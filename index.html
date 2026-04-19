@@ -548,7 +548,7 @@
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
   <p class="section-subtitle" id="menuSubtitle">Select your bowl for today.</p>
-  <div class="week-label" id="weekLabel">📅 Week of 13th – 18th April 2026 (Week 39) — Menu updated every Sunday for the next week.</div>
+  <div class="week-label" id="weekLabel">📅 Week of 20th – 25th April 2026 (Week 40) — Menu updated every Sunday for the next week.</div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div>
   <br>
@@ -779,64 +779,64 @@
 <script>
 const BOWLS = [
   {
-    day:"Monday", name:"Creamy Pumpkin Paneer Power Bowl", emoji:"🥗",
-    desc:"A vibrant base of Zucchini and Carrot zoodles topped with a velvety Roasted Pumpkin & Spinach sauce.",
-    ingredients:"Spiralized Zucchini, Red Pumpkin Puree, Paneer, Peanut Butter, Spinach, Pomegranate | Dressing: Peanut-Hung Curd",
-    macros:["Cal: 420","P: 18g","Carbs: 16g","Fat: 28g"],
-    juice:"The Golden Bael Cooler", juiceDesc:"Traditional digestive tonic — soothes and eases digestion after a high-fat meal",
-    juiceFlavor:"Light, earthy & cooling",
-    juiceIngredients:"Fresh Bael (Wood Apple) Pulp, Roasted Fennel (Saunf), Black Salt",
-    juiceMacros:"Cal: 85 | Carbs: 21g | Protein: 0.5g"
+    day:"Monday", name:"Citrus Peanut Power Bowl", emoji:"🥗",
+    desc:"Bright citrus-peanut glazed legumes with Maharashtrian greens and light kadhi-style millet.",
+    ingredients:"Chavli, Black Moong, Orange-Peanut Glaze, Lal Math, Varai Kadhi Khichdi, Cucumber-Carrot Slaw, Pomegranate | Dressing: Green Chutney Yogurt | Boost: Roasted Peanuts & Sprouted Moong",
+    macros:["Cal: 500","P: 20g","Carbs: 60g","Fat: 20g"],
+    juice:"Orange Amla Jeera Cooler", juiceDesc:"Refreshing citrus digestive — cuts heaviness after protein-rich meals and boosts absorption",
+    juiceFlavor:"Light, cooling & citrusy",
+    juiceIngredients:"Orange, Amla, Roasted Jeera",
+    juiceMacros:"Cal: 80 | Carbs: 16g | Protein: 0.5g | Fat: 0g"
   },
   {
-    day:"Tuesday", name:"Rajma Kasundi Brown Rice Bowl", emoji:"🥗",
-    desc:"Earthy Brown Rice with Cumin and Hing, paired with slow-cooked Rajma in a creamy Yogurt gravy and sharp Tomato Kasundi sauce.",
-    ingredients:"Brown Rice, Kidney Beans, Tomato Kasundi, Curd, Beetroot Slaw, Dried Figs | Dressing: Tomato Kasundi Mustard Sauce",
-    macros:["Cal: 480","P: 16g","Carbs: 58g","Fat: 12g"],
-    juice:"Gulkand & Sabja Hydrator", juiceDesc:"Cooling floral drink — balances heat of mustard and aids digestion",
-    juiceFlavor:"Floral, cooling & sweet",
-    juiceIngredients:"Gulkand (Sun-cooked Rose Petals), Soaked Sabja (Basil Seeds), Fresh Mint",
-    juiceMacros:"Cal: 45 | Carbs: 10g | Protein: 0.2g"
+    day:"Tuesday", name:"Street Chaat Protein Bowl", emoji:"🥗",
+    desc:"Clean street-style chaat with spiced legumes, crunchy ragi bhel, and cooling dahi dressing.",
+    ingredients:"Rajma, Chole, Sprouted Moong, Ragi Puffs, Lettuce, Beans, Corn, Potato, Walnuts | Dressing: Dahi Chutney | Boost: Extra Sprouts & Thick Curd Base",
+    macros:["Cal: 510","P: 22g","Carbs: 64g","Fat: 18g"],
+    juice:"Pudina Jaljeera Digestive", juiceDesc:"Classic tangy-spicy digestive — fights bloating and resets your palate after chaat",
+    juiceFlavor:"Tangy, spicy & refreshing",
+    juiceIngredients:"Mint, Coriander, Jeera, Ajwain",
+    juiceMacros:"Cal: 50 | Carbs: 10g | Protein: 1g | Fat: 0g"
   },
   {
-    day:"Wednesday", name:"Methi Yogurt Rajma Bowl", emoji:"🥗",
-    desc:"Protein-packed Rajma simmered in a fragrant Kasoori Methi and Yogurt base, served with Jeera Brown Rice and blanched French Beans.",
-    ingredients:"Rajma, Fresh Fenugreek, Brown Rice, French Beans, Roasted Chickpeas (Phutana) | Dressing: Kasoori Methi Yogurt",
-    macros:["Cal: 460","P: 17g","Carbs: 55g","Fat: 14g"],
-    juice:"Triphala & Rose Tonic", juiceDesc:"Ancient Ayurvedic detoxifier — iron absorption booster, perfect with methi",
-    juiceFlavor:"Earthy, floral & cleansing",
-    juiceIngredients:"Triphala Extract, Edible Rose Water, Honey",
-    juiceMacros:"Cal: 35 | Carbs: 8g | Protein: 0g"
+    day:"Wednesday", name:"Herbed Paneer Fusion Bowl", emoji:"🥗",
+    desc:"Grilled herb paneer with tangy ambat chuka rice, roasted veggies, and coconut dressing.",
+    ingredients:"Paneer, Brown Rice, Ambat Chuka, Peanuts, Roasted Veggies, Pineapple, Roasted Chana | Dressing: Coconut Chutney | Boost: Extra Paneer & Roasted Chana",
+    macros:["Cal: 530","P: 24g","Carbs: 55g","Fat: 24g"],
+    juice:"Amla Coconut Cooling Shot", juiceDesc:"Smooth creamy blend — balances rich meals while soothing and cooling your gut",
+    juiceFlavor:"Creamy, sweet & cooling",
+    juiceIngredients:"Coconut Milk, Amla, Cardamom",
+    juiceMacros:"Cal: 105 | Carbs: 11g | Protein: 1.5g | Fat: 6g"
   },
   {
-    day:"Thursday", name:"Hakka Paneer Pasta Bowl", emoji:"🥗",
-    desc:"Whole-wheat Pasta tossed on high heat with Ginger, Garlic and Paneer, with roasted Sweet Potato and a Date-Fennel dressing.",
-    ingredients:"Whole-wheat Pasta, Paneer, Roasted Sweet Potato, Grapes, Soy Sauce, Dates | Dressing: Khajur-Saunf (Date-Fennel)",
-    macros:["Cal: 510","P: 20g","Carbs: 52g","Fat: 18g"],
-    juice:"Ajwain & Ginger Spark", juiceDesc:"Zesty digestive infusion — ignites digestion after a hearty pasta meal",
-    juiceFlavor:"Zesty, sharp & warming",
-    juiceIngredients:"Ajwain (Carom) Water, Fresh Ginger, Lemon",
-    juiceMacros:"Cal: 20 | Carbs: 5g | Protein: 0.1g"
+    day:"Thursday", name:"Indo-Chinese Comfort Bowl", emoji:"🥗",
+    desc:"Light chole manchurian with stir-fried veggies and tangy yogurt onion dressing.",
+    ingredients:"Chole, Cabbage, Baby Corn, Capsicum, Methi, Red Rice, Sweet Potato Chips | Dressing: Yogurt Onion | Boost: Sesame Seeds & Tofu Cubes",
+    macros:["Cal: 500","P: 21g","Carbs: 62g","Fat: 18g"],
+    juice:"Cucumber Ajwain Gut Cooler", juiceDesc:"Hydrating anti-bloat cooler — de-bloats and cools after heavy spicy meals",
+    juiceFlavor:"Fresh, light & cooling",
+    juiceIngredients:"Fresh Cucumber Juice, Ajwain, Mint, Lemon",
+    juiceMacros:"Cal: 40 | Carbs: 8g | Protein: 1g | Fat: 0g"
   },
   {
-    day:"Friday", name:"Podi Rajma & Quinoa Power Bowl", emoji:"🥗",
-    desc:"Fluffy vegetable-loaded Quinoa paired with Rajma coated in South-Indian Podi spice powder and fresh Coconut.",
-    ingredients:"Quinoa, Rajma, Gunpowder (Podi), Fresh Coconut, Lettuce, Basil | Dressing: Creamy Basil-Yogurt",
-    macros:["Cal: 440","P: 19g","Carbs: 45g","Fat: 16g"],
-    juice:"Amla & Roasted Jeera Punch", juiceDesc:"Vitamin-C powerhouse — boosts immunity and aids digestion of coconut and legumes",
-    juiceFlavor:"Tangy, earthy & punchy",
-    juiceIngredients:"Fresh Amla Juice, Roasted Cumin, Ginger",
-    juiceMacros:"Cal: 40 | Carbs: 9g | Protein: 0.4g"
+    day:"Friday", name:"Rustic Maharashtrian Bowl", emoji:"🥗",
+    desc:"Earthy sprouted legumes with shepu greens, fresh crunch, and light tangy dressing.",
+    ingredients:"Akkha Masoor, Green Harbara, Shepu, Peanuts, Cucumber, Cabbage, Carrot, Bhakri Crisps | Dressing: Tomato-Curd | Boost: Sprouted Legumes & Extra Peanuts",
+    macros:["Cal: 480","P: 19g","Carbs: 58g","Fat: 17g"],
+    juice:"Gulkand Saunf Milk Cooler", juiceDesc:"Soothing lightly sweet cooler — relieves acidity and calms after earthy meals",
+    juiceFlavor:"Sweet, floral & calming",
+    juiceIngredients:"Diluted Milk, Gulkand, Saunf, Rose Water, Sabja Seeds",
+    juiceMacros:"Cal: 135 | Carbs: 19g | Protein: 3.5g | Fat: 4g"
   },
   {
-    day:"Saturday", name:"Val-Harbara Comfort Bowl", emoji:"🥗",
-    desc:"A nostalgic mix of Field Beans (Val) and Black Chana (Harbara) in a Peanut Butter sauce, paired with sweet Amaranth & Apple Kheer.",
-    ingredients:"Val (Field Beans), Black Chana (Harbara), Rajgira (Amaranth), Milk, Apple, Red Amaranth Leaves | Dressing: Peanut Butter Sauce",
-    macros:["Cal: 490","P: 21g","Carbs: 62g","Fat: 15g"],
-    juice:"Rose & Sabja Comfort Cooler", juiceDesc:"Gentle sweet cooler — soothes after high-protein legume bowl, aids overnight digestion",
-    juiceFlavor:"Sweet, gentle & cooling",
-    juiceIngredients:"Rock Sugar (Mishri), Soaked Sabja (Basil Seeds), Dried Rose Petals",
-    juiceMacros:"Cal: 50 | Carbs: 12g | Protein: 0.3g"
+    day:"Saturday", name:"Global Detox Fusion Bowl", emoji:"🥗",
+    desc:"Fresh herbed legumes with roasted veggies, quinoa, and kokum-chuka dressing.",
+    ingredients:"Yellow Peas, Green Chana, Quinoa, Zucchini, Capsicum, Cauliflower, Lettuce, Papaya, Pumpkin & Sunflower Seeds | Dressing: Kokum-Chuka",
+    macros:["Cal: 460","P: 18g","Carbs: 54g","Fat: 16g"],
+    juice:"Kokum Mint Detox Refresher", juiceDesc:"Light tangy kokum drink — keeps digestion light and reduces acidity after detox meals",
+    juiceFlavor:"Tangy, minty & refreshing",
+    juiceIngredients:"Kokum, Mint, Jeera",
+    juiceMacros:"Cal: 50 | Carbs: 11g | Protein: 0g | Fat: 0g"
   },
 ];
 
