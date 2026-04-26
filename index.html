@@ -548,7 +548,7 @@
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
   <p class="section-subtitle" id="menuSubtitle">Select your bowl for today.</p>
-  <div class="week-label" id="weekLabel">📅 Week of 20th – 25th April 2026 (Week 40) — Menu updated every Sunday for the next week.</div>
+  <div class="week-label" id="weekLabel">📅 Week of 27th April – 2nd May 2026 (Week 41) — Menu updated every Sunday for the next week.</div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div>
   <br>
@@ -779,64 +779,64 @@
 <script>
 const BOWLS = [
   {
-    day:"Monday", name:"Citrus Peanut Power Bowl", emoji:"🥗",
-    desc:"Bright citrus-peanut glazed legumes with Maharashtrian greens and light kadhi-style millet.",
-    ingredients:"Chavli, Black Moong, Orange-Peanut Glaze, Lal Math, Varai Kadhi Khichdi, Cucumber-Carrot Slaw, Pomegranate | Dressing: Green Chutney Yogurt | Boost: Roasted Peanuts & Sprouted Moong",
-    macros:["Cal: 500","P: 20g","Carbs: 60g","Fat: 20g"],
-    juice:"Orange Amla Jeera Cooler", juiceDesc:"Refreshing citrus digestive — cuts heaviness after protein-rich meals and boosts absorption",
-    juiceFlavor:"Light, cooling & citrusy",
-    juiceIngredients:"Orange, Amla, Roasted Jeera",
-    juiceMacros:"Cal: 80 | Carbs: 16g | Protein: 0.5g | Fat: 0g"
+    day:"Monday", name:"Chatpata Soya Crunch Bowl", emoji:"🥗",
+    desc:"Spicy roasted soya chunks in tangy chaat spices over herby millet pasta, fresh greens, and cooling beetroot yogurt drizzle.",
+    ingredients:"Soya Chunks, Lettuce, Mint, Coriander, Varai (Millet), Corn, Bell Peppers, Carrot, Pomegranate, Amla Candy | Dressing: Beetroot Curd",
+    macros:["Cal: 360","P: 22g","Carbs: 42g","Fat: 10g"],
+    juice:"Rose Gulkand Saunf Cooler", juiceDesc:"Soothing rose and gulkand digestive cooler — cools the body and settles digestion after a tangy bowl",
+    juiceFlavor:"Floral, cooling & soothing",
+    juiceIngredients:"Gulkand, Rose, Saunf, Sabja Seeds, Black Salt",
+    juiceMacros:"Cal: 95 | Carbs: 23g | Protein: 1g | Fat: 0g"
   },
   {
-    day:"Tuesday", name:"Street Chaat Protein Bowl", emoji:"🥗",
-    desc:"Clean street-style chaat with spiced legumes, crunchy ragi bhel, and cooling dahi dressing.",
-    ingredients:"Rajma, Chole, Sprouted Moong, Ragi Puffs, Lettuce, Beans, Corn, Potato, Walnuts | Dressing: Dahi Chutney | Boost: Extra Sprouts & Thick Curd Base",
-    macros:["Cal: 510","P: 22g","Carbs: 64g","Fat: 18g"],
-    juice:"Pudina Jaljeera Digestive", juiceDesc:"Classic tangy-spicy digestive — fights bloating and resets your palate after chaat",
-    juiceFlavor:"Tangy, spicy & refreshing",
-    juiceIngredients:"Mint, Coriander, Jeera, Ajwain",
-    juiceMacros:"Cal: 50 | Carbs: 10g | Protein: 1g | Fat: 0g"
+    day:"Tuesday", name:"Tropical Paneer Power Bowl", emoji:"🥗",
+    desc:"Golden paneer and chickpeas glazed in sweet-spicy pineapple chutney with creamy yogurt rice, sautéed greens, and kokum-rasam dressing.",
+    ingredients:"Paneer, Chickpeas, Pineapple, Spinach, Brown Rice, Curd, Baby Corn, Carrot, Potato, Peanuts, Kokum | Dressing: Kokum-Rasam",
+    macros:["Cal: 400","P: 21g","Carbs: 48g","Fat: 12g"],
+    juice:"Pineapple Ajwain Digestive Cooler", juiceDesc:"Sweet-tangy pineapple digestive — light, refreshing and ideal after protein-rich meals",
+    juiceFlavor:"Sweet, tangy & refreshing",
+    juiceIngredients:"Pineapple, Ajwain, Roasted Jeera, Mint, Black Salt",
+    juiceMacros:"Cal: 80 | Carbs: 20g | Protein: 0.5g | Fat: 0g"
   },
   {
-    day:"Wednesday", name:"Herbed Paneer Fusion Bowl", emoji:"🥗",
-    desc:"Grilled herb paneer with tangy ambat chuka rice, roasted veggies, and coconut dressing.",
-    ingredients:"Paneer, Brown Rice, Ambat Chuka, Peanuts, Roasted Veggies, Pineapple, Roasted Chana | Dressing: Coconut Chutney | Boost: Extra Paneer & Roasted Chana",
-    macros:["Cal: 530","P: 24g","Carbs: 55g","Fat: 24g"],
-    juice:"Amla Coconut Cooling Shot", juiceDesc:"Smooth creamy blend — balances rich meals while soothing and cooling your gut",
-    juiceFlavor:"Creamy, sweet & cooling",
-    juiceIngredients:"Coconut Milk, Amla, Cardamom",
-    juiceMacros:"Cal: 105 | Carbs: 11g | Protein: 1.5g | Fat: 6g"
+    day:"Wednesday", name:"Earthy Rajma Quinoa Fusion Bowl", emoji:"🥗",
+    desc:"Protein-rich rajma and quinoa in a tangy ambat chuka base with spiced veggies, juicy grapes, and nutty crunch.",
+    ingredients:"Rajma, Quinoa, Ambat Chuka Leaves, Cabbage, Beetroot, Podi Masala, Grapes, Almonds, Cashews | Dressing: Fruit Curd",
+    macros:["Cal: 380","P: 20g","Carbs: 45g","Fat: 11g"],
+    juice:"Amla Kokum Mint Refresher", juiceDesc:"Sharp and cooling refresher — balances heavy legumes and supports digestion",
+    juiceFlavor:"Sharp, cooling & tangy",
+    juiceIngredients:"Amla, Kokum, Mint, Black Salt",
+    juiceMacros:"Cal: 60 | Carbs: 14g | Protein: 0.5g | Fat: 0g"
   },
   {
-    day:"Thursday", name:"Indo-Chinese Comfort Bowl", emoji:"🥗",
-    desc:"Light chole manchurian with stir-fried veggies and tangy yogurt onion dressing.",
-    ingredients:"Chole, Cabbage, Baby Corn, Capsicum, Methi, Red Rice, Sweet Potato Chips | Dressing: Yogurt Onion | Boost: Sesame Seeds & Tofu Cubes",
-    macros:["Cal: 500","P: 21g","Carbs: 62g","Fat: 18g"],
-    juice:"Cucumber Ajwain Gut Cooler", juiceDesc:"Hydrating anti-bloat cooler — de-bloats and cools after heavy spicy meals",
-    juiceFlavor:"Fresh, light & cooling",
-    juiceIngredients:"Fresh Cucumber Juice, Ajwain, Mint, Lemon",
-    juiceMacros:"Cal: 40 | Carbs: 8g | Protein: 1g | Fat: 0g"
+    day:"Thursday", name:"Desi Comfort Protein Bowl", emoji:"🥗",
+    desc:"Hearty val and masoor in pav bhaji spices with herbed pasta, garlicky methi, fresh veggies, and raw mango coconut dressing.",
+    ingredients:"Val, Masoor Dal, Methi, Raisins, Whole Wheat Pasta, Broccoli, Cauliflower, Cucumber, Raw Mango, Coconut | Dressing: Raw Mango Coconut",
+    macros:["Cal: 420","P: 23g","Carbs: 50g","Fat: 13g"],
+    juice:"Kairi Coconut Jeera Cooler", juiceDesc:"Raw mango and coconut fusion cooler — cooling, mildly tangy and digestive",
+    juiceFlavor:"Tangy, cooling & mildly sweet",
+    juiceIngredients:"Raw Mango (Kairi), Coconut Water, Roasted Jeera, Black Salt, Jaggery",
+    juiceMacros:"Cal: 90 | Carbs: 21g | Protein: 1g | Fat: 1g"
   },
   {
-    day:"Friday", name:"Rustic Maharashtrian Bowl", emoji:"🥗",
-    desc:"Earthy sprouted legumes with shepu greens, fresh crunch, and light tangy dressing.",
-    ingredients:"Akkha Masoor, Green Harbara, Shepu, Peanuts, Cucumber, Cabbage, Carrot, Bhakri Crisps | Dressing: Tomato-Curd | Boost: Sprouted Legumes & Extra Peanuts",
-    macros:["Cal: 480","P: 19g","Carbs: 58g","Fat: 17g"],
-    juice:"Gulkand Saunf Milk Cooler", juiceDesc:"Soothing lightly sweet cooler — relieves acidity and calms after earthy meals",
-    juiceFlavor:"Sweet, floral & calming",
-    juiceIngredients:"Diluted Milk, Gulkand, Saunf, Rose Water, Sabja Seeds",
-    juiceMacros:"Cal: 135 | Carbs: 19g | Protein: 3.5g | Fat: 4g"
+    day:"Friday", name:"Cooling Greens Protein Bowl", emoji:"🥗",
+    desc:"Light black beans in a creamy broccoli base with fresh veggie noodles, crunchy lettuce, and sweet melon accents.",
+    ingredients:"Black Beans, Broccoli, Zucchini Noodles, Carrot, Cucumber, Lettuce, Muskmelon, Peanuts | Dressing: Mint",
+    macros:["Cal: 340","P: 19g","Carbs: 38g","Fat: 9g"],
+    juice:"Cucumber Bael Mint Cooler", juiceDesc:"Hydrating cucumber and bael cooler — gentle, gut-friendly and naturally cooling",
+    juiceFlavor:"Fresh, gentle & cooling",
+    juiceIngredients:"Cucumber, Bael, Mint, Roasted Jeera, Black Salt",
+    juiceMacros:"Cal: 85 | Carbs: 20g | Protein: 1g | Fat: 0g"
   },
   {
-    day:"Saturday", name:"Global Detox Fusion Bowl", emoji:"🥗",
-    desc:"Fresh herbed legumes with roasted veggies, quinoa, and kokum-chuka dressing.",
-    ingredients:"Yellow Peas, Green Chana, Quinoa, Zucchini, Capsicum, Cauliflower, Lettuce, Papaya, Pumpkin & Sunflower Seeds | Dressing: Kokum-Chuka",
-    macros:["Cal: 460","P: 18g","Carbs: 54g","Fat: 16g"],
-    juice:"Kokum Mint Detox Refresher", juiceDesc:"Light tangy kokum drink — keeps digestion light and reduces acidity after detox meals",
-    juiceFlavor:"Tangy, minty & refreshing",
-    juiceIngredients:"Kokum, Mint, Jeera",
-    juiceMacros:"Cal: 50 | Carbs: 11g | Protein: 0g | Fat: 0g"
+    day:"Saturday", name:"Street Style Fusion Bowl", emoji:"🥗",
+    desc:"Pani puri spiced moong and peas with tangy chutney rice, sautéed greens, crunchy veggies, and bold Indo-Chinese drizzle.",
+    ingredients:"Yellow Moong, Yellow Peas, Brown Rice, Tomato Chutney, Red Cabbage, Onion, Tomato, Lal Math, Apple, Phutana | Dressing: Soy-Garlic",
+    macros:["Cal: 390","P: 20g","Carbs: 46g","Fat: 11g"],
+    juice:"Spiced Kokum Jaljeera Cooler", juiceDesc:"Street-style kokum jaljeera — tangy, spicy and digestive, perfect after a chatpata bowl",
+    juiceFlavor:"Chatpata, tangy & spicy",
+    juiceIngredients:"Kokum, Mint, Coriander, Ajwain, Roasted Jeera, Black Salt, Jaggery",
+    juiceMacros:"Cal: 55 | Carbs: 13g | Protein: 0.5g | Fat: 0g"
   },
 ];
 
