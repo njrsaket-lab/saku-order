@@ -1106,7 +1106,7 @@ function placeOrder(){
     ("0"+now.getDate()).slice(-2) + "-" +
     Math.floor(1000+Math.random()*9000).toString();
 
-  // Send to Google Sheets via URL params (bypasses CORS)
+  // Send to Google Sheets via fetch no-cors
   try {
     const params = new URLSearchParams();
     params.append("name", payload.name || "");
@@ -1125,8 +1125,10 @@ function placeOrder(){
     params.append("balanceCycle", payload.balanceCycle || "");
     params.append("total", payload.total || 0);
 
-    const img = new Image();
-    img.src = SHEET_ENDPOINT + "?" + params.toString();
+    fetch(SHEET_ENDPOINT + "?" + params.toString(), {
+      method: "GET",
+      mode: "no-cors"
+    }).catch(function(err){ console.log("Sheet log error:", err); });
   } catch(err) {
     console.log("Sheet log error:", err);
   }
