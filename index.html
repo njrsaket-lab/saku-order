@@ -548,7 +548,7 @@
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
   <p class="section-subtitle" id="menuSubtitle">Select your bowl for today.</p>
-  <div class="week-label" id="weekLabel">📅 Week of 11th – 16th May 2026 (Week 43) — Menu updated every Sunday for the next week.</div>
+  <div class="week-label" id="weekLabel">📅 Week of 18th – 23rd May 2026 (Week 44) — Menu updated every Sunday for the next week.</div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div>
   <br>
@@ -752,8 +752,8 @@
     <div class="thankyou-title">Thank You! 🌿</div>
     <div class="thankyou-msg">"Nourishment rooted in tradition,<br>delivered with love."</div>
     <div class="thankyou-detail">
-      Your order is confirmed! 🎉<br>
-      We'll send a WhatsApp confirmation shortly.<br><br>
+      Your order has been sent to our kitchen on WhatsApp! 🎉<br><br>
+      We'll confirm your order shortly.<br>
       Look out for our <strong style="color:var(--green);">5 AM daily update</strong> — bowl details, macros, and delivery status.<br><br>
       Any questions? Reach us below.
     </div>
@@ -779,64 +779,64 @@
 <script>
 const BOWLS = [
   {
-    day:"Monday", name:"Mediterranean Maharashtrian Bowl", emoji:"🥗",
-    desc:"Chickpea & cowpea protein bowl with lemon-jeera brown rice, spinach-mint greens, crunchy cucumber, tomato, zucchini and orange.",
-    ingredients:"Chickpea, Cowpea, Brown Rice, Spinach, Mint, Cucumber, Tomato, Zucchini, Orange | Dressing: Mint Hummus Curd",
-    macros:["Cal: 550","P: 24g","Carbs: 74g","Fat: 18g"],
-    juice:"Amla Jeera Mint Chaas Cooler", juiceDesc:"Cooling chaas-style digestive — balances the fiber-rich Mediterranean bowl perfectly",
-    juiceFlavor:"Cooling, tangy & light",
-    juiceIngredients:"Amla, Roasted Jeera, Mint, Fennel, Black Salt, Chaas",
-    juiceMacros:"Cal: 68 | Carbs: 8g | Protein: 2.5g | Fat: 2.5g"
+    day:"Monday", name:"Smoky Kokum Rajma Crunch Bowl", emoji:"🥗",
+    desc:"Smoky kokum basil rajma over garlic jowar with roasted veggies, fresh orange, crunchy coconut-peanut topping & creamy kokum yogurt dressing.",
+    ingredients:"Rajma, Jowar, Rocket Leaves, Lettuce, Beetroot, Broccoli, Sweet Corn, Orange, Coconut | Dressing: Kokum Yogurt",
+    macros:["Cal: 420","P: 22g","Carbs: 48g","Fat: 11g"],
+    juice:"Kokum Basil Jeera Digestive", juiceDesc:"Cooling digestive with kokum, basil and roasted jeera — lightly tangy, mildly herbal and gut-soothing",
+    juiceFlavor:"Tangy, herbal & cooling",
+    juiceIngredients:"Kokum, Basil, Jeera, Sabja, Saunf",
+    juiceMacros:"Cal: 58 | Carbs: 12g | Protein: 1g | Fat: 0.8g"
   },
   {
-    day:"Tuesday", name:"Mexican Chaat Bowl", emoji:"🌮",
-    desc:"Smoky rajma & paneer bowl with jowar Mexican rice, corn, bell peppers, pickled onion, pineapple and nacho-style makhana.",
-    ingredients:"Rajma, Paneer, Jowar, Corn, Bell Peppers, Pickled Onion, Pineapple, Makhana | Dressing: Tamarind Curd Salsa",
-    macros:["Cal: 640","P: 28g","Carbs: 77g","Fat: 25g"],
-    juice:"Jaljeera Kokum Ananas Digestive", juiceDesc:"Tangy kokum-jaljeera cooler with pineapple — refreshing post-meal digestive finish",
-    juiceFlavor:"Tangy, spicy & punchy",
-    juiceIngredients:"Kokum, Pineapple (Ananas), Mint, Roasted Jeera, Ajwain, Black Salt",
-    juiceMacros:"Cal: 58 | Carbs: 12g | Protein: 0.5g | Fat: 0g"
+    day:"Tuesday", name:"Pani Puri Protein Power Bowl", emoji:"🥗",
+    desc:"Street-style paneer & yellow peas in pani puri flavours with tamarind red rice, methi zhunkha, crunchy toppings & smoked yogurt dressing.",
+    ingredients:"Paneer, Yellow Peas, Red Rice, Methi, Spinach, Cucumber, French Beans, Tomato, Pomegranate | Dressing: Smoked Yogurt",
+    macros:["Cal: 435","P: 24g","Carbs: 45g","Fat: 13g"],
+    juice:"Pudina Chaas Pani-Puri Digestive", juiceDesc:"Street-style probiotic cooler with mint chaas, cucumber and roasted spices — refreshing digestive finish",
+    juiceFlavor:"Street-style, tangy & cooling",
+    juiceIngredients:"Buttermilk, Pudina, Cucumber, Jeera, Saunf",
+    juiceMacros:"Cal: 64 | Carbs: 8g | Protein: 3g | Fat: 2g"
   },
   {
-    day:"Wednesday", name:"Japanese Indo Ramen Bowl", emoji:"🍜",
-    desc:"Umami soybean & black bean bowl with varai tomato-peanut base, sesame spinach, roasted broccoli, cauliflower and caramelized onion.",
-    ingredients:"Soybean, Black Bean, Varai, Spinach, Tomato, Peanuts, Broccoli, Cauliflower, Caramelized Onion, Pineapple | Dressing: Peanut Vinaigrette",
-    macros:["Cal: 615","P: 31g","Carbs: 70g","Fat: 23g"],
-    juice:"Pineapple Sabja Amla Ginger Cooler", juiceDesc:"Light juicy cooler with sabja seeds — cooling and refreshing ramen bowl pairing",
-    juiceFlavor:"Juicy, cooling & fresh",
-    juiceIngredients:"Pineapple, Sabja Seeds, Amla, Mint, Ginger, Black Salt",
-    juiceMacros:"Cal: 63 | Carbs: 13g | Protein: 0.5g | Fat: 0.5g"
+    day:"Wednesday", name:"Tokyo Tangy Bean Bowl", emoji:"🥗",
+    desc:"Sesame soy beans & black beans over tangy tomato varai with roasted vegetables, pineapple freshness & creamy peanut pineapple dressing.",
+    ingredients:"Soya Beans, Black Beans, Varai, Spinach, Cauliflower, Tomato, Onion, Pineapple, Coconut | Dressing: Peanut Pineapple",
+    macros:["Cal: 430","P: 25g","Carbs: 43g","Fat: 12g"],
+    juice:"Pineapple Ajwain Cooler", juiceDesc:"Sweet-tangy pineapple digestive with ajwain and ginger — makes bean-heavy meals feel lighter",
+    juiceFlavor:"Sweet, tangy & refreshing",
+    juiceIngredients:"Pineapple, Ajwain, Ginger, Mint, Lemon",
+    juiceMacros:"Cal: 72 | Carbs: 16g | Protein: 1g | Fat: 0.5g"
   },
   {
-    day:"Thursday", name:"Italian Green Desi Bowl", emoji:"🌿",
-    desc:"Pesto moong & masoor bowl with creamy red amaranth whole wheat pasta, sautéed baby corn, bell peppers, zucchini and almonds.",
-    ingredients:"Green Moong, Masoor, Whole Wheat Pasta, Red Amaranth, Baby Corn, Bell Peppers, Zucchini, Almonds, Fruit | Dressing: Sweet Chilli Sesame",
-    macros:["Cal: 660","P: 27g","Carbs: 83g","Fat: 25g"],
-    juice:"Rose Amla Basil Fennel Cooler", juiceDesc:"Floral rose and basil digestive — light and cooling finish to the Italian Green Bowl",
-    juiceFlavor:"Floral, light & cooling",
-    juiceIngredients:"Rose Water, Amla, Basil, Fennel, Sabja Seeds, Lemon",
-    juiceMacros:"Cal: 55 | Carbs: 11.5g | Protein: 0g | Fat: 0.5g"
+    day:"Thursday", name:"Green Goddess Pasta Bowl", emoji:"🥗",
+    desc:"Fresh basil pesto moong & masoor with creamy lal math pasta, sautéed veggies, juicy pineapple & light Thai yogurt dressing.",
+    ingredients:"Green Moong, Masoor, Whole Wheat Pasta, Lal Math, Bell Peppers, Baby Corn, Zucchini, Pineapple | Dressing: Thai Yogurt",
+    macros:["Cal: 425","P: 23g","Carbs: 46g","Fat: 10g"],
+    juice:"Amla Coconut Probiotic Cooler", juiceDesc:"Light probiotic digestive with amla, coconut water and curd — cooling vitamin-rich finish",
+    juiceFlavor:"Light, cooling & probiotic",
+    juiceIngredients:"Amla, Coconut Water, Curd, Basil, Sabja",
+    juiceMacros:"Cal: 68 | Carbs: 10g | Protein: 3g | Fat: 2g"
   },
   {
-    day:"Friday", name:"Middle Eastern Shepu Bowl", emoji:"🥒",
-    desc:"Creamy herb harbhara & cowpea bowl with quinoa-jowar base, fresh dill salad, cucumber, zucchini, bottle gourd and coconut-phutana chutney.",
-    ingredients:"Harbhara, Cowpea, Quinoa, Jowar, Shepu (Dill), Cucumber, Zucchini, Bottle Gourd, Coconut, Phutana, Nuts, Raisins | Dressing: Coconut Phutana Chutney",
-    macros:["Cal: 600","P: 25g","Carbs: 73g","Fat: 23g"],
-    juice:"Bael Saunf Ajwain Digestive Sharbat", juiceDesc:"Traditional bael cooler with fennel and ajwain — smooth earthy digestive experience",
-    juiceFlavor:"Earthy, smooth & traditional",
-    juiceIngredients:"Bael, Saunf (Fennel), Roasted Jeera, Mint, Ajwain",
-    juiceMacros:"Cal: 83 | Carbs: 18g | Protein: 0.5g | Fat: 0g"
+    day:"Friday", name:"Creamy Kulith Crunch Bowl", emoji:"🥗",
+    desc:"Creamy kulith & green harbara with herbed quinoa-jowar mix, fresh shepu salad, caramel nuts & coconut-phutana dressing.",
+    ingredients:"Kulith, Green Harbara, Quinoa, Jowar, Shepu, Cucumber, Doodhi, Zucchini, Amla | Dressing: Coconut Phutana",
+    macros:["Cal: 440","P: 24g","Carbs: 42g","Fat: 13g"],
+    juice:"Gulkand Saunf Milk Cooler", juiceDesc:"Creamy rose-fennel cooler with gulkand and sabja — soothing cooling finish after earthy kulith",
+    juiceFlavor:"Creamy, floral & soothing",
+    juiceIngredients:"Gulkand, Saunf, Milk, Rose, Sabja",
+    juiceMacros:"Cal: 118 | Carbs: 16g | Protein: 4g | Fat: 4g"
   },
   {
-    day:"Saturday", name:"Thai Konkan Bowl", emoji:"🥥",
-    desc:"Earthy kulith & chickpea bowl in broccoli coconut gravy with ambat chuka pickle, roasted vegetables, ragi nacho crumble and chunda curd dressing.",
-    ingredients:"Kulith, Chickpea, Broccoli, Coconut Milk, Ambat Chuka, Roasted Vegetables, Ragi Bhakri, Fruit, Roasted Chana | Dressing: Chunda Curd",
-    macros:["Cal: 670","P: 27g","Carbs: 82g","Fat: 28g"],
-    juice:"Kokum Solkadhi Sabja Digestive", juiceDesc:"Konkan-style kokum and coconut digestive — cooling tropical finish after an earthy bowl",
-    juiceFlavor:"Coastal, tropical & cooling",
-    juiceIngredients:"Kokum, Light Coconut Milk, Sabja Seeds, Jeera, Herbs",
-    juiceMacros:"Cal: 80 | Carbs: 8.5g | Protein: 1.5g | Fat: 5g"
+    day:"Saturday", name:"Ragi Nacho Chole Bowl", emoji:"🥗",
+    desc:"Earthy kulith & chole in broccoli coconut gravy with crunchy ragi nacho crumble, roasted veggies, chikoo bites & mild chunda dressing.",
+    ingredients:"Kulith, Chole, Ragi, Ambat Chuka, Bell Peppers, Broccoli, Tomato, Chikoo | Dressing: Chunda",
+    macros:["Cal: 435","P: 23g","Carbs: 44g","Fat: 12g"],
+    juice:"Bael Chaas Smoked Digestive", juiceDesc:"Rustic bael and chaas digestive with roasted jeera and mint — designed for hearty millet and legume bowls",
+    juiceFlavor:"Rustic, smoky & gut-soothing",
+    juiceIngredients:"Bael, Buttermilk, Mint, Ginger, Smoked Chilli",
+    juiceMacros:"Cal: 74 | Carbs: 11g | Protein: 3g | Fat: 2g"
   },
 ];
 
@@ -862,10 +862,11 @@ function renderMenu() {
   const c=document.getElementById("bowlsContainer");
   const isSub=state.plan!=="single";
   document.getElementById("menuTitle").textContent=isSub?"This Week's Menu":"Choose Your Bowl";
-  document.getElementById("menuSubtitle").textContent=isSub?"Your subscription covers all 6 bowls. Customize add-ons next.":"Select bowl(s) from this week's menu.";
+  document.getElementById("menuSubtitle").textContent=isSub?"Your subscription covers all 6 bowls. Customize size & juice next.":"Select bowl(s) from this week's menu.";
   c.innerHTML=BOWLS.map((b,i)=>{
-    const sel=state.bowlSelections[i]||{qty:0,juice:false,juiceQty:1};
+    const sel=state.bowlSelections[i]||{qty:0,size:"full",juice:false,juiceQty:1};
     const isSelected=isSub||sel.qty>0;
+    const bowlPrice=sel.size==="half"?150:280;
     return `<div class="bowl-card ${isSelected?"selected":""}" id="bowlcard-${i}">
       <div class="bowl-header" onclick="toggleBowl(${i})">
         <span class="bowl-emoji">${b.emoji}</span>
@@ -875,18 +876,35 @@ function renderMenu() {
           <div class="bowl-desc">${b.desc}</div>
           <div style="font-size:10px;font-weight:300;color:rgba(8,67,199,0.55);margin-top:4px;line-height:1.5;">${b.ingredients}</div>
           <div class="bowl-macros" style="margin-top:6px;">${b.macros.map(m=>`<span class="macro">${m}</span>`).join("")}</div>
-          <div class="bowl-price">₹280 / bowl</div>
+          <div style="display:flex;gap:8px;margin-top:6px;">
+            <span style="font-size:11px;font-weight:700;color:var(--blue);">Half ₹150</span>
+            <span style="font-size:11px;color:rgba(8,67,199,0.3);">|</span>
+            <span style="font-size:11px;font-weight:700;color:var(--blue);">Full ₹280</span>
+            <span style="font-size:11px;color:rgba(8,67,199,0.3);">|</span>
+            <span style="font-size:11px;font-weight:700;color:var(--green-dark);">+Juice ₹70</span>
+          </div>
         </div>
       </div>
       <div class="bowl-selector">
-        ${!isSub?`<div class="qty-row"><div class="qty-label">Bowl Qty <small>₹280 each</small></div><div class="qty-ctrl"><button class="qty-btn" onclick="changeBowlQty(${i},-1)" ${sel.qty<=1?"disabled":""}>−</button><span class="qty-num" id="bqty-${i}">${sel.qty||1}</span><button class="qty-btn" onclick="changeBowlQty(${i},1)">+</button></div></div>`:""}
+        <div style="margin-bottom:12px;">
+          <div class="form-label" style="margin-bottom:8px;">Bowl Size</div>
+          <div style="display:flex;gap:8px;">
+            <div onclick="setBowlSize(${i},'half')" style="flex:1;padding:10px;border-radius:10px;border:2px solid ${sel.size==='half'?'var(--green)':'rgba(8,67,199,0.2)'};background:${sel.size==='half'?'rgba(130,189,133,0.1)':'white'};cursor:pointer;text-align:center;">
+              <div style="font-size:13px;font-weight:800;color:var(--blue);">Half Bowl</div>
+              <div style="font-size:12px;font-weight:700;color:${sel.size==='half'?'var(--green-dark)':'rgba(8,67,199,0.5)'};">₹150</div>
+            </div>
+            <div onclick="setBowlSize(${i},'full')" style="flex:1;padding:10px;border-radius:10px;border:2px solid ${sel.size==='full'?'var(--green)':'rgba(8,67,199,0.2)'};background:${sel.size==='full'?'rgba(130,189,133,0.1)':'white'};cursor:pointer;text-align:center;">
+              <div style="font-size:13px;font-weight:800;color:var(--blue);">Full Bowl</div>
+              <div style="font-size:12px;font-weight:700;color:${sel.size==='full'?'var(--green-dark)':'rgba(8,67,199,0.5)'};">₹280</div>
+            </div>
+          </div>
+        </div>
+        ${!isSub?`<div class="qty-row"><div class="qty-label">Qty <small>₹${bowlPrice} each</small></div><div class="qty-ctrl"><button class="qty-btn" onclick="changeBowlQty(${i},-1)" ${sel.qty<=1?"disabled":""}>−</button><span class="qty-num" id="bqty-${i}">${sel.qty||1}</span><button class="qty-btn" onclick="changeBowlQty(${i},1)">+</button></div></div>`:""}
         <div class="juice-toggle ${sel.juice?"active":""}" id="jtog-${i}" onclick="toggleJuice(${i})">
           <span class="juice-toggle-icon">🧃</span>
           <div class="juice-toggle-info">
-            <div class="juice-toggle-name">${b.juice} <span style="color:var(--green-dark);font-size:10px;font-weight:800;">+₹70</span></div>
-            <div class="juice-toggle-desc" style="font-style:italic;">${b.juiceFlavor}</div>
-            <div class="juice-toggle-desc">${b.juiceIngredients}</div>
-            <div class="juice-toggle-desc" style="font-weight:600;margin-top:2px;">${b.juiceMacros}</div>
+            <div class="juice-toggle-name">Add Digestive Juice <span style="color:var(--green-dark);font-size:10px;font-weight:800;">+₹70</span></div>
+            <div class="juice-toggle-desc">150ml fresh digestive juice paired with your bowl</div>
           </div>
           <div class="juice-check" id="jcheck-${i}">✓</div>
         </div>
@@ -894,17 +912,23 @@ function renderMenu() {
       </div>
     </div>`;
   }).join("");
-  if(isSub){BOWLS.forEach((_,i)=>{if(!state.bowlSelections[i])state.bowlSelections[i]={qty:1,juice:false,juiceQty:1};});}
+  if(isSub){BOWLS.forEach((_,i)=>{if(!state.bowlSelections[i])state.bowlSelections[i]={qty:1,size:"full",juice:false,juiceQty:1};});}
   updateFloat();
 }
 
 function toggleBowl(i) {
   if(state.plan!=="single") return;
-  const sel=state.bowlSelections[i]||{qty:0,juice:false,juiceQty:1};
-  state.bowlSelections[i]=sel.qty===0?{qty:1,juice:false,juiceQty:1}:{qty:0,juice:false,juiceQty:1};
+  const sel=state.bowlSelections[i]||{qty:0,size:"full",juice:false,juiceQty:1};
+  state.bowlSelections[i]=sel.qty===0?{qty:1,size:"full",juice:false,juiceQty:1}:{qty:0,size:"full",juice:false,juiceQty:1};
   renderMenu();
 }
-function changeBowlQty(i,d){const sel=state.bowlSelections[i]||{qty:1,juice:false,juiceQty:1};sel.qty=Math.max(1,sel.qty+d);state.bowlSelections[i]=sel;document.getElementById("bqty-"+i).textContent=sel.qty;updateFloat();}
+function setBowlSize(i,size){
+  if(!state.bowlSelections[i]) state.bowlSelections[i]={qty:1,size:"full",juice:false,juiceQty:1};
+  state.bowlSelections[i].size=size;
+  if(state.plan==="single" && state.bowlSelections[i].qty===0) state.bowlSelections[i].qty=1;
+  renderMenu();
+}
+function changeBowlQty(i,d){const sel=state.bowlSelections[i]||{qty:1,size:"full",juice:false,juiceQty:1};sel.qty=Math.max(1,sel.qty+d);state.bowlSelections[i]=sel;document.getElementById("bqty-"+i).textContent=sel.qty;updateFloat();}
 function toggleJuice(i){if(!state.bowlSelections[i])return;state.bowlSelections[i].juice=!state.bowlSelections[i].juice;renderMenu();}
 function changeJuiceQty(i,d){if(!state.bowlSelections[i])return;state.bowlSelections[i].juiceQty=Math.max(1,(state.bowlSelections[i].juiceQty||1)+d);renderMenu();}
 function changeQty(item,d){if(item==="paneer"){state.paneerQty=Math.max(0,state.paneerQty+d);document.getElementById("paneerQty").textContent=state.paneerQty;}updateFloat();}
@@ -930,7 +954,10 @@ function calcTotal(){
   Object.keys(state.bowlSelections).forEach(k=>{
     const s=state.bowlSelections[k];
     if(s&&(s.qty>0||isSub)){
-      if(!isSub) total+=s.qty*280;
+      if(!isSub){
+        const bowlPrice=s.size==="half"?150:280;
+        total+=s.qty*bowlPrice;
+      }
       if(s.juice) total+=(s.juiceQty||1)*70;
     }
   });
@@ -989,8 +1016,10 @@ function buildSummaryHTML(){
     const s=state.bowlSelections[k];
     if(s&&(s.qty>0||isSub)){
       const b=BOWLS[k];
-      if(!isSub) rows+=`<div class="summary-row"><span>${b.emoji} ${b.name} ×${s.qty}</span><span>₹${s.qty*280}</span></div>`;
-      if(s.juice) rows+=`<div class="summary-row"><span>🧃 ${b.juice} ×${s.juiceQty}</span><span>₹${s.juiceQty*70}</span></div>`;
+      const sizeLabel=s.size==="half"?"Half":"Full";
+      const bowlPrice=s.size==="half"?150:280;
+      if(!isSub) rows+=`<div class="summary-row"><span>${b.emoji} ${b.name} (${sizeLabel}) ×${s.qty}</span><span>₹${s.qty*bowlPrice}</span></div>`;
+      if(s.juice) rows+=`<div class="summary-row"><span>🧃 Digestive Juice ×${s.juiceQty}</span><span>₹${s.juiceQty*70}</span></div>`;
     }
   });
   if(state.paneerQty>0) rows+=`<div class="summary-row"><span>🥛 Paneer Add-on ×${state.paneerQty} (${state.paneerQty*50}g)</span><span>₹${state.paneerQty*20}</span></div>`;
@@ -1015,9 +1044,6 @@ function goTo(n){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-// ✅ PASTE YOUR APPS SCRIPT WEB APP URL HERE after deploying
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbweBU8rBZC4PgqsTstQsVrO181h1NqYdUVZqBwSugoOqEmIgVqVAmkLYfmQd8wkaIaCBQ/exec";
-
 function buildOrderPayload() {
   const isSub = state.plan !== "single";
   const bowlNames = [], juiceNames = [];
@@ -1025,8 +1051,9 @@ function buildOrderPayload() {
     const s = state.bowlSelections[k];
     if (s && (s.qty > 0 || isSub)) {
       const b = BOWLS[k];
-      bowlNames.push(b.day + ": " + b.name + (s.qty > 1 ? " x" + s.qty : ""));
-      if (s.juice) juiceNames.push(b.juice + (s.juiceQty > 1 ? " x" + s.juiceQty : ""));
+      const sizeLabel = s.size === "half" ? " [Half]" : " [Full]";
+      bowlNames.push(b.day + ": " + b.name + sizeLabel + (s.qty > 1 ? " x" + s.qty : ""));
+      if (s.juice) juiceNames.push("Juice for " + b.day + (s.juiceQty > 1 ? " x" + s.juiceQty : ""));
     }
   });
   return {
@@ -1065,8 +1092,9 @@ function buildWhatsAppMessage(payload, orderId) {
   msg += "🥗 *ORDER DETAILS*%0A";
   msg += "Plan: " + (planLabels[payload.plan] || payload.plan) + "%0A";
   msg += "Bowls: " + payload.bowls + "%0A";
+  msg += "*(Half Bowl: Rs 150 | Full Bowl: Rs 280)*%0A";
   if (payload.juices && payload.juices !== "None") {
-    msg += "Juice: " + payload.juices + "%0A";
+    msg += "Juice: " + payload.juices + " (+Rs 70 each)%0A";
   }
   if (payload.proteinGrams > 0) {
     msg += "Paneer Add-on: " + payload.proteinGrams + "g%0A";
@@ -1099,59 +1127,26 @@ function placeOrder(){
 
   const payload = buildOrderPayload();
 
-  // Generate order ID for WhatsApp message
   const now = new Date();
   const orderId = "SAKU-" + now.getFullYear().toString() +
     ("0"+(now.getMonth()+1)).slice(-2) +
     ("0"+now.getDate()).slice(-2) + "-" +
     Math.floor(1000+Math.random()*9000).toString();
 
-  // Send to Google Sheets via fetch no-cors
-  try {
-    const params = new URLSearchParams();
-    params.append("name", payload.name || "");
-    params.append("phone", payload.phone || "");
-    params.append("plan", payload.plan || "");
-    params.append("bowls", payload.bowls || "");
-    params.append("juices", payload.juices || "");
-    params.append("proteinGrams", payload.proteinGrams || 0);
-    params.append("specialRequest", payload.specialRequest || "");
-    params.append("deliveryType", payload.deliveryType || "");
-    params.append("address", payload.address || "");
-    params.append("area", payload.area || "");
-    params.append("pincode", payload.pincode || "");
-    params.append("paymentMethod", payload.paymentMethod || "");
-    params.append("utr", payload.utr || "");
-    params.append("balanceCycle", payload.balanceCycle || "");
-    params.append("total", payload.total || 0);
+  // Build WhatsApp URL and open immediately
+  const waMsg = buildWhatsAppMessage(payload, orderId);
+  const waUrl = "https://wa.me/917721830718?text=" + waMsg;
 
-    fetch(SHEET_ENDPOINT + "?" + params.toString(), {
-      method: "GET",
-      mode: "no-cors"
-    }).catch(function(err){ console.log("Sheet log error:", err); });
-  } catch(err) {
-    console.log("Sheet log error:", err);
-  }
+  // Open WhatsApp automatically
+  window.open(waUrl, "_blank");
 
-  // Show thank you screen then open WhatsApp
+  // Show thank you screen
   setTimeout(()=>{
     document.getElementById("screen5").classList.remove("active");
     document.getElementById("screenTY").classList.add("active");
     document.getElementById("floatBar").style.display="none";
     document.getElementById("stepsNav").style.display="none";
-
-    // Build WhatsApp message to kitchen
-    const waMsg = buildWhatsAppMessage(payload, orderId);
-    const waUrl = "https://wa.me/917721830718?text=" + waMsg;
-
-    // Show WhatsApp button on thank you screen
-    const tyScreen = document.getElementById("screenTY");
-    const waBtn = document.createElement("div");
-    waBtn.style.cssText = "margin-top:20px;";
-    waBtn.innerHTML = '<a href="' + waUrl + '" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#25D366;color:white;padding:14px 28px;border-radius:30px;font-family:Montserrat,sans-serif;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.35);">📲 Send Order on WhatsApp</a><div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.5);margin-top:8px;">Tap to send your order details to our kitchen</div>';
-    tyScreen.querySelector(".thankyou-screen").appendChild(waBtn);
-
-  }, 1500);
+  }, 800);
 }
 
 renderMenu();updateTabs();
