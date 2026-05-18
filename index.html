@@ -510,8 +510,8 @@
   <div class="card plan-card" id="plan-single" onclick="selectPlan('single')">
     <div class="card-check">✓</div>
     <div class="plan-name">Single Day Order</div>
-    <div class="plan-price">₹280 <span>/ bowl</span></div>
-    <div class="plan-desc">Pick any bowl from this week's menu. Add digestive juice (+₹70) and protein add-ons. Perfect for trying us out!</div>
+    <div class="plan-price">₹150 <span>/ half · </span>₹280 <span>/ full</span></div>
+    <div class="plan-desc">Pick any bowl — choose Half (₹150) or Full (₹280). Add digestive juice (+₹70) and protein add-ons. Perfect for trying us out!</div>
   </div>
 
   <div class="card plan-card" id="plan-6days" onclick="selectPlan('6days')">
@@ -757,7 +757,7 @@
       Look out for our <strong style="color:var(--green);">5 AM daily update</strong> — bowl details, macros, and delivery status.<br><br>
       Any questions? Reach us below.
     </div>
-    <div class="contact-chip">📞 7721830718</div>
+    <div class="contact-chip">📞 9525113636</div>
     <div class="thankyou-detail" style="margin-top:8px;">
       <em>With love from the Saku Kitchen 🌱</em><br><br>
       <strong style="color:var(--green);font-size:14px;">Saku Healthy Bowls</strong><br>
@@ -829,10 +829,10 @@ const BOWLS = [
     juiceMacros:"Cal: 118 | Carbs: 16g | Protein: 4g | Fat: 4g"
   },
   {
-    day:"Saturday", name:"Ragi Nacho Chole Bowl", emoji:"🥗",
-    desc:"Earthy kulith & chole in broccoli coconut gravy with crunchy ragi nacho crumble, roasted veggies, chikoo bites & mild chunda dressing.",
-    ingredients:"Kulith, Chole, Ragi, Ambat Chuka, Bell Peppers, Broccoli, Tomato, Chikoo | Dressing: Chunda",
-    macros:["Cal: 435","P: 23g","Carbs: 44g","Fat: 12g"],
+    day:"Saturday", name:"Seoul Smoky Harbhara Bowl", emoji:"🥗",
+    desc:"Korean-inspired smoky bowl with guava-glazed green chana & yellow peas, sesame garlic red rice, charred veggies, kokum ambat chuka, crunchy coconut & chilled coconut yogurt dressing.",
+    ingredients:"Green Harbhara (Guava & Smoky Chilli Glazed), Yellow Peas, Red Rice, Charred Corn, Zucchini, Bell Peppers, Kokum-Lemon Ambat Chuka, Lettuce, Pink Guava, Roasted Coconut Flakes, Crunchy Chavli | Dressing: Coconut Yogurt",
+    macros:["Cal: 550","P: 22g","Carbs: 70g","Fat: 18g"],
     juice:"Bael Chaas Smoked Digestive", juiceDesc:"Rustic bael and chaas digestive with roasted jeera and mint — designed for hearty millet and legume bowls",
     juiceFlavor:"Rustic, smoky & gut-soothing",
     juiceIngredients:"Bael, Buttermilk, Mint, Ginger, Smoked Chilli",
@@ -1135,7 +1135,7 @@ function placeOrder(){
 
   // Build WhatsApp URL and open immediately
   const waMsg = buildWhatsAppMessage(payload, orderId);
-  const waUrl = "https://wa.me/917721830718?text=" + waMsg;
+  const waUrl = "https://wa.me/919525113636?text=" + waMsg;
 
   // Open WhatsApp automatically
   window.open(waUrl, "_blank");
