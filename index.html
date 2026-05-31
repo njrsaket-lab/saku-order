@@ -487,6 +487,7 @@
     <span class="badge">🌿 40% Own Farm</span>
     <span class="badge">🫙 Digestive Juice</span>
     <span class="badge">📦 Daily Pre-Order</span>
+    <span class="badge" style="background:rgba(255,107,107,0.2);border-color:rgba(255,107,107,0.5);color:#FF6B6B;">⏰ Order by 5 PM</span>
   </div>
 </div>
 
@@ -548,7 +549,14 @@
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
   <p class="section-subtitle" id="menuSubtitle">Select your bowl for today.</p>
-  <div class="week-label" id="weekLabel">📅 Week of 25th – 30th May 2026 (Week 45) — Menu updated every Sunday for the next week.</div>
+  <div class="week-label" id="weekLabel">📅 Week of 1st – 6th June 2026 (Week 46) — Menu updated every Sunday for the next week.</div>
+  <div style="background:rgba(255,107,107,0.12);border:1.5px solid rgba(255,107,107,0.4);border-radius:10px;padding:10px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:20px;">⏰</span>
+    <div>
+      <div style="font-size:12px;font-weight:800;color:#FF6B6B;letter-spacing:0.5px;">ORDER CUTOFF: 5:00 PM DAILY</div>
+      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.65);margin-top:2px;">Orders placed before 5 PM will be delivered the same evening (5–7 PM). Orders after 5 PM will be for the next day.</div>
+    </div>
+  </div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div>
   <br>
@@ -779,64 +787,64 @@
 <script>
 const BOWLS = [
   {
-    day:"Monday", name:"Smoky Rasam Chole Dalia Bowl", emoji:"🥗",
-    desc:"Smoky tomato rasam warmth with creamy garlic yogurt and charred vegetables balanced by sweet orange freshness. South Indian × Mediterranean Smoke Fusion.",
-    ingredients:"Chole (Smoked Rasam Reduction), Garlic Dalia, Kale, Spinach, Charred Zucchini, Roasted Carrot, Burnt Corn, Orange Cubes | Dressing: Coconut-Yogurt Rasam with Mint, Cumin & Kokum | Toppings: Roasted Peanut Dust, Coconut Crisps, Curry Leaf Powder",
-    macros:["Cal: 430","P: 27g","Fiber: 16g","Fat: —"],
-    juice:"Kokum Bael Rasam Cooler", juiceDesc:"Cooling Konkan digestive with kokum, bael, roasted jeera water, mint, cucumber and curry leaf infusion — calms digestion after smoky rasam bowls",
-    juiceFlavor:"Cooling, tangy & herbal",
-    juiceIngredients:"Kokum, Bael, Roasted Jeera Water, Mint, Cucumber, Curry Leaf",
-    juiceMacros:"Cal: 58 | Carbs: 13g | Protein: 1g | Fat: 0.5g"
+    day:"Monday", name:"Lebanese Sambar Chickpea Pasta Bowl", emoji:"🥗",
+    desc:"Fusion whole wheat pasta in roasted pepper sambar cream with chickpeas, smoky vegetables, pomegranate freshness & coconut dukka crunch. Lebanese × South Indian Fusion.",
+    ingredients:"Chickpeas (Roasted Red Pepper Sambar Broth), Whole Wheat Pasta (Garlic, Olive Oil, Curry Leaf Dust), Coriander Mint Yogurt, Roasted Eggplant, Zucchini, Cherry Tomatoes, Pomegranate Pearls | Dressing: Roasted Pepper Coconut Sambar Cream | Toppings: Coconut Dukka, Crispy Chana Dal, Herb Oil",
+    macros:["Cal: 430","P: 27g","Carbs: 59g","Fat: 14g"],
+    juice:"Coconut Curry Leaf Buttermilk Cooler", juiceDesc:"Cooling blend of buttermilk, coconut water, fresh coconut, curry leaves, mint and roasted cumin — balances hearty meals and supports digestion",
+    juiceFlavor:"Smooth, cooling & refreshing",
+    juiceIngredients:"Buttermilk, Coconut Water, Fresh Coconut, Curry Leaves, Mint, Roasted Cumin",
+    juiceMacros:"Cal: 75 | Carbs: 8g | Protein: 3.5g | Fat: 3g"
   },
   {
-    day:"Tuesday", name:"Thai Chunda Rajma Rice Bowl", emoji:"🥗",
-    desc:"Sweet-spicy tropical bowl with chilled herbs, tangy chunda balance, creamy peanut-lime finish, and crunchy vegetables. Thai × Gujarati Street Fusion.",
-    ingredients:"Rajma (Sweet Chilli Chunda Glaze), Red Rice (Lemongrass), Lettuce, Basil, Baby Corn, Purple Cabbage, Bell Peppers, Pineapple Cubes | Dressing: Peanut Coconut Lime with Yogurt, Mint & Jaggery | Toppings: Air Fried Black Chana, Mint Saunf, Crushed Almonds",
-    macros:["Cal: 445","P: 28g","Fiber: 15g","Fat: —"],
-    juice:"Thai Jaljeera Pineapple Digestive", juiceDesc:"Tangy tropical digestive with pineapple, jaljeera, mint, coriander and roasted cumin — cuts heaviness from rajma and peanut-rich bowls",
-    juiceFlavor:"Tangy, sweet-spicy & tropical",
-    juiceIngredients:"Pineapple, Jaljeera Water, Mint, Coriander, Roasted Cumin, Saunf, Ajwain",
-    juiceMacros:"Cal: 72 | Carbs: 16g | Protein: 1.2g | Fat: 0.6g"
+    day:"Tuesday", name:"Mediterranean Misal Quinoa Bowl", emoji:"🥗",
+    desc:"Herby quinoa bowl with creamy Mediterranean misal hummus, roasted vegetables, mosambi freshness & za'atar crunch. Maharashtrian × Mediterranean Fusion.",
+    ingredients:"White Vatana (Tomato, Roasted Garlic, Fennel, Misal Masala), Lemon Oregano Quinoa, Mint Coriander Yogurt, Roasted Bell Peppers, Cucumber Ribbons, Cherry Tomato, Mosambi Segments | Dressing: Misal Hummus (White Vatana, Tahini, Yogurt, Roasted Tomato) | Toppings: Za'atar Makhana, Pickled Onion, Roasted Pumpkin Seeds",
+    macros:["Cal: 420","P: 26g","Carbs: 52g","Fat: 15g"],
+    juice:"Pudina Saunf Mosambi Chaas", juiceDesc:"Refreshing buttermilk with sweet lime, mint, fennel and roasted cumin — light, citrusy and naturally digestive with a clean herbal finish",
+    juiceFlavor:"Citrusy, herbal & light",
+    juiceIngredients:"Buttermilk, Mosambi (Sweet Lime) Juice, Mint (Pudina), Saunf (Fennel), Roasted Cumin",
+    juiceMacros:"Cal: 70 | Carbs: 9g | Protein: 3.5g | Fat: 2g"
   },
   {
-    day:"Wednesday", name:"Seoul Kokum Harbara Bowl", emoji:"🥗",
-    desc:"Tangy smoky bowl with kokum chilli glaze, cooling cucumber ribbons, roasted sesame, and creamy coconut contrast. Korean × Konkan Fusion.",
-    ingredients:"Green Harbara & Yellow Peas (Kokum Chilli Glaze), Brown Rice (Sesame Garlic), Ambat Chuka, Lettuce, Burnt Broccoli, Cucumber Ribbons, Charred Onion, Pink Guava | Dressing: Cold Coconut Pepper Yogurt with Garlic, Lemon & Mint | Toppings: Coconut Flakes, Roasted Chavli, Dry Mint Powder",
-    macros:["Cal: 425","P: 26g","Fiber: 17g","Fat: —"],
-    juice:"Coconut Kokum Seoul Cooler", juiceDesc:"Light Korean-Konkan cooler with kokum, thin coconut milk, cucumber juice and mint — balances acidity and soothes gut",
-    juiceFlavor:"Creamy-light, tangy & cooling",
-    juiceIngredients:"Kokum Water, Thin Coconut Milk, Cucumber Juice, Mint, Roasted Sesame, Jeera, Hing",
-    juiceMacros:"Cal: 68 | Carbs: 10g | Protein: 1.5g | Fat: 2.5g"
+    day:"Wednesday", name:"Japanese Palak Soya Soba Bowl", emoji:"🥗",
+    desc:"Japanese-inspired millet noodle bowl with spinach sesame gravy, glazed soya chunks, fresh apple cucumber crunch & roasted rajgira. Japanese × North Indian Fusion.",
+    ingredients:"Soya Chunks (Date Tamari, Ginger, Roasted Onion), Millet Noodles (Sesame Oil, Garlic, Mild Soy), Creamy Palak Sesame Puree, Steamed Bok Choy, Carrot Ribbons, Cucumber, Green Apple Slices | Dressing: Spinach Miso-Style Gravy (Spinach, Sesame, Garlic) | Toppings: Crispy Rajgira, Nori Sesame Sprinkle, Roasted Peanuts",
+    macros:["Cal: 445","P: 31g","Carbs: 49g","Fat: 14g"],
+    juice:"Roasted Rice Green Tea Chaas", juiceDesc:"Japanese-inspired cooler with buttermilk, green tea, roasted rice essence, mint and ginger — light-bodied, aromatic and easy on the stomach",
+    juiceFlavor:"Aromatic, light & unique",
+    juiceIngredients:"Buttermilk, Green Tea, Roasted Rice Essence, Mint, Ginger",
+    juiceMacros:"Cal: 55 | Carbs: 5g | Protein: 3.5g | Fat: 2g"
   },
   {
-    day:"Thursday", name:"Basil Thecha Moong Quinoa Bowl", emoji:"🥗",
-    desc:"Fresh herbal bowl with spicy green freshness, creamy yogurt basil coating, and sweet citrus balance. Italian × Maharashtrian Fusion.",
-    ingredients:"Green Moong & Black Masoor (Basil Thecha Yogurt Coat), Quinoa (Garlic Oil & Oregano), Rocket Leaves, Lal Math, Roasted Cauliflower, Cherry Tomato, Zucchini Noodles, Mosambi Segments | Dressing: Amla Coconut Herb with Yogurt, Mint & Jaggery | Toppings: Roasted Sunflower Seeds, Bael Candy Bits, Peanut Crumble",
-    macros:["Cal: 440","P: 29g","Fiber: 16g","Fat: —"],
-    juice:"Rose Amla Gulkand Refresher", juiceDesc:"Floral herbal digestive with rose, gulkand, amla, saunf water and mint — cools body and refreshes after spicy basil-thecha bowls",
-    juiceFlavor:"Floral, sweet-cooling & citrusy",
-    juiceIngredients:"Rose Syrup, Gulkand, Amla Juice, Saunf Water, Mint, Citrus",
-    juiceMacros:"Cal: 84 | Carbs: 17g | Protein: 1.8g | Fat: 1.2g"
+    day:"Thursday", name:"Chaat Style Kulith Dalia Bowl", emoji:"🥗",
+    desc:"Comforting dalia bowl with creamy kulith ragda, mint yogurt drizzle, guava freshness & crunchy rajgira chaat textures. Delhi Chaat × Maharashtrian Fusion.",
+    ingredients:"Kulith (Tamarind, Roasted Tomato, Mild Spices — Creamy Ragda), Garlic Cumin Dalia, Mint Spinach Yogurt, Beet Cubes, Onion, Cucumber, Pink Guava Cubes | Dressing: Sweet-Spiced Tamarind Yogurt | Toppings: Puffed Rajgira, Roasted Chana, Saunf Peanut Dust",
+    macros:["Cal: 410","P: 25g","Carbs: 55g","Fat: 11g"],
+    juice:"Amla Pudina Jaljeera Chaas", juiceDesc:"Tangy amla and fresh mint blended into chilled buttermilk with traditional jaljeera spices — refreshing with a lively herbal kick",
+    juiceFlavor:"Tangy, herbal & lively",
+    juiceIngredients:"Buttermilk, Amla, Fresh Mint (Pudina), Jaljeera Spice Mix",
+    juiceMacros:"Cal: 60 | Carbs: 6g | Protein: 3.5g | Fat: 2g"
   },
   {
-    day:"Friday", name:"Mexican Podi Kulith Bowl", emoji:"🥗",
-    desc:"Earthy smoky bowl with podi spice warmth, tangy tomato depth, crunchy vegetables, and cooling curd finish. Mexican × South Indian Fusion.",
-    ingredients:"Kulith & Black Beans (Roasted Tomato Podi Sauce), Jowar Crumble Rice (Mustard, Garlic, Curry Leaves), Methi Spinach, Roasted Sweet Potato, Bell Peppers, Cabbage, Green Apple Cubes | Dressing: Smoked Curd Peanut with Coriander, Kokum & Chilli Oil | Toppings: Roasted Makhana, Jawas Chutney Dust, Pickled Onion",
-    macros:["Cal: 455","P: 30g","Fiber: 18g","Fat: —"],
-    juice:"Smoked Jeera Chaas Elixir", juiceDesc:"Earthy digestive chaas with roasted jeera, smoked black salt, ginger, curry leaf and ajwain — supports digestion after smoky kulith and podi bowls",
-    juiceFlavor:"Smoky, savoury & cooling",
-    juiceIngredients:"Buttermilk, Roasted Jeera, Smoked Black Salt, Ginger, Curry Leaf, Ajwain",
-    juiceMacros:"Cal: 52 | Carbs: 5g | Protein: 2.8g | Fat: 2g"
+    day:"Friday", name:"Turkish Coconut Rajma Millet Bowl", emoji:"🥗",
+    desc:"Creamy coconut paprika rajma over aromatic millet with roasted pumpkin, citrus freshness & nutty sesame crunch. Turkish × Konkan Fusion.",
+    ingredients:"Rajma (Smoked Paprika, Coconut Yogurt, Roasted Garlic), Foxtail Millet (Cumin, Cinnamon, Vegetable Stock), Dill Spinach Herb Oil, Roasted Pumpkin, Cucumber, Purple Cabbage, Orange Wedges | Dressing: Amla Tahini Yogurt Sauce | Toppings: Sesame Peanut Dukka, Curry Leaf Crisps, Sunflower Seeds",
+    macros:["Cal: 450","P: 28g","Carbs: 57g","Fat: 15g"],
+    juice:"Orange Dill Cumin Chaas", juiceDesc:"Fresh orange juice, dill leaves, roasted cumin and cultured buttermilk — bright, citrus-forward digestive with subtle herbal notes",
+    juiceFlavor:"Citrusy, fresh & herbal",
+    juiceIngredients:"Buttermilk, Fresh Orange Juice, Dill Leaves, Roasted Cumin",
+    juiceMacros:"Cal: 80 | Carbs: 11g | Protein: 3.5g | Fat: 2g"
   },
   {
-    day:"Saturday", name:"Japanese Sambar Soya Bowl", emoji:"🥗",
-    desc:"Warm umami bowl with sambar miso depth, caramel vegetables, chilled fruit freshness, and crunchy nutty finish. Japanese × South Indian Fusion.",
-    ingredients:"Soya Chunks & Toor Dal (Thick Sambar Glaze), Varai (Sesame Oil, Curry Leaf Powder, Roasted Garlic), Spinach, Basil, Roasted Broccoli, Caramelized Onion, Mushroom, Chilled Chikoo Cubes | Dressing: Cold Coconut Tamarind with Yogurt, Mint & Roasted Cumin | Toppings: Crispy Roasted Soybeans, Coconut Chips, Dry Curry Leaf Crumble",
-    macros:["Cal: 460","P: 31g","Fiber: 17g","Fat: —"],
-    juice:"Coconut Sauf Sambar Digestive", juiceDesc:"Creamy coconut digestive with buttermilk, tamarind water, mint, basil and fennel — balances umami-rich sambar soya bowls",
-    juiceFlavor:"Creamy, tangy & mildly spiced",
-    juiceIngredients:"Thin Buttermilk, Tamarind Water, Mint, Basil, Saunf (Fennel), Roasted Cumin, Black Pepper",
-    juiceMacros:"Cal: 64 | Carbs: 7g | Protein: 2.5g | Fat: 2.8g"
+    day:"Saturday", name:"Korean Methi Soya Rice Bowl", emoji:"🥗",
+    desc:"Korean-inspired brown rice bowl with glazed soya, creamy methi gravy, caramel vegetables & sesame puffed rice crunch. Korean × Maharashtrian Fusion.",
+    ingredients:"Soya Chunks (Apple Puree, Mild Chili Paste, Jaggery Soy Glaze), Brown Rice (Garlic Sesame Oil, Spring Onion), Methi Spinach Slow-Wilt Puree, Caramel Onions, Roasted Carrots, Stir-Fried Cabbage, Pear Slices | Dressing: Creamy Methi Fermented Rice Gravy | Toppings: Sesame Puffed Rice, Roasted Peanuts, Pickled Cucumber",
+    macros:["Cal: 440","P: 30g","Carbs: 53g","Fat: 13g"],
+    juice:"Pear Ginger Rice Kanji Cooler", juiceDesc:"Probiotic-inspired cooler with pear, ginger, fermented rice water and buttermilk — lightly tangy, naturally refreshing and digestion-friendly",
+    juiceFlavor:"Lightly tangy, fresh & probiotic",
+    juiceIngredients:"Buttermilk, Pear, Ginger, Fermented Rice Water",
+    juiceMacros:"Cal: 85 | Carbs: 12g | Protein: 3g | Fat: 2g"
   },
 ];
 
