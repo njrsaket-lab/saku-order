@@ -549,14 +549,27 @@
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
   <p class="section-subtitle" id="menuSubtitle">Select your bowl for today.</p>
-  <div class="week-label" id="weekLabel">📅 Week of 29th June – 4th July 2026 (Week 50) — Menu updated every Sunday for the next week.</div>
-  <div style="background:rgba(255,107,107,0.12);border:1.5px solid rgba(255,107,107,0.4);border-radius:10px;padding:10px 14px;margin-bottom:16px;display:flex;align-items:center;gap:10px;">
-    <span style="font-size:20px;">⏰</span>
-    <div>
-      <div style="font-size:12px;font-weight:800;color:#FF6B6B;letter-spacing:0.5px;">ORDER CUTOFF: 5:00 PM DAILY</div>
-      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.65);margin-top:2px;">Orders placed before 5 PM will be delivered the same evening (5–7 PM). Orders after 5 PM will be for the next day.</div>
+  <!-- DELIVERY INFO BOX -->
+  <div style="background:rgba(255,107,107,0.12);border:1.5px solid rgba(255,107,107,0.4);border-radius:10px;padding:12px 14px;margin-bottom:12px;">
+    <div style="font-size:12px;font-weight:800;color:#FF6B6B;letter-spacing:0.5px;margin-bottom:6px;">⏰ ORDER & DELIVERY TIMINGS</div>
+    <div style="font-size:11px;font-weight:400;color:rgba(255,255,255,0.8);line-height:1.9;">
+      🕔 <strong style="color:var(--green);">Orders accepted till 5:00 PM daily</strong><br>
+      🚚 <strong>Evening delivery:</strong> Delivered after 5:30 PM same day<br>
+      ☀️ <strong>Lunch bowl:</strong> Place your order <strong style="color:#FF6B6B;">a day prior</strong> to receive it at lunchtime<br>
+      🏠 <strong>Self pick-up:</strong> Available from 12:00 PM daily at Kothrud kitchen
     </div>
   </div>
+
+  <!-- WEEK TOGGLE -->
+  <div style="display:flex;background:rgba(255,255,255,0.1);border-radius:12px;padding:4px;gap:4px;margin-bottom:14px;">
+    <div id="weekTab50" onclick="switchWeek(50)" style="flex:1;padding:10px;border-radius:9px;text-align:center;cursor:pointer;background:var(--green);color:white;font-size:11px;font-weight:800;box-shadow:0 2px 10px rgba(130,189,133,0.4);transition:all 0.2s;">
+      📅 This Week<br><span style="font-size:9px;font-weight:400;opacity:0.85;">29 Jun – 4 Jul (Wk 50)</span>
+    </div>
+    <div id="weekTab51" onclick="switchWeek(51)" style="flex:1;padding:10px;border-radius:9px;text-align:center;cursor:pointer;color:rgba(255,255,255,0.55);font-size:11px;font-weight:800;transition:all 0.2s;">
+      🗓️ Next Week<br><span style="font-size:9px;font-weight:400;opacity:0.85;">7–12 Jul (Wk 51) • Pre-Order</span>
+    </div>
+  </div>
+  <div class="week-label" id="weekLabel">📅 Week of 29th June – 4th July 2026 (Week 50) — Ordering open till 5 PM daily.</div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div>
   <br>
@@ -848,6 +861,69 @@ const BOWLS = [
   },
 ];
 
+const BOWLS_NEXT = [
+  {
+    day:"Monday", name:"Smoky Harissa Rajma Quinoa Bowl", emoji:"🥗",
+    desc:"Lemon herb quinoa with smoky harissa rajma, roasted vegetables, garlic hummus, pomegranate and crispy jowar crumble for the perfect balance of flavour and texture.",
+    ingredients:"Rajma (Smoky Harissa), Lemon Herb Quinoa, Roasted Vegetables, Garlic Hummus, Pomegranate, Crispy Jowar Crumble",
+    macros:["Cal: 535","P: 22g","Carbs: 63g","Fat: 20g"],
+    juice:"Bael Ginger Jeera Refresher", juiceDesc:"Refreshing bael with fresh ginger, roasted cumin and lemon — naturally cooling with a warm digestive finish",
+    juiceFlavor:"Cooling, warming & digestive",
+    juiceIngredients:"Bael, Fresh Ginger, Roasted Cumin, Lemon",
+    juiceMacros:"Cal: 48 | Carbs: 11g | Protein: 0.4g | Fat: 0g"
+  },
+  {
+    day:"Tuesday", name:"Miso Kulith Millet Bowl", emoji:"🥗",
+    desc:"Garlic little millet topped with caramelized miso kulith, roasted vegetables, black sesame hummus and crunchy pumpkin seeds for a rich umami finish.",
+    ingredients:"Kulith (Caramelized Miso), Garlic Little Millet, Roasted Vegetables, Black Sesame Hummus, Crunchy Pumpkin Seeds",
+    macros:["Cal: 525","P: 23g","Carbs: 60g","Fat: 19g"],
+    juice:"Orange Saunf Digestive Cooler", juiceDesc:"Fresh orange, roasted fennel and ginger in a light citrus cooler that refreshes and supports digestion",
+    juiceFlavor:"Light, citrusy & refreshing",
+    juiceIngredients:"Fresh Orange, Roasted Saunf (Fennel), Ginger",
+    juiceMacros:"Cal: 60 | Carbs: 14g | Protein: 0.8g | Fat: 0g"
+  },
+  {
+    day:"Wednesday", name:"Thai Peanut Chole Brown Rice Bowl", emoji:"🥗",
+    desc:"Lemongrass brown rice with peanut-spiced chickpeas, fresh vegetables, chilli peanut hummus, pineapple and crispy rice for sweet, creamy and crunchy bites.",
+    ingredients:"Chickpeas (Peanut-Spiced), Lemongrass Brown Rice, Fresh Vegetables, Chilli Peanut Hummus, Pineapple, Crispy Rice",
+    macros:["Cal: 548","P: 21g","Carbs: 66g","Fat: 20g"],
+    juice:"Pineapple Jal Jeera Cooler", juiceDesc:"Sweet pineapple balanced with jal jeera, mint and roasted cumin — tangy, refreshing digestive cooler",
+    juiceFlavor:"Tangy, sweet & refreshing",
+    juiceIngredients:"Pineapple, Jal Jeera, Mint, Roasted Cumin",
+    juiceMacros:"Cal: 64 | Carbs: 15g | Protein: 0.6g | Fat: 0g"
+  },
+  {
+    day:"Thursday", name:"Mediterranean Moong Jowar Bowl", emoji:"🥗",
+    desc:"Herbed jowar with garlic green moong, roasted vegetables, classic hummus, lemon tahini dressing and za'atar crunch for a fresh Mediterranean-inspired bowl.",
+    ingredients:"Green Moong (Garlic), Herbed Jowar, Roasted Vegetables, Classic Hummus, Za'atar Crunch | Dressing: Lemon Tahini",
+    macros:["Cal: 518","P: 22g","Carbs: 59g","Fat: 18g"],
+    juice:"Amla Tulsi Ginger Cooler", juiceDesc:"Fresh amla, tulsi and ginger blended with lemon — vibrant herbal cooler with a crisp, refreshing finish",
+    juiceFlavor:"Vibrant, herbal & crisp",
+    juiceIngredients:"Fresh Amla, Tulsi, Ginger, Lemon",
+    juiceMacros:"Cal: 40 | Carbs: 9g | Protein: 0.5g | Fat: 0g"
+  },
+  {
+    day:"Friday", name:"Gochugaru Edamame Red Rice Bowl", emoji:"🥗",
+    desc:"Sesame red rice with protein-rich edamame, roasted vegetables, chilli hummus and roasted garlic gochugaru dressing finished with crispy rice and sesame.",
+    ingredients:"Edamame (Protein-Rich), Sesame Red Rice, Roasted Vegetables, Chilli Hummus, Crispy Rice, Sesame | Dressing: Roasted Garlic Gochugaru",
+    macros:["Cal: 540","P: 24g","Carbs: 61g","Fat: 19g"],
+    juice:"Pear Saunf Bael Cooler", juiceDesc:"Juicy pear, bael and roasted fennel with fresh ginger — smooth, naturally sweet digestive refresher",
+    juiceFlavor:"Smooth, sweet & refreshing",
+    juiceIngredients:"Pear, Bael, Roasted Saunf (Fennel), Fresh Ginger",
+    juiceMacros:"Cal: 58 | Carbs: 14g | Protein: 0.5g | Fat: 0g"
+  },
+  {
+    day:"Saturday", name:"Peri Peri Paneer & Black Bean Bowl", emoji:"🥗",
+    desc:"Turmeric quinoa loaded with peri peri paneer, black beans, roasted vegetables, red pepper hummus, mango and crunchy nachni flakes for a smoky finish.",
+    ingredients:"Peri Peri Paneer, Black Beans, Turmeric Quinoa, Roasted Vegetables, Red Pepper Hummus, Mango, Crunchy Nachni Flakes",
+    macros:["Cal: 565","P: 24g","Carbs: 58g","Fat: 23g"],
+    juice:"Mango Gulkand Digestive Cooler", juiceDesc:"Ripe mango with fragrant gulkand, ginger and roasted cumin — refreshing tropical cooler with floral notes",
+    juiceFlavor:"Tropical, floral & refreshing",
+    juiceIngredients:"Ripe Mango, Gulkand, Ginger, Roasted Cumin",
+    juiceMacros:"Cal: 78 | Carbs: 19g | Protein: 0.7g | Fat: 0.2g"
+  },
+];
+
 let state = { plan:null, bowlSelections:{}, paneerQty:0, specialReq:"", deliveryType:"delivery", name:"", phone:"", addr:"", landmark:"", area:"", pin:"", payMethod:null, utr:"" };
 let currentScreen = 0;
 
@@ -866,12 +942,46 @@ function selectPlan(p) {
   renderMenu();
 }
 
+let activeWeek = 50;
+
+function switchWeek(week) {
+  activeWeek = week;
+  state.bowlSelections = {};
+
+  // Update tab styles
+  const tab50 = document.getElementById("weekTab50");
+  const tab51 = document.getElementById("weekTab51");
+  if (week === 50) {
+    tab50.style.background = "var(--green)";
+    tab50.style.color = "white";
+    tab50.style.boxShadow = "0 2px 10px rgba(130,189,133,0.4)";
+    tab51.style.background = "transparent";
+    tab51.style.color = "rgba(255,255,255,0.55)";
+    tab51.style.boxShadow = "none";
+    document.getElementById("weekLabel").textContent = "📅 Week of 29th June – 4th July 2026 (Week 50) — Ordering open till 5 PM daily.";
+  } else {
+    tab51.style.background = "var(--green)";
+    tab51.style.color = "white";
+    tab51.style.boxShadow = "0 2px 10px rgba(130,189,133,0.4)";
+    tab50.style.background = "transparent";
+    tab50.style.color = "rgba(255,255,255,0.55)";
+    tab50.style.boxShadow = "none";
+    document.getElementById("weekLabel").textContent = "📅 Week of 7th – 12th July 2026 (Week 51) — Pre-Order Next Week! Orders open till 5 PM daily.";
+  }
+  renderMenu();
+}
+
+function getActiveBowls() {
+  return activeWeek === 51 ? BOWLS_NEXT : BOWLS;
+}
+
 function renderMenu() {
   const c=document.getElementById("bowlsContainer");
   const isSub=state.plan!=="single";
+  const ACTIVE_BOWLS=getActiveBowls();
   document.getElementById("menuTitle").textContent=isSub?"This Week's Menu":"Choose Your Bowl";
   document.getElementById("menuSubtitle").textContent=isSub?"Your subscription covers all 6 bowls. Customize size & juice next.":"Select bowl(s) from this week's menu.";
-  c.innerHTML=BOWLS.map((b,i)=>{
+  c.innerHTML=ACTIVE_BOWLS.map((b,i)=>{
     const sel=state.bowlSelections[i]||{qty:0,size:"full",juice:false,juiceQty:1};
     const isSelected=isSub||sel.qty>0;
     const bowlPrice=sel.size==="half"?150:280;
@@ -920,7 +1030,7 @@ function renderMenu() {
       </div>
     </div>`;
   }).join("");
-  if(isSub){BOWLS.forEach((_,i)=>{if(!state.bowlSelections[i])state.bowlSelections[i]={qty:1,size:"full",juice:false,juiceQty:1};});}
+  if(isSub){ACTIVE_BOWLS.forEach((_,i)=>{if(!state.bowlSelections[i])state.bowlSelections[i]={qty:1,size:"full",juice:false,juiceQty:1};});}
   updateFloat();
 }
 
@@ -1020,10 +1130,11 @@ function buildSummaryHTML(){
   let rows=`<div class="summary-title">🌿 Your Order Summary</div>
     <div class="summary-row"><span>Plan</span><span><strong>${planLabels[state.plan]}</strong></span></div>`;
   if(isSub) rows+=`<div class="summary-row"><span>Subscription Price</span><span>${planPrices[state.plan]}</span></div>`;
+  const SB=getActiveBowls();
   Object.keys(state.bowlSelections).forEach(k=>{
     const s=state.bowlSelections[k];
     if(s&&(s.qty>0||isSub)){
-      const b=BOWLS[k];
+      const b=SB[k];
       const sizeLabel=s.size==="half"?"Half":"Full";
       const bowlPrice=s.size==="half"?150:280;
       if(!isSub) rows+=`<div class="summary-row"><span>${b.emoji} ${b.name} (${sizeLabel}) ×${s.qty}</span><span>₹${s.qty*bowlPrice}</span></div>`;
@@ -1055,10 +1166,11 @@ function goTo(n){
 function buildOrderPayload() {
   const isSub = state.plan !== "single";
   const bowlNames = [], juiceNames = [];
+  const AB = getActiveBowls();
   Object.keys(state.bowlSelections).forEach(k => {
     const s = state.bowlSelections[k];
     if (s && (s.qty > 0 || isSub)) {
-      const b = BOWLS[k];
+      const b = AB[k];
       const sizeLabel = s.size === "half" ? " [Half]" : " [Full]";
       bowlNames.push(b.day + ": " + b.name + sizeLabel + (s.qty > 1 ? " x" + s.qty : ""));
       if (s.juice) juiceNames.push("Juice for " + b.day + (s.juiceQty > 1 ? " x" + s.juiceQty : ""));
@@ -1090,6 +1202,7 @@ function buildWhatsAppMessage(payload, orderId) {
 
   let msg = "";
   msg += "🌿 *NEW ORDER - SAKU HEALTHY BOWLS* 🌿%0A";
+  msg += (activeWeek === 51 ? "🗓️ *PRE-ORDER — Week 51 (7–12 July)* 🗓️%0A" : "📅 *Week 50 (29 Jun – 4 Jul)*%0A");
   msg += "━━━━━━━━━━━━━━━━━━━━%0A";
   msg += "*Order ID:* " + orderId + "%0A";
   msg += "*Date:* " + new Date().toLocaleDateString("en-IN") + "%0A";
