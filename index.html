@@ -221,7 +221,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
     </div>
     <div class="week-tab" id="weekTab51" onclick="switchWeek(51)">
       🗓️ Next Week — Pre-Order
-      <small>7 – 12 Jul (Wk 51)</small>
+      <small>6 – 11 Jul (Wk 51)</small>
     </div>
   </div>
 
@@ -445,7 +445,7 @@ const BOWLS = [
 ];
 
 // ============================================================
-// WEEK 51 BOWLS — Next Week Pre-Order (7 – 12 Jul 2026)
+// WEEK 51 BOWLS — Next Week Pre-Order (6 – 11 Jul 2026)
 // ============================================================
 const BOWLS_NEXT = [
   {day:"Monday",name:"Smoky Harissa Rajma Quinoa Bowl",emoji:"🥗",desc:"Lemon herb quinoa with smoky harissa rajma, roasted vegetables, garlic hummus, pomegranate and crispy jowar crumble for the perfect balance of flavour and texture.",ingredients:"Rajma (Smoky Harissa), Lemon Herb Quinoa, Roasted Vegetables, Garlic Hummus, Pomegranate, Crispy Jowar Crumble",macros:["Cal: 535","P: 22g","Carbs: 63g","Fat: 20g"],juice:"Bael Ginger Jeera Refresher",juiceDesc:"Refreshing bael with fresh ginger, roasted cumin and lemon — naturally cooling with a warm digestive finish",juiceFlavor:"Cooling, warming & digestive",juiceIngredients:"Bael, Fresh Ginger, Roasted Cumin, Lemon",juiceMacros:"Cal: 48 | Carbs: 11g | Protein: 0.4g | Fat: 0g"},
@@ -475,7 +475,7 @@ function switchWeek(week){
     document.getElementById("weekLabel").textContent="📅 Week of 29th June – 4th July 2026 (Week 50) — Ordering open till 5 PM daily.";
   } else {
     t51.classList.add("active");t50.classList.remove("active");
-    document.getElementById("weekLabel").textContent="🗓️ Week of 7th – 12th July 2026 (Week 51) — PRE-ORDER Next Week! Orders open till 5 PM daily.";
+    document.getElementById("weekLabel").textContent="🗓️ Week of 6th – 11th July 2026 (Week 51) — PRE-ORDER Next Week! Orders open till 5 PM daily.";
   }
   renderMenu();
 }
@@ -678,7 +678,7 @@ function buildSummaryHTML(){
   const planLabels={single:"Single Day Order","6days":"6-Day Subscription","12days":"12-Day Subscription","24days":"24-Day Subscription"};
   const planPrices={single:"—","6days":"₹1,550","12days":"₹2,850","24days":"₹5,850"};
   const payLabels={upi:"UPI (Prepaid)",cod:"Cash on Delivery",cop:"Cash on Pick-up",balance:"Saku Balance"};
-  const weekLabel=activeWeek===51?"🗓️ Week 51 — PRE-ORDER (7–12 Jul)":"📅 Week 50 (29 Jun – 4 Jul)";
+  const weekLabel=activeWeek===51?"🗓️ Week 51 — PRE-ORDER (6–11 Jul)":"📅 Week 50 (29 Jun – 4 Jul)";
   let rows=`<div class="summary-title">🌿 Your Order Summary</div>
     <div class="summary-row"><span>Week</span><span><strong>${weekLabel}</strong></span></div>
     <div class="summary-row"><span>Plan</span><span><strong>${planLabels[state.plan]}</strong></span></div>`;
@@ -718,7 +718,7 @@ function buildOrderPayload(){
     }
   });
   return{
-    weekLabel:activeWeek===51?"Week 51 PRE-ORDER (7–12 Jul)":"Week 50 (29 Jun – 4 Jul)",
+    weekLabel:activeWeek===51?"Week 51 PRE-ORDER (6–11 Jul)":"Week 50 (29 Jun – 4 Jul)",
     name:state.name,phone:state.phone,
     plan:{single:"Single Day","6days":"6-Day Sub","12days":"12-Day Sub","24days":"24-Day Sub"}[state.plan],
     bowls:bowlNames.join(" | "),juices:juiceNames.join(" | ")||"None",
