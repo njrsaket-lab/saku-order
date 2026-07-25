@@ -235,8 +235,8 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title" id="menuTitle">This Week's Menu</h2>
-  <p class="section-subtitle">Week of 20th – 25th July 2026 (Week 53)</p>
-  <div class="week-label">📅 20–25 July 2026 · Ordering open till 5 PM daily · Delivered after 5:30 PM</div>
+  <p class="section-subtitle">Week of 27th July – 1st August 2026 (Week 54)</p>
+  <div class="week-label">📅 27 Jul – 1 Aug 2026 · Ordering open till 5 PM daily · Delivered after 5:30 PM</div>
   <div id="bowlsContainer"></div>
   <div id="menu-err" class="error-text">Please select at least one bowl to continue.</div><br>
   <button class="btn-primary" onclick="goTo(2)">Continue →</button>
@@ -484,48 +484,48 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Tomato Tamarind Rajma Bhurji Khichdi Bowl",emoji:"🥗",
-   desc:"Comforting garlic vegetable moong khichdi with caramelized rajma bhurji, ajwain cauliflower, sweet pumpkin, pepper beans, greens and pomegranate. Finished with amla-jaggery hummus and crispy khatta-meetha bhakri nachos.",
-   flavor:"Tangy • Sweet • Spiced • Creamy • Crunchy",
-   macros:["Cal: 650","P: 24g","Carbs: 94g","Fat: 20g","Fibre: 18g"],
-   juice:"Bael Ginger Ajwain Refresher",juiceDesc:"Earthy bael with warming ginger, ajwain, roasted cumin, lemon and black salt — mildly sweet and gently spiced",
-   juiceFlavor:"Earthy • Warming • Mildly Sweet",juiceIngredients:"Bael, Ginger, Ajwain, Roasted Cumin, Lemon, Black Salt",
-   juiceMacros:"Cal: 95 | Carbs: 23g | Protein: 1g | Fat: 0g"},
-  {day:"Tuesday",name:"Kadhi Corn Soya Masala Millet Bowl",emoji:"🌽",
-   desc:"Wholesome curry leaf millet with protein-rich soya kheema, charred sweet corn, ginger cabbage, masala okra, fresh greens and juicy pineapple. Served with sweet corn mustard hummus and creamy ginger corn kadhi dressing.",
-   flavor:"Sweet • Savoury • Creamy • Juicy • Crunchy",
-   macros:["Cal: 620","P: 29g","Carbs: 86g","Fat: 18g","Fibre: 16g"],
-   juice:"Amla Saunf Ginger Cooler",juiceDesc:"Tangy amla, aromatic fennel, warming ginger, lemon and a touch of jaggery — light, herbal and perfectly balanced",
-   juiceFlavor:"Tangy • Herbal • Lightly Sweet",juiceIngredients:"Amla, Saunf (Fennel), Ginger, Lemon, Jaggery",
-   juiceMacros:"Cal: 70 | Carbs: 17g | Protein: 1g | Fat: 0g"},
-  {day:"Wednesday",name:"Broccoli Almond Chole Dalia Bowl",emoji:"🥦",
-   desc:"Hearty pickled lemon dalia with chutney chole, tandoori bottle gourd, caramelized carrots, garlic baby corn, greens and fresh guava. Finished with caramelized onion hummus and crispy jowar pops.",
-   flavor:"Tangy • Creamy • Nutty • Juicy • Crunchy",
-   macros:["Cal: 670","P: 25g","Carbs: 91g","Fat: 23g","Fibre: 19g"],
-   juice:"Guava Jeera Jaljeera Refresher",juiceDesc:"Fruity guava with roasted cumin, zesty jaljeera, ginger and fresh lemon — tangy, lightly spiced with bold desi flavours",
-   juiceFlavor:"Fruity • Tangy • Spiced",juiceIngredients:"Guava, Roasted Cumin, Jaljeera, Ginger, Lemon",
-   juiceMacros:"Cal: 110 | Carbs: 26g | Protein: 2g | Fat: 1g"},
-  {day:"Thursday",name:"Sweet Lemon Paneer Poha Bowl",emoji:"🍋",
-   desc:"Classic lemon poha with sweet-peppery glazed paneer, mustard broccoli, caramelized beetroot, roasted capsicum, fresh greens and juicy orange. Finished with beetroot coconut hummus and sweet lemon chutney dressing.",
-   flavor:"Sweet • Tangy • Creamy • Juicy • Crunchy",
-   macros:["Cal: 640","P: 26g","Carbs: 82g","Fat: 24g","Fibre: 13g"],
-   juice:"Cucumber Mint Saunf Refresher",juiceDesc:"Fresh cucumber, mint, aromatic fennel, ginger and lemon — crisp, herbal and refreshing with a clean easy finish",
-   juiceFlavor:"Fresh • Herbal • Light • Cooling",juiceIngredients:"Cucumber, Mint, Saunf (Fennel), Ginger, Lemon",
-   juiceMacros:"Cal: 45 | Carbs: 10g | Protein: 1g | Fat: 0g"},
-  {day:"Friday",name:"Green Curry Moong Masala Rice Bowl",emoji:"🌿",
-   desc:"Aromatic coconut pepper red rice with green chutney moong, curry-roasted ridge gourd, pepper beans, caramelized baby corn, greens and fresh pear. Finished with green pea curry leaf hummus and masala popcorn.",
-   flavor:"Aromatic • Creamy • Fresh • Sweet • Crunchy",
-   macros:["Cal: 660","P: 23g","Carbs: 92g","Fat: 22g","Fibre: 17g"],
-   juice:"Kokum Ajwain Ginger Digestive",juiceDesc:"Bold tangy kokum with warming ginger, ajwain, roasted cumin, jaggery and black salt — sweet, sour and spiced",
-   juiceFlavor:"Tangy • Warming • Spiced",juiceIngredients:"Kokum, Ajwain, Ginger, Roasted Cumin, Jaggery, Black Salt",
-   juiceMacros:"Cal: 75 | Carbs: 19g | Protein: 0g | Fat: 0g"},
-  {day:"Saturday",name:"Pickle Masala Black Bean Paneer Pulao Bowl",emoji:"🫙",
-   desc:"Caramelized onion masala pulao with achari paneer and black bean bhurji, sweet-sour sweet potato, masala cauliflower, garlic cabbage, greens and pomegranate. Finished with tomato tamarind peanut hummus and sweet achari dressing.",
-   flavor:"Bold • Tangy • Sweet • Creamy • Crunchy",
-   macros:["Cal: 720","P: 30g","Carbs: 91g","Fat: 27g","Fibre: 18g"],
-   juice:"Rose Bael Jeera Digestive",juiceDesc:"Aromatic earthy bael, delicate rose, warming ginger, roasted cumin and fresh lemon — lightly sweet, floral and refreshing",
-   juiceFlavor:"Floral • Earthy • Lightly Sweet",juiceIngredients:"Bael, Rose, Ginger, Roasted Cumin, Lemon",
-   juiceMacros:"Cal: 100 | Carbs: 24g | Protein: 1g | Fat: 0g"},
+  {day:"Monday",name:"Fire-Roasted Tomato Paneer Bowl",emoji:"🔥",
+   desc:"Smoky roasted tomato glazed paneer over herb vegetable rice with charred broccoli, roasted sweet potato, garlic beans, roasted onion hummus, sweet mattha raita, caramelized apple and bhakri chips.",
+   flavor:"Comfort • Smoky • Tangy",
+   macros:["Cal: 710","P: 31g","Carbs: 72g","Fat: 30g","Fibre: 13g"],
+   juice:"Orange Ginger Jeera Refresher",juiceDesc:"Fresh orange juice with ginger, roasted cumin, lemon and a touch of jaggery — bright, refreshing and digestive",
+   juiceFlavor:"Bright • Citrusy • Refreshing",juiceIngredients:"Orange, Ginger, Roasted Cumin (Jeera), Lemon, Jaggery",
+   juiceMacros:"Cal: 78 | Carbs: 19g | Protein: 0.8g | Fat: 0.2g"},
+  {day:"Tuesday",name:"Barbecue Soya Millet Bowl",emoji:"🍯",
+   desc:"Barbecue glazed soya chunks over garlic millet with roasted pumpkin, capsicum and baby corn, roasted pumpkin hummus, smoked yogurt, dragon fruit and crunchy peri peri roasted chana.",
+   flavor:"Sweet • Smoky • Sticky",
+   macros:["Cal: 690","P: 34g","Carbs: 70g","Fat: 24g","Fibre: 16g"],
+   juice:"Orange Fennel Ginger Cooler",juiceDesc:"Sweet orange, cooling fennel and fresh ginger — light, naturally refreshing with gentle digestive benefits",
+   juiceFlavor:"Sweet • Cooling • Light",juiceIngredients:"Orange, Saunf (Fennel), Fresh Ginger, Lemon",
+   juiceMacros:"Cal: 80 | Carbs: 19g | Protein: 0.9g | Fat: 0.3g"},
+  {day:"Wednesday",name:"Creamy Broccoli Kulith Pasta Bowl",emoji:"🥦",
+   desc:"Whole wheat pasta with garlic and herbs, paired with buttery kulith, roasted broccoli, mushrooms, carrots, garlic almond hummus, creamy broccoli almond sauce, fresh pear and spinach basil greens.",
+   flavor:"Creamy • Earthy • Rich",
+   macros:["Cal: 730","P: 29g","Carbs: 68g","Fat: 34g","Fibre: 15g"],
+   juice:"Pineapple Mint Pepper Cooler",juiceDesc:"Juicy pineapple with fresh mint, lemon and a hint of black pepper — tropical refresher with a subtle spicy finish",
+   juiceFlavor:"Tropical • Fresh • Subtly Spiced",juiceIngredients:"Pineapple, Fresh Mint, Lemon, Black Pepper",
+   juiceMacros:"Cal: 72 | Carbs: 18g | Protein: 0.6g | Fat: 0.2g"},
+  {day:"Thursday",name:"Tangy Sattu Chana Rice Bowl",emoji:"🍊",
+   desc:"Jeera rice with spiced kala chana, roasted sattu crumble, roasted cauliflower, cucumber, cherry tomatoes, roasted peanut hummus, cucumber raita, tomato tamarind drizzle and crunchy bhakri nachos.",
+   flavor:"Fresh • Tangy • Nutty",
+   macros:["Cal: 700","P: 27g","Carbs: 82g","Fat: 22g","Fibre: 17g"],
+   juice:"Watermelon Basil Lemon Refresher",juiceDesc:"Fresh watermelon with basil, roasted cumin and lemon — light, hydrating with clean herbal notes",
+   juiceFlavor:"Light • Hydrating • Herbal",juiceIngredients:"Watermelon, Basil, Roasted Cumin, Lemon",
+   juiceMacros:"Cal: 58 | Carbs: 14g | Protein: 0.7g | Fat: 0.2g"},
+  {day:"Friday",name:"Sweet Corn Moong Khichda Bowl",emoji:"🌽",
+   desc:"Wholesome vegetable khichda with rice, millet and moong, served with whole green moong, paneer crumble, sweet corn hummus, coriander raita, roasted pepper dressing, fresh apple and masala popcorn.",
+   flavor:"Soft • Creamy • Comforting",
+   macros:["Cal: 720","P: 32g","Carbs: 79g","Fat: 25g","Fibre: 14g"],
+   juice:"Pomegranate Beet Ginger Refresher",juiceDesc:"Vibrant pomegranate, beetroot and fresh ginger balanced with lemon — naturally sweet and antioxidant-rich",
+   juiceFlavor:"Vibrant • Sweet • Antioxidant-Rich",juiceIngredients:"Pomegranate, Beetroot, Fresh Ginger, Lemon",
+   juiceMacros:"Cal: 88 | Carbs: 21g | Protein: 1.2g | Fat: 0.3g"},
+  {day:"Saturday",name:"Pickled Black Bean Paneer Pulao Bowl",emoji:"🥣",
+   desc:"Caramelized onion pulao with pickled garlic glazed paneer and black beans, roasted beetroot, capsicum, cabbage, tomato peanut hummus, mattha curry drizzle, pomegranate and sweet pickle dressing.",
+   flavor:"Sweet • Sour • Bold",
+   macros:["Cal: 760","P: 33g","Carbs: 74g","Fat: 31g","Fibre: 15g"],
+   juice:"Bael Mint Digestive Cooler",juiceDesc:"Traditional bael with mint, roasted cumin and lemon — smooth, cooling and naturally satisfying digestive drink",
+   juiceFlavor:"Cooling • Earthy • Smooth",juiceIngredients:"Bael, Mint, Roasted Cumin, Lemon",
+   juiceMacros:"Cal: 95 | Carbs: 23g | Protein: 1.1g | Fat: 0.3g"},
 ];
 
 let state={plan:null,bowlSelections:{},paneerQty:0,specialReq:"",deliveryType:"delivery",deliveryTime:null,lunchDate:"",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
@@ -726,7 +726,7 @@ function buildSummaryHTML(){
   const payLabels={upi:"UPI (Prepaid)",cod:"Cash on Delivery",cop:"Cash on Pick-up",balance:"Saku Balance"};
   const timeLabel=state.deliveryTime==="lunch"?`☀️ Lunch Delivery on ${state.lunchDate}`:"🌆 Evening Delivery (after 5:30 PM)";
   let rows=`<div class="summary-title">🌿 Your Order Summary</div>
-    <div class="summary-row"><span>📅 Week</span><span>20–25 Jul 2026 (Wk 52)</span></div>
+    <div class="summary-row"><span>📅 Week</span><span>27 Jul – 1 Aug 2026 (Wk 52)</span></div>
     <div class="summary-row"><span>Plan</span><span><strong>${planLabels[state.plan]}</strong></span></div>
     <div class="summary-row"><span>Delivery Time</span><span><strong>${timeLabel}</strong></span></div>`;
   if(isSub)rows+=`<div class="summary-row"><span>Subscription</span><span>${planPrices[state.plan]}</span></div>`;
@@ -757,7 +757,7 @@ function buildWhatsAppMessage(payload,orderId){
   let msg="🌿 *NEW ORDER — SAKU HEALTHY BOWLS* 🌿%0A";
   msg+="━━━━━━━━━━━━━━━━━━━━%0A";
   msg+="*Order ID:* "+orderId+"%0A";
-  msg+="*Week 53 — 20 to 25 Jul 2026*%0A";
+  msg+="*Week 54 — 27 Jul to 1 Aug 2026*%0A";
   msg+="*Date:* "+new Date().toLocaleDateString("en-IN")+"%0A";
   msg+="*Time:* "+new Date().toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
   msg+="⏰ *DELIVERY TIME*%0A";
