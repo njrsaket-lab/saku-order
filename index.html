@@ -833,6 +833,95 @@ function buildWhatsAppMessage(payload,orderId){
   },800);
 }
 
+function placeOrder(){
+  const btn=document.getElementById("placeBtn");
+  btn.textContent="⏳ Sending Order...";btn.disabled=true;
+  const isSub=state.plan!=="single";
+  const bowlNames=[],juiceNames=[];
+  Object.keys(state.bowlSelections).forEach(k=>{
+    const s=state.bowlSelections[k];
+    if(s&&(s.qty>0||isSub)){
+      const b=BOWLS[k];
+      const sz=s.size||"full";
+      const p=sz==="half"?179:280;
+      bowlNames.push(b.day+": "+b.name+" ("+sz+" bowl"+(isSub?"":(" x"+s.qty+" @ ₹"+p))+")" );
+      if(s.juice)juiceNames.push(b.juice+(s.juiceQty>1?" x"+s.juiceQty:""));
+    }
+  });
+  const now=new Date();
+  const orderId="SAKU-"+now.getFullYear().toString()+("0"+(now.getMonth()+1)).slice(-2)+("0"+now.getDate()).slice(-2)+"-"+Math.floor(1000+Math.random()*9000).toString();
+  const planLabel={single:"Single Day Order","6days":"6-Day Subscription","12days":"12-Day Subscription","24days":"24-Day Subscription"}[state.plan]||state.plan;
+  const payLabels={upi:"UPI (Paid)",cod:"Cash on Delivery",cop:"Cash on Pickup",balance:"Saku Balance"};
+  const sr=document.getElementById("specialReq").value.trim();
+  let msg="";
+  msg+="🌿 *SAKU HEALTHY BOWLS — NEW ORDER* 🌿%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A%0A";
+  msg+="🆔 *Order ID:* "+orderId+"%0A";
+  msg+="📅 *Week 55 — 3 to 8 Aug 2026*%0A";
+  msg+="🗓️ *Date:* "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
+  msg+="⏱️ *Time:* "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="⏰ *DELIVERY TIME*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  if(state.deliveryTime==="lunch"){
+    msg+="☀️ *LUNCH ORDER*%0A";
+    msg+="📆 Lunch Date: *"+state.lunchDate+"*%0A";
+    msg+="🕛 Time: *12:00 PM – 2:00 PM*%0A";
+    msg+="⚠️ _Confirm lunch bowl with customer before prepping_%0A%0A";
+  } else {
+    msg+="🌆 *EVENING ORDER*%0A";
+    msg+="🕔 Delivery: *After 5:30 PM today*%0A%0A";
+  }
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="👤 *CUSTOMER DETAILS*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="👨 Name: *"+state.name+"*%0A";
+  msg+="📱 WhatsApp: *+91 "+state.phone+"*%0A%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="🥗 *ORDER DETAILS*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="📋 Plan: *"+planLabel+"*%0A%0A";
+  bowlNames.forEach((b,i)=>{msg+="🥗 Bowl "+(i+1)+": *"+b+"*%0A";});
+  if(juiceNames.length){msg+="%0A";juiceNames.forEach((j,i)=>{msg+="🧃 Juice "+(i+1)+": *"+j+"* (+₹70)%0A";});}
+  if(state.paneerQty>0)msg+="%0A🥛 Paneer Add-on: *"+(state.paneerQty*50)+"g* ("+state.paneerQty+" unit"+(state.paneerQty>1?"s":"")+") — ₹"+state.paneerQty*20+"%0A";
+  if(sr)msg+="%0A📝 Kitchen Note: _"+sr+"_%0A";
+  msg+="%0A━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="🚚 *DELIVERY DETAILS*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  if(state.deliveryType==="delivery"){
+    msg+="🛵 Type: *Home Delivery*%0A";
+    msg+="🏠 Address: *"+state.addr+"*%0A";
+    if(state.landmark)msg+="📍 Landmark: "+state.landmark+"%0A";
+    msg+="📌 Area: *"+state.area+"*%0A";
+    msg+="🔢 Pincode: *"+state.pin+"*%0A";
+    msg+="🚗 Delivery: Free within 3 km | Charge applicable beyond 3 km%0A";
+  } else {
+    msg+="🏠 Type: *Self Pick-up*%0A";
+    msg+="📍 Plot No. 12, Kothrud Industrial Estate, Atenx Studio, Kothrud, Pune – 411038%0A";
+    msg+="🕛 Ready from: *12:00 PM*%0A";
+  }
+  msg+="%0A━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="💳 *PAYMENT DETAILS*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="Method: *"+(payLabels[state.payMethod]||state.payMethod)+"*%0A";
+  if(state.payMethod==="upi"){msg+="✅ Status: *Paid*%0A";msg+="🔢 UTR / Txn ID: *"+state.utr+"*%0A";}
+  if(state.payMethod==="cod")msg+="💵 Collect cash on delivery%0A";
+  if(state.payMethod==="cop")msg+="💵 Collect cash at pick-up%0A";
+  if(state.payMethod==="balance"){msg+="🪙 Settlement: *"+state.balanceCycle+"*%0A";msg+="💡 Add to customer running balance%0A";}
+  msg+="%0A━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="💰 *ORDER TOTAL: ₹"+calcTotal()+"*%0A";
+  msg+="━━━━━━━━━━━━━━━━━━━━━━━━%0A";
+  msg+="🌿 _Saku Healthy Bowls | Kothrud, Pune_";
+  var waUrl="https://wa.me/919525113636?text="+msg;
+  window.open(waUrl,"_blank");
+  setTimeout(function(){
+    document.getElementById("screen6").classList.remove("active");
+    document.getElementById("screenTY").classList.add("active");
+    document.getElementById("floatBar").style.display="none";
+    document.getElementById("stepsNav").style.display="none";
+  },800);
+}
+
 renderMenu();updateTabs();
 </script>
 </body>
