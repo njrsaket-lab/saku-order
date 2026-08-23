@@ -220,7 +220,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title">This Week's Menu</h2>
-  <p class="section-subtitle">Week of 17th&#8211;22nd August 2026 (Week 57)</p>
+  <p class="section-subtitle">Week of 17th&#8211;22nd August 2026 (Week 58)</p>
   <div class="week-label">&#128197; 17&#8211;22 Aug 2026 &nbsp;&#183;&nbsp; Orders open till 5:00 PM daily &nbsp;&#183;&nbsp; Evening delivery after 5:30 PM</div>
   <div id="bowlsContainer"></div>
   <div id="err-menu" class="err">Please select at least one bowl to continue.</div>
@@ -483,66 +483,12 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Basil Tomato Paneer Rice Bowl",emoji:"🥗",
-   desc:"Creamy roasted basil-tomato paneer with lemon parsley rice, garlic-tadka broccoli, roasted zucchini, caramelized apple and crisp bhakri phodni. Finished with honey mustard dressing and roasted basil pepper dust.",
-   flavor:"Sweet Basil • Roasted Tomato • Mild Garlic",
-   contains:"Lemon Parsley Rice • Basil-Tomato Paneer • Broccoli • Zucchini • Cherry Tomatoes • Baby Spinach • Caramelized Apple • Honey Mustard Vinaigrette • Bhakri Crisps",
-   macros:["Cal: 620","P: 24g","Carbs: 72g","Fat: 25g","Fibre: 9g"],
-   juice:"Dragon Fruit Lemon Honey Cooler",
-   juiceDesc:"Fresh dragon fruit with zesty lemon, ginger, roasted cumin, honey and black salt — light, fruity and refreshing",
-   juiceFlavor:"Fruity • Citrusy • Light",
-   juiceIngredients:"Dragon Fruit, Lemon, Ginger, Roasted Cumin, Honey, Black Salt",
-   juiceMacros:"Cal: 85 | Carbs: 20g | Protein: 1g | Fat: 0g"},
-  {day:"Tuesday",name:"Podi Edamame Millet Bowl",emoji:"🥗",
-   desc:"Nutty curry-leaf millet with roasted edamame, warm podi oil, garlic, baby corn, beans and sweet corn. Finished with shepu herb yogurt, roasted peanut-phutana crumble and fresh pear.",
-   flavor:"Nutty • Aromatic • Smoky",
-   contains:"Curry Leaf Millet • Podi Edamame • Baby Corn • French Beans • Sweet Corn • Lal Math • Pear • Shepu Yogurt • Peanut-Phutana Crumble",
-   macros:["Cal: 570","P: 25g","Carbs: 73g","Fat: 20g","Fibre: 12g"],
-   juice:"Pear Gulkand Fennel Refresher",
-   juiceDesc:"Juicy pear with delicate gulkand, roasted fennel, fresh ginger, lemon and black salt — naturally floral, fruity and refreshing",
-   juiceFlavor:"Fruity • Floral • Herbal",
-   juiceIngredients:"Pear, Gulkand, Roasted Fennel, Fresh Ginger, Lemon, Black Salt",
-   juiceMacros:"Cal: 95 | Carbs: 23g | Protein: 0.5g | Fat: 0g"},
-  {day:"Wednesday",name:"Teriyaki Black Bean Pasta Bowl",emoji:"🥗",
-   desc:"Whole wheat fusilli with black beans in homemade jaggery-ginger teriyaki, roasted peppers, caramelized onions and French beans. Finished with sesame yogurt, orange, sweet onion vinaigrette and toasted sunflower seeds.",
-   flavor:"Sweet Soy • Ginger • Sesame",
-   contains:"Whole Wheat Fusilli • Teriyaki Black Beans • French Beans • Roasted Peppers • Caramelized Onions • Orange • Sesame Yogurt • Sweet Onion Vinaigrette • Sunflower Seeds",
-   macros:["Cal: 610","P: 25g","Carbs: 88g","Fat: 17g","Fibre: 14g"],
-   juice:"Orange Ajwain Ginger Spritzer",
-   juiceDesc:"Bright fresh orange with warming ajwain, ginger, roasted cumin, jaggery, lemon and black salt — citrusy, fresh and gently spiced",
-   juiceFlavor:"Citrusy • Warming • Fresh",
-   juiceIngredients:"Fresh Orange, Ajwain, Ginger, Roasted Cumin, Jaggery, Lemon, Black Salt",
-   juiceMacros:"Cal: 80 | Carbs: 19g | Protein: 1g | Fat: 0g"},
-  {day:"Thursday",name:"Green Moong Pesto Jowar Bowl",emoji:"🥗",
-   desc:"Phodni jowar with Italian-style basil pesto green moong, roasted garlic, cauliflower, sweet potato and cherry tomatoes. Finished with methi, lal math yogurt, herb-spiced popcorn and roasted herb podi.",
-   flavor:"Fresh Herbs • Roasted Garlic • Nutty",
-   contains:"Phodni Jowar • Basil Pesto Moong • Roasted Cauliflower • Sweet Potato • Cherry Tomatoes • Methi • Lal Math Yogurt • Herb Popcorn • Roasted Herb Podi",
-   macros:["Cal: 590","P: 23g","Carbs: 82g","Fat: 19g","Fibre: 15g"],
-   juice:"Kiwi Mint Jeera Cooler",
-   juiceDesc:"Tangy fresh kiwi with cooling mint, roasted cumin, ginger, honey, lemon and black salt — crisp, herbal and refreshing",
-   juiceFlavor:"Tangy • Fruity • Herbal",
-   juiceIngredients:"Fresh Kiwi, Mint, Roasted Cumin, Ginger, Honey, Lemon, Black Salt",
-   juiceMacros:"Cal: 80 | Carbs: 19g | Protein: 1g | Fat: 0.5g"},
-  {day:"Friday",name:"Honey Mustard Field Bean Bowl",emoji:"🥗",
-   desc:"Garlic brown rice with field beans in a honey mustard glaze, roasted pumpkin, broccoli and baby corn. Finished with shepu, light mustard yogurt, guava, sweet tomato-saunf dressing and toasted dinka seed crunch.",
-   flavor:"Sweet • Tangy • Peppery",
-   contains:"Garlic Brown Rice • Honey Mustard Field Beans • Pumpkin • Broccoli • Baby Corn • Shepu • Mustard Yogurt • Guava • Tomato-Saunf Vinaigrette • Dinka Seed Crunch",
-   macros:["Cal: 600","P: 23g","Carbs: 81g","Fat: 19g","Fibre: 14g"],
-   juice:"Guava Jeera Honey Refresher",
-   juiceDesc:"Fresh ripe guava with roasted cumin, ginger, honey, lemon and black salt — naturally fruity with a sweet-tangy earthy finish",
-   juiceFlavor:"Fruity • Sweet-Tangy • Earthy",
-   juiceIngredients:"Fresh Guava, Roasted Cumin (Jeera), Ginger, Honey, Lemon, Black Salt",
-   juiceMacros:"Cal: 100 | Carbs: 23g | Protein: 1.5g | Fat: 0.5g"},
-  {day:"Saturday",name:"Manchow Moong Quinoa Bowl",emoji:"🥗",
-   desc:"Vegetable quinoa with brown moong in a rich roasted garlic-Manchow reduction, crunchy vegetables and spring onion greens. Finished with green tomato coriander chutney, pomegranate, baked dhokla croutons and mild chilli-garlic sesame dust.",
-   flavor:"Garlic • Pepper • Spring Onion",
-   contains:"Vegetable Quinoa • Manchow Moong • Cabbage • Bell Peppers • Baby Corn • Spring Onion • Pomegranate • Green Tomato Coriander Chutney • Baked Dhokla Croutons • Chilli-Garlic Sesame Dust",
-   macros:["Cal: 575","P: 22g","Carbs: 84g","Fat: 17g","Fibre: 14g"],
-   juice:"Gulkand Triphala Lemon Elixir",
-   juiceDesc:"Mild culinary triphala infusion with gulkand, fresh ginger, roasted cumin, lemon and black salt — delicate floral-herbal flavour",
-   juiceFlavor:"Floral • Citrusy • Herbal",
-   juiceIngredients:"Triphala Infusion (culinary), Gulkand, Fresh Ginger, Roasted Cumin, Lemon, Black Salt",
-   juiceMacros:"Cal: 55 | Carbs: 14g | Protein: 0g | Fat: 0g"},
+  {day:"Monday",name:"Palak Paneer Carrot Noodle Bowl",emoji:"🥗",desc:"Creamy palak paneer with fresh carrot and zucchini noodles, chaat-style brown rice, cucumber, caramelized apple, mint curd, peanuts and a sweet lemon chaat dressing.",flavor:"Creamy - Tangy - Fresh",contains:"Paneer, Spinach, Carrot, Zucchini, Brown Rice, Cucumber, Apple, Curd, Peanuts, Almonds",macros:["Cal: 520","P: 24g","Carbs: 58g","Fat: 22g","Fibre: 10g"],juice:"Jamun Saunf Ginger Cooler",juiceDesc:"Tart jamun with aromatic fennel, fresh ginger and lemon - light and naturally fruity",juiceFlavor:"Tart - Aromatic - Fruity",juiceIngredients:"Jamun, Saunf, Ginger, Lemon",juiceMacros:"Cal: ~85 | Carbs: 20g | Protein: 1g | Fat: 0.3g"},
+  {day:"Tuesday",name:"Achari Chole Couscous Salad Bowl",emoji:"🥗",desc:"Tangy achari chole with herbed couscous, roasted beetroot, cucumber, French beans, orange, mint curd, pickle vinaigrette, baked papad and pumpkin seeds.",flavor:"Tangy - Herby - Crunchy",contains:"Chickpeas, Couscous, Beetroot, Cucumber, French Beans, Orange, Curd, Pickle, Pumpkin Seeds",macros:["Cal: 495","P: 18g","Carbs: 67g","Fat: 17g","Fibre: 13g"],juice:"Papaya Mint Lime Cooler",juiceDesc:"Smooth ripe papaya with fresh mint, zesty lime and roasted cumin - naturally refreshing",juiceFlavor:"Smooth - Fresh - Lightly Spiced",juiceIngredients:"Ripe Papaya, Fresh Mint, Lime, Roasted Cumin",juiceMacros:"Cal: ~90 | Carbs: 22g | Protein: 1g | Fat: 0.3g"},
+  {day:"Wednesday",name:"Saar Roasted Vegetable Quinoa Bowl",emoji:"🥗",desc:"Light peppery saar-inspired quinoa with roasted pumpkin, baby corn and French beans, topped with toor dal patties, coriander curd, pear, sesame and crispy papad crumble.",flavor:"Light - Peppery - Comforting",contains:"Quinoa, Toor Dal, Pumpkin, Baby Corn, French Beans, Pear, Curd, Sesame, Coriander",macros:["Cal: 475","P: 20g","Carbs: 67g","Fat: 15g","Fibre: 11g"],juice:"Pear Coriander Seed Cooler",juiceDesc:"Juicy pear with coriander-seed infusion, fresh lemon and ginger - subtly floral and refreshing",juiceFlavor:"Delicate - Juicy - Floral",juiceIngredients:"Pear, Coriander Seed Infusion, Lemon, Ginger",juiceMacros:"Cal: ~80 | Carbs: 20g | Protein: 0.5g | Fat: 0.2g"},
+  {day:"Thursday",name:"Beetroot Raita Rajma Couscous Bowl",emoji:"🥗",desc:"Creamy beetroot raita with cumin couscous, roasted rajma, cauliflower, cucumber, carrot, pomegranate, mint, tamarind dressing, baked papdi and sunflower seeds.",flavor:"Creamy - Earthy - Vibrant",contains:"Rajma, Beetroot, Couscous, Cauliflower, Cucumber, Carrot, Pomegranate, Curd, Tamarind, Sunflower Seeds",macros:["Cal: 505","P: 19g","Carbs: 68g","Fat: 17g","Fibre: 13g"],juice:"Fennel Pomegranate Refresher",juiceDesc:"Bright pomegranate with aromatic fennel, lemon and ginger - tart, vibrant and refreshing",juiceFlavor:"Tart - Vibrant - Aromatic",juiceIngredients:"Pomegranate, Fennel, Lemon, Ginger",juiceMacros:"Cal: ~90 | Carbs: 21g | Protein: 1g | Fat: 0.5g"},
+  {day:"Friday",name:"Thecha Sweet Potato Millet Salad",emoji:"🥗",desc:"Roasted sweet potato and lemon coriander millet with moong-peanut crumble, cabbage, cherry tomato, guava, mild garlic thecha, roasted makhana and peanut crunch.",flavor:"Spicy - Sweet - Crunchy",contains:"Sweet Potato, Little Millet, Green Moong, Peanuts, Cabbage, Tomato, Guava, Garlic, Makhana",macros:["Cal: 510","P: 18g","Carbs: 68g","Fat: 19g","Fibre: 12g"],juice:"Cucumber Fennel Lemon Cooler",juiceDesc:"Crisp cucumber with fennel, lemon, mint and ginger - clean, light and exceptionally refreshing",juiceFlavor:"Clean - Light - Crisp",juiceIngredients:"Cucumber, Fennel, Lemon, Mint, Ginger",juiceMacros:"Cal: ~35 | Carbs: 8g | Protein: 1g | Fat: 0.2g"},
+  {day:"Saturday",name:"Coconut Curry Paneer Rice Salad",emoji:"🥗",desc:"Coconut curry leaf rice with tender paneer, roasted okra, carrot, sweet corn, pineapple, light coconut curd, coconut-lime dressing and roasted cashew crunch.",flavor:"Tropical - Creamy - Aromatic",contains:"Paneer, Rice, Coconut, Curry Leaves, Okra, Carrot, Corn, Pineapple, Curd, Cashews",macros:["Cal: 540","P: 23g","Carbs: 65g","Fat: 22g","Fibre: 9g"],juice:"Coriander Pineapple Jeera Cooler",juiceDesc:"Fresh pineapple with coriander-seed infusion, lemon and roasted cumin - tropical, tangy and refreshing",juiceFlavor:"Tropical - Tangy - Refreshing",juiceIngredients:"Pineapple, Coriander Seed Infusion, Lemon, Roasted Cumin",juiceMacros:"Cal: ~85 | Carbs: 21g | Protein: 0.5g | Fat: 0.2g"},
 ];
 var state={plan:null,bowlSelections:{},paneerQty:0,deliveryTime:null,lunchDate:"",deliveryType:"delivery",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
 var currentScreen=0;
@@ -637,7 +583,7 @@ function buildSummary(){
   var timeStr=state.deliveryTime==="lunch"?"Lunch on "+state.lunchDate+" (12 to 2 PM)":"Evening today after 5:30 PM";
   var html='<div class="sum-title">Your Order Summary</div>';
   html+='<div class="sum-section"><div class="sum-section-label">Order Info</div>';
-  html+='<div class="sum-row"><span>Week</span><span>Week 57 — 17 to 22 Aug 2026</span></div>';
+  html+='<div class="sum-row"><span>Week</span><span>Week 58 — 24 to 29 Aug 2026</span></div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div>';
   html+='<div class="sum-row"><span>Delivery Slot</span><span>'+timeStr+'</span></div></div>';
   html+='<div class="sum-section"><div class="sum-section-label">Bowls and Juice</div>';
@@ -684,7 +630,7 @@ function placeOrder(){
   m+="SAKU HEALTHY BOWLS - NEW ORDER%0A";
   m+="==========================%0A%0A";
   m+="Order ID: "+orderId+"%0A";
-  m+="Week 57 - 17 to 22 Aug 2026%0A";
+  m+="Week 58 - 24 to 29 Aug 2026%0A";
   m+="Date: "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
   m+="Time: "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
   m+="DELIVERY SLOT%0A";
