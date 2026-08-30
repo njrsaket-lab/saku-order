@@ -220,7 +220,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title">This Week's Menu</h2>
-  <p class="section-subtitle">Week of 17th&#8211;22nd August 2026 (Week 58)</p>
+  <p class="section-subtitle">Week of 17th&#8211;22nd August 2026 (Week 59)</p>
   <div class="week-label">&#128197; 17&#8211;22 Aug 2026 &nbsp;&#183;&nbsp; Orders open till 5:00 PM daily &nbsp;&#183;&nbsp; Evening delivery after 5:30 PM</div>
   <div id="bowlsContainer"></div>
   <div id="err-menu" class="err">Please select at least one bowl to continue.</div>
@@ -483,24 +483,65 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Palak Paneer Carrot Noodle Bowl",emoji:"🥗",desc:"Creamy palak paneer with fresh carrot and zucchini noodles, chaat-style brown rice, cucumber, caramelized apple, mint curd, peanuts and a sweet lemon chaat dressing.",flavor:"Creamy - Tangy - Fresh",contains:"Paneer, Spinach, Carrot, Zucchini, Brown Rice, Cucumber, Apple, Curd, Peanuts, Almonds",macros:["Cal: 520","P: 24g","Carbs: 58g","Fat: 22g","Fibre: 10g"],juice:"Jamun Saunf Ginger Cooler",juiceDesc:"Tart jamun with aromatic fennel, fresh ginger and lemon - light and naturally fruity",juiceFlavor:"Tart - Aromatic - Fruity",juiceIngredients:"Jamun, Saunf, Ginger, Lemon",juiceMacros:"Cal: ~85 | Carbs: 20g | Protein: 1g | Fat: 0.3g"},
-  {day:"Tuesday",name:"Achari Chole Couscous Salad Bowl",emoji:"🥗",desc:"Tangy achari chole with herbed couscous, roasted beetroot, cucumber, French beans, orange, mint curd, pickle vinaigrette, baked papad and pumpkin seeds.",flavor:"Tangy - Herby - Crunchy",contains:"Chickpeas, Couscous, Beetroot, Cucumber, French Beans, Orange, Curd, Pickle, Pumpkin Seeds",macros:["Cal: 495","P: 18g","Carbs: 67g","Fat: 17g","Fibre: 13g"],juice:"Papaya Mint Lime Cooler",juiceDesc:"Smooth ripe papaya with fresh mint, zesty lime and roasted cumin - naturally refreshing",juiceFlavor:"Smooth - Fresh - Lightly Spiced",juiceIngredients:"Ripe Papaya, Fresh Mint, Lime, Roasted Cumin",juiceMacros:"Cal: ~90 | Carbs: 22g | Protein: 1g | Fat: 0.3g"},
-  {day:"Wednesday",name:"Saar Roasted Vegetable Quinoa Bowl",emoji:"🥗",desc:"Light peppery saar-inspired quinoa with roasted pumpkin, baby corn and French beans, topped with toor dal patties, coriander curd, pear, sesame and crispy papad crumble.",flavor:"Light - Peppery - Comforting",contains:"Quinoa, Toor Dal, Pumpkin, Baby Corn, French Beans, Pear, Curd, Sesame, Coriander",macros:["Cal: 475","P: 20g","Carbs: 67g","Fat: 15g","Fibre: 11g"],juice:"Pear Coriander Seed Cooler",juiceDesc:"Juicy pear with coriander-seed infusion, fresh lemon and ginger - subtly floral and refreshing",juiceFlavor:"Delicate - Juicy - Floral",juiceIngredients:"Pear, Coriander Seed Infusion, Lemon, Ginger",juiceMacros:"Cal: ~80 | Carbs: 20g | Protein: 0.5g | Fat: 0.2g"},
-  {day:"Thursday",name:"Beetroot Raita Rajma Couscous Bowl",emoji:"🥗",desc:"Creamy beetroot raita with cumin couscous, roasted rajma, cauliflower, cucumber, carrot, pomegranate, mint, tamarind dressing, baked papdi and sunflower seeds.",flavor:"Creamy - Earthy - Vibrant",contains:"Rajma, Beetroot, Couscous, Cauliflower, Cucumber, Carrot, Pomegranate, Curd, Tamarind, Sunflower Seeds",macros:["Cal: 505","P: 19g","Carbs: 68g","Fat: 17g","Fibre: 13g"],juice:"Fennel Pomegranate Refresher",juiceDesc:"Bright pomegranate with aromatic fennel, lemon and ginger - tart, vibrant and refreshing",juiceFlavor:"Tart - Vibrant - Aromatic",juiceIngredients:"Pomegranate, Fennel, Lemon, Ginger",juiceMacros:"Cal: ~90 | Carbs: 21g | Protein: 1g | Fat: 0.5g"},
-  {day:"Friday",name:"Thecha Sweet Potato Millet Salad",emoji:"🥗",desc:"Roasted sweet potato and lemon coriander millet with moong-peanut crumble, cabbage, cherry tomato, guava, mild garlic thecha, roasted makhana and peanut crunch.",flavor:"Spicy - Sweet - Crunchy",contains:"Sweet Potato, Little Millet, Green Moong, Peanuts, Cabbage, Tomato, Guava, Garlic, Makhana",macros:["Cal: 510","P: 18g","Carbs: 68g","Fat: 19g","Fibre: 12g"],juice:"Cucumber Fennel Lemon Cooler",juiceDesc:"Crisp cucumber with fennel, lemon, mint and ginger - clean, light and exceptionally refreshing",juiceFlavor:"Clean - Light - Crisp",juiceIngredients:"Cucumber, Fennel, Lemon, Mint, Ginger",juiceMacros:"Cal: ~35 | Carbs: 8g | Protein: 1g | Fat: 0.2g"},
-  {day:"Saturday",name:"Coconut Curry Paneer Rice Salad",emoji:"🥗",desc:"Coconut curry leaf rice with tender paneer, roasted okra, carrot, sweet corn, pineapple, light coconut curd, coconut-lime dressing and roasted cashew crunch.",flavor:"Tropical - Creamy - Aromatic",contains:"Paneer, Rice, Coconut, Curry Leaves, Okra, Carrot, Corn, Pineapple, Curd, Cashews",macros:["Cal: 540","P: 23g","Carbs: 65g","Fat: 22g","Fibre: 9g"],juice:"Coriander Pineapple Jeera Cooler",juiceDesc:"Fresh pineapple with coriander-seed infusion, lemon and roasted cumin - tropical, tangy and refreshing",juiceFlavor:"Tropical - Tangy - Refreshing",juiceIngredients:"Pineapple, Coriander Seed Infusion, Lemon, Roasted Cumin",juiceMacros:"Cal: ~85 | Carbs: 21g | Protein: 0.5g | Fat: 0.2g"},
+  {day:"Monday",name:"Russian Paneer Potato Protein Salad",emoji:"🥗",desc:"Roasted paneer, herbed quinoa, potato, crisp vegetables and green apple, finished with a light hung-curd Russian dressing, roasted sunflower seeds and dill-cumin seasoning.",flavor:"Creamy - Tangy - Mildly Sweet",contains:"Paneer, Herbed Quinoa, Potato, Crisp Vegetables, Green Apple, Sunflower Seeds | Dressing: Hung-Curd Russian",macros:["Cal: 430","P: 25g","Carbs: 43g","Fat: 19g","Fibre: 8g"],juice:"Apple Ginger Fennel Cooler",juiceDesc:"Fresh green apple with ginger, fennel infusion, lemon and honey - light, aromatic and refreshing",juiceFlavor:"Light - Aromatic - Refreshing",juiceIngredients:"Green Apple, Ginger, Fennel Infusion, Lemon, Honey",juiceMacros:"Cal: ~85 | Carbs: 21g | Protein: 0.5g | Fat: 0.2g"},
+  {day:"Tuesday",name:"Tabbouleh Moong Protein Bowl",emoji:"🥗",desc:"Whole green moong, cracked wheat, cucumber, tomato and red cabbage folded with fresh parsley and mint, topped with pomegranate and pumpkin seeds. Finished with a refreshing mint-coriander lemon dressing.",flavor:"Fresh - Herby - Light",contains:"Green Moong, Cracked Wheat, Cucumber, Tomato, Red Cabbage, Parsley, Mint, Pomegranate, Pumpkin Seeds | Dressing: Mint-Coriander Lemon",macros:["Cal: 390","P: 18g","Carbs: 52g","Fat: 13g","Fibre: 12g"],juice:"Muskmelon Ginger Ajwain Cooler",juiceDesc:"Fresh muskmelon with mild ajwain infusion, ginger, lemon and jaggery - hydrating, refreshing and easy on the palate",juiceFlavor:"Hydrating - Refreshing - Mild",juiceIngredients:"Muskmelon, Ajwain Infusion, Ginger, Lemon, Jaggery",juiceMacros:"Cal: ~70 | Carbs: 17g | Protein: 1g | Fat: 0.3g"},
+  {day:"Wednesday",name:"Crispy Falafel Quinoa Salad Bowl",emoji:"🥗",desc:"Baked moong-chickpea falafel with lemon quinoa, roasted cauliflower, fresh vegetables, herbs and juicy orange. Finished with a creamy green chutney tahini dressing and crispy falafel crumble.",flavor:"Herby - Nutty - Citrusy",contains:"Baked Moong-Chickpea Falafel, Lemon Quinoa, Roasted Cauliflower, Fresh Vegetables, Orange, Herbs | Dressing: Green Chutney Tahini",macros:["Cal: 440","P: 20g","Carbs: 48g","Fat: 20g","Fibre: 11g"],juice:"Orange Mint Coriander Cooler",juiceDesc:"Fresh orange with mint, coriander infusion, ginger and lemon - bright, citrusy and refreshing with a clean herbal finish",juiceFlavor:"Bright - Citrusy - Herbal",juiceIngredients:"Fresh Orange, Mint, Coriander Infusion, Ginger, Lemon",juiceMacros:"Cal: ~75 | Carbs: 18g | Protein: 1g | Fat: 0.2g"},
+  {day:"Thursday",name:"Manchurian Cauliflower Fibre Bowl",emoji:"🥗",desc:"Roasted Manchurian-style cauliflower with plant protein from roasted chana and edamame, brown rice, crunchy Asian vegetables and fresh greens. Finished with sweet-sour ginger dressing, sesame and crispy rice.",flavor:"Sweet-Sour - Garlicky - Crunchy",contains:"Manchurian Cauliflower, Roasted Chana, Edamame, Brown Rice, Asian Vegetables, Fresh Greens, Sesame | Dressing: Sweet-Sour Ginger",macros:["Cal: 420","P: 19g","Carbs: 52g","Fat: 15g","Fibre: 12g"],juice:"Pear Roasted Coriander Cooler",juiceDesc:"Fresh pear with roasted coriander, ginger, lemon and black salt - mildly sweet, aromatic and refreshing",juiceFlavor:"Mildly Sweet - Aromatic - Refreshing",juiceIngredients:"Pear, Roasted Coriander, Ginger, Lemon, Black Salt",juiceMacros:"Cal: ~80 | Carbs: 20g | Protein: 0.5g | Fat: 0.2g"},
+  {day:"Friday",name:"Caramel Apple Sweet Potato Protein Salad",emoji:"🥗",desc:"Roasted black-eyed peas, herbed little millet, roasted sweet potato, French beans and spinach with lightly caramelized cinnamon apple. Finished with lemon honey mustard dressing and roasted almonds.",flavor:"Sweet-Savory - Warm - Nutty",contains:"Black-Eyed Peas, Little Millet, Sweet Potato, French Beans, Spinach, Caramelized Cinnamon Apple, Roasted Almonds | Dressing: Lemon Honey Mustard",macros:["Cal: 430","P: 18g","Carbs: 58g","Fat: 15g","Fibre: 11g"],juice:"Plum Ginger Jeera Refresher",juiceDesc:"Fresh tart plum with ginger, roasted cumin, lemon and honey - sharp, refreshing and flavourful",juiceFlavor:"Sharp - Tangy - Refreshing",juiceIngredients:"Fresh Plum, Ginger, Roasted Cumin, Lemon, Honey",juiceMacros:"Cal: ~65 | Carbs: 16g | Protein: 0.7g | Fat: 0.2g"},
+  {day:"Saturday",name:"Phodni Mini Idli Protein Salad Bowl",emoji:"🥗",desc:"Soft mini idlis tempered with mustard, curry leaves and sesame, paired with lightly seasoned paneer, roasted green gram, fresh vegetables and pomegranate. Finished with coconut-lemon chutney dressing, roasted coconut and peanuts.",flavor:"Coastal - Nutty - Comforting",contains:"Mini Idli, Paneer, Roasted Green Gram, Fresh Vegetables, Pomegranate, Roasted Coconut, Peanuts | Dressing: Coconut-Lemon Chutney",macros:["Cal: 450","P: 24g","Carbs: 48g","Fat: 19g","Fibre: 8g"],juice:"Coconut Water Ginger Lime Cooler",juiceDesc:"Tender coconut water with fresh ginger, lime, mint and roasted cumin - naturally light, hydrating and refreshing",juiceFlavor:"Light - Hydrating - Tropical",juiceIngredients:"Tender Coconut Water, Fresh Ginger, Lime, Mint, Roasted Cumin",juiceMacros:"Cal: ~45 | Carbs: 10g | Protein: 1g | Fat: 0g"},
 ];
-var state={plan:null,bowlSelections:{},paneerQty:0,deliveryTime:null,lunchDate:"",deliveryType:"delivery",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
+
+var state={
+  plan:null, bowlSelections:{}, paneerQty:0,
+  deliveryTime:null, lunchDate:"",
+  deliveryType:"delivery",
+  name:"", phone:"", addr:"", landmark:"", area:"", pin:"",
+  payMethod:null, utr:"", balanceCycle:"", specialReq:""
+};
 var currentScreen=0;
 var PAY_KEYS=["upi","cod","cop","balance"];
-var PAY_LABELS={"upi":"UPI Payment (Paid Online)","cod":"Cash on Delivery","cop":"Cash on Pick-up","balance":"Saku Balance Account"};
-var PLAN_LABELS={single:"Single Day Order","6days":"6-Day Subscription","12days":"12-Day Subscription","24days":"24-Day Subscription"};
-var PLAN_PRICES={single:"Per bowl","6days":"Rs 1,550","12days":"Rs 2,850","24days":"Rs 5,850"};
+var PAY_LABELS={
+  upi:"UPI Payment — Paid Online",
+  cod:"Cash on Delivery",
+  cop:"Cash on Pick-up",
+  balance:"Saku Balance Account"
+};
+var PLAN_LABELS={
+  single:"Single Day Order",
+  "6days":"6-Day Subscription",
+  "12days":"12-Day Subscription",
+  "24days":"24-Day Subscription"
+};
+var PLAN_PRICES={
+  single:"Per bowl",
+  "6days":"Rs 1,550",
+  "12days":"Rs 2,850",
+  "24days":"Rs 5,850"
+};
 
-function updateTabs(){for(var i=0;i<7;i++){var t=document.getElementById("tab"+i);if(!t)continue;t.className="step-tab";if(i<currentScreen)t.classList.add("done");if(i===currentScreen)t.classList.add("active");}}
+// ── Tab navigation ──────────────────────────────────────────────────────────
+function updateTabs(){
+  for(var i=0;i<7;i++){
+    var t=document.getElementById("tab"+i);
+    if(!t)continue;
+    t.className="step-tab";
+    if(i<currentScreen)t.classList.add("done");
+    if(i===currentScreen)t.classList.add("active");
+  }
+}
 
-function selectPlan(el){var p=el.getAttribute("data-plan");state.plan=p;state.bowlSelections={};["single","6days","12days","24days"].forEach(function(id){var c=document.getElementById("plan-"+id);if(c)c.classList.toggle("selected",id===p);});renderMenu();}
+// ── Plan selection ──────────────────────────────────────────────────────────
+function selectPlan(el){
+  var p=el.getAttribute("data-plan");
+  state.plan=p; state.bowlSelections={};
+  ["single","6days","12days","24days"].forEach(function(id){
+    var c=document.getElementById("plan-"+id);
+    if(c)c.classList.toggle("selected",id===p);
+  });
+  renderMenu();
+}
 
+// ── Bowl rendering ──────────────────────────────────────────────────────────
 function renderMenu(){
   var c=document.getElementById("bowlsContainer");
   var isSub=state.plan!=="single";
@@ -511,179 +552,472 @@ function renderMenu(){
     var isSelected=isSub||sel.qty>0;
     var bp=sel.size==="half"?179:280;
     var isHalf=sel.size==="half";
+
     html+='<div class="bowl-card'+(isSelected?" selected":"")+'"><div class="bowl-header" onclick="toggleBowl('+i+')">';
     html+='<span class="bowl-emoji">'+b.emoji+'</span><div class="bowl-info">';
-    html+='<div class="bowl-day">'+b.day+'</div><div class="bowl-name">'+b.name+'</div>';
+    html+='<div class="bowl-day">'+b.day+'</div>';
+    html+='<div class="bowl-name">'+b.name+'</div>';
     html+='<div class="bowl-desc">'+b.desc+'</div>';
     html+='<div class="bowl-flavor">'+b.flavor+'</div>';
     html+='<div class="bowl-contains">'+b.contains+'</div>';
     html+='<div class="bowl-macros">';
     for(var m=0;m<b.macros.length;m++)html+='<span class="macro">'+b.macros[m]+'</span>';
-    html+='</div><div class="bowl-price-tag">&#8377;179 half &nbsp;&#183;&nbsp; &#8377;280 full &nbsp;&#183;&nbsp; Juice +&#8377;70</div>';
-    html+='</div></div><div class="bowl-selector">';
+    html+='</div>';
+    html+='<div class="bowl-price-tag">Rs 179 half &nbsp;|&nbsp; Rs 280 full &nbsp;|&nbsp; +Rs 70 juice</div>';
+    html+='</div></div>';
+
+    html+='<div class="bowl-selector">';
     if(!isSub){
       html+='<div class="size-label">Choose Bowl Size</div><div class="size-row">';
       html+='<div class="size-btn'+(isHalf?" active":"")+'" onclick="setBowlSize('+i+',0)">';
-      html+='<div class="size-btn-label">Half Bowl</div><div class="size-btn-price">&#8377;179</div><div class="size-btn-note">Lighter portion</div></div>';
+      html+='<div class="size-btn-label">Half Bowl</div>';
+      html+='<div class="size-btn-price">Rs 179</div>';
+      html+='<div class="size-btn-note">Lighter portion</div></div>';
       html+='<div class="size-btn'+(!isHalf?" active":"")+'" onclick="setBowlSize('+i+',1)">';
-      html+='<div class="size-btn-label">Full Bowl</div><div class="size-btn-price">&#8377;280</div><div class="size-btn-note">Full portion</div></div></div>';
-      html+='<div class="qty-row"><div class="qty-label">Quantity <small>&#8377;'+bp+' per bowl</small></div>';
-      html+='<div class="qty-ctrl"><button class="qty-btn" onclick="chgBowlQty('+i+',-1)"'+(sel.qty<=1?" disabled":"")+'>&#8722;</button>';
+      html+='<div class="size-btn-label">Full Bowl</div>';
+      html+='<div class="size-btn-price">Rs 280</div>';
+      html+='<div class="size-btn-note">Full portion</div></div></div>';
+      html+='<div class="qty-row">';
+      html+='<div class="qty-label">Quantity <small>Rs '+bp+' per bowl</small></div>';
+      html+='<div class="qty-ctrl">';
+      html+='<button class="qty-btn" onclick="chgBowlQty('+i+',-1)"'+(sel.qty<=1?" disabled":"")+'>-</button>';
       html+='<span class="qty-num" id="bqty-'+i+'">'+(sel.qty||1)+'</span>';
-      html+='<button class="qty-btn" onclick="chgBowlQty('+i+',1)">+</button></div></div>';
+      html+='<button class="qty-btn" onclick="chgBowlQty('+i+',1)">+</button>';
+      html+='</div></div>';
     }
+
     html+='<div class="juice-toggle'+(sel.juice?" active":"")+'" onclick="toggleJuice('+i+')">';
-    html+='<span class="juice-icon">&#129381;</span><div class="juice-info">';
-    html+='<div class="juice-name">'+b.juice+' <span style="color:var(--green-dark);font-size:9px;font-weight:800;">+&#8377;70</span></div>';
+    html+='<span class="juice-icon">&#129381;</span>';
+    html+='<div class="juice-info">';
+    html+='<div class="juice-name">'+b.juice+' <span style="color:var(--green-dark);font-size:9px;font-weight:800;">+Rs 70</span></div>';
     html+='<div class="juice-detail" style="font-style:italic;">'+b.juiceFlavor+'</div>';
     html+='<div class="juice-detail">'+b.juiceIngredients+'</div>';
     html+='<div class="juice-detail" style="font-weight:600;">'+b.juiceMacros+'</div>';
     html+='</div><div class="juice-check">&#10003;</div></div>';
+
     if(sel.juice){
-      html+='<div class="qty-row" style="margin-top:8px;"><div class="qty-label">Juice Quantity <small>&#8377;70 per juice</small></div>';
-      html+='<div class="qty-ctrl"><button class="qty-btn" onclick="chgJuiceQty('+i+',-1)"'+(sel.juiceQty<=1?" disabled":"")+'>&#8722;</button>';
+      html+='<div class="qty-row" style="margin-top:8px;">';
+      html+='<div class="qty-label">Juice Quantity <small>Rs 70 per juice</small></div>';
+      html+='<div class="qty-ctrl">';
+      html+='<button class="qty-btn" onclick="chgJuiceQty('+i+',-1)"'+(sel.juiceQty<=1?" disabled":"")+'>-</button>';
       html+='<span class="qty-num" id="jqty-'+i+'">'+(sel.juiceQty||1)+'</span>';
-      html+='<button class="qty-btn" onclick="chgJuiceQty('+i+',1)">+</button></div></div>';
+      html+='<button class="qty-btn" onclick="chgJuiceQty('+i+',1)">+</button>';
+      html+='</div></div>';
     }
     html+='</div></div>';
   }
   c.innerHTML=html;
-  if(isSub){for(var j=0;j<BOWLS.length;j++){if(!state.bowlSelections[j])state.bowlSelections[j]={qty:1,size:"full",juice:false,juiceQty:1};}}
+  if(isSub){
+    for(var j=0;j<BOWLS.length;j++){
+      if(!state.bowlSelections[j])
+        state.bowlSelections[j]={qty:1,size:"full",juice:false,juiceQty:1};
+    }
+  }
   updateFloat();
 }
 
-function toggleBowl(i){if(state.plan!=="single")return;var s=state.bowlSelections[i]||{qty:0,size:"full",juice:false,juiceQty:1};state.bowlSelections[i]=s.qty===0?{qty:1,size:"full",juice:false,juiceQty:1}:{qty:0,size:"full",juice:false,juiceQty:1};renderMenu();}
-function setBowlSize(i,v){var sz=v===0?"half":"full";if(!state.bowlSelections[i])state.bowlSelections[i]={qty:1,size:sz,juice:false,juiceQty:1};else state.bowlSelections[i].size=sz;renderMenu();}
-function chgBowlQty(i,d){var s=state.bowlSelections[i]||{qty:1,size:"full",juice:false,juiceQty:1};s.qty=Math.max(1,s.qty+d);state.bowlSelections[i]=s;var el=document.getElementById("bqty-"+i);if(el)el.textContent=s.qty;updateFloat();}
-function toggleJuice(i){if(!state.bowlSelections[i])return;state.bowlSelections[i].juice=!state.bowlSelections[i].juice;renderMenu();}
-function chgJuiceQty(i,d){if(!state.bowlSelections[i])return;state.bowlSelections[i].juiceQty=Math.max(1,(state.bowlSelections[i].juiceQty||1)+d);renderMenu();}
-function chgQty(dir){state.paneerQty=Math.max(0,state.paneerQty+(dir===0?-1:1));document.getElementById("paneerQty").textContent=state.paneerQty;updateFloat();}
-function selectTime(v){state.deliveryTime=v===0?"evening":"lunch";document.getElementById("time-evening").classList.toggle("selected",v===0);document.getElementById("time-lunch").classList.toggle("selected",v===1);document.getElementById("info-evening").style.display=v===0?"block":"none";document.getElementById("info-lunch").style.display=v===1?"block":"none";if(v===1){var tom=new Date();tom.setDate(tom.getDate()+1);document.getElementById("lunchDate").min=tom.toISOString().split("T")[0];}}
-function setDelivery(v){state.deliveryType=v===0?"delivery":"pickup";document.getElementById("dtab-delivery").classList.toggle("active",v===0);document.getElementById("dtab-pickup").classList.toggle("active",v===1);document.getElementById("addrBlock").style.display=v===0?"block":"none";document.getElementById("pickupBlock").style.display=v===1?"block":"none";}
-function selectPay(v){state.payMethod=PAY_KEYS[v];PAY_KEYS.forEach(function(k,idx){document.getElementById("pay-"+k).classList.toggle("selected",idx===v);});document.getElementById("upiBox").classList.toggle("show",v===0);document.getElementById("balanceBox").classList.toggle("show",v===3);}
-function copyUPI(){navigator.clipboard.writeText("hngho95117130@barodampay").then(function(){var b=document.getElementById("copyBtn");b.textContent="Copied!";setTimeout(function(){b.innerHTML="&#128203; Copy UPI ID";},2000);});}
-function calcTotal(){var t=0;var isSub=state.plan!=="single";if(isSub){var pp={"6days":1550,"12days":2850,"24days":5850};t+=pp[state.plan]||0;}Object.keys(state.bowlSelections).forEach(function(k){var s=state.bowlSelections[k];if(s&&(s.qty>0||isSub)){if(!isSub){var p=s.size==="half"?179:280;t+=s.qty*p;}if(s.juice)t+=(s.juiceQty||1)*70;}});t+=state.paneerQty*20;return t;}
-function updateFloat(){var fb=document.getElementById("floatBar");if(currentScreen>=1&&currentScreen<=5){fb.style.display="flex";document.getElementById("floatAmt").textContent="Rs "+calcTotal().toLocaleString("en-IN");}else fb.style.display="none";}
-function showErr(id,v){var el=document.getElementById(id);if(el)el.classList.toggle("show",v);}
+// ── Bowl interaction helpers ────────────────────────────────────────────────
+function toggleBowl(i){
+  if(state.plan!=="single")return;
+  var s=state.bowlSelections[i]||{qty:0,size:"full",juice:false,juiceQty:1};
+  state.bowlSelections[i]=s.qty===0
+    ?{qty:1,size:"full",juice:false,juiceQty:1}
+    :{qty:0,size:"full",juice:false,juiceQty:1};
+  renderMenu();
+}
+function setBowlSize(i,v){
+  var sz=v===0?"half":"full";
+  if(!state.bowlSelections[i])
+    state.bowlSelections[i]={qty:1,size:sz,juice:false,juiceQty:1};
+  else state.bowlSelections[i].size=sz;
+  renderMenu();
+}
+function chgBowlQty(i,d){
+  var s=state.bowlSelections[i]||{qty:1,size:"full",juice:false,juiceQty:1};
+  s.qty=Math.max(1,s.qty+d);
+  state.bowlSelections[i]=s;
+  var el=document.getElementById("bqty-"+i);
+  if(el)el.textContent=s.qty;
+  updateFloat();
+}
+function toggleJuice(i){
+  if(!state.bowlSelections[i])return;
+  state.bowlSelections[i].juice=!state.bowlSelections[i].juice;
+  renderMenu();
+}
+function chgJuiceQty(i,d){
+  if(!state.bowlSelections[i])return;
+  state.bowlSelections[i].juiceQty=Math.max(1,(state.bowlSelections[i].juiceQty||1)+d);
+  renderMenu();
+}
 
+// ── Add-on quantity ─────────────────────────────────────────────────────────
+function chgQty(dir){
+  state.paneerQty=Math.max(0,state.paneerQty+(dir===0?-1:1));
+  document.getElementById("paneerQty").textContent=state.paneerQty;
+  updateFloat();
+}
+
+// ── Timing selection ────────────────────────────────────────────────────────
+function selectTime(v){
+  state.deliveryTime=v===0?"evening":"lunch";
+  document.getElementById("time-evening").classList.toggle("selected",v===0);
+  document.getElementById("time-lunch").classList.toggle("selected",v===1);
+  document.getElementById("info-evening").style.display=v===0?"block":"none";
+  document.getElementById("info-lunch").style.display=v===1?"block":"none";
+  if(v===1){
+    var tom=new Date();
+    tom.setDate(tom.getDate()+1);
+    document.getElementById("lunchDate").min=tom.toISOString().split("T")[0];
+  }
+  showErr("err-time",false);
+}
+
+// ── Delivery type ───────────────────────────────────────────────────────────
+function setDelivery(v){
+  state.deliveryType=v===0?"delivery":"pickup";
+  document.getElementById("dtab-delivery").classList.toggle("active",v===0);
+  document.getElementById("dtab-pickup").classList.toggle("active",v===1);
+  document.getElementById("addrBlock").style.display=v===0?"block":"none";
+  document.getElementById("pickupBlock").style.display=v===1?"block":"none";
+}
+
+// ── Payment selection ───────────────────────────────────────────────────────
+function selectPay(v){
+  state.payMethod=PAY_KEYS[v];
+  PAY_KEYS.forEach(function(k,idx){
+    document.getElementById("pay-"+k).classList.toggle("selected",idx===v);
+  });
+  document.getElementById("upiBox").classList.toggle("show",v===0);
+  document.getElementById("balanceBox").classList.toggle("show",v===3);
+  showErr("err-pay",false);
+}
+
+function copyUPI(){
+  navigator.clipboard.writeText("hngho95117130@barodampay").then(function(){
+    var b=document.getElementById("copyBtn");
+    b.textContent="Copied!";
+    setTimeout(function(){b.textContent="Copy UPI ID";},2500);
+  });
+}
+
+// ── Total calculation ───────────────────────────────────────────────────────
+function calcTotal(){
+  var t=0;
+  var isSub=state.plan!=="single";
+  if(isSub){var pp={"6days":1550,"12days":2850,"24days":5850};t+=pp[state.plan]||0;}
+  Object.keys(state.bowlSelections).forEach(function(k){
+    var s=state.bowlSelections[k];
+    if(s&&(s.qty>0||isSub)){
+      if(!isSub){var p=s.size==="half"?179:280;t+=s.qty*p;}
+      if(s.juice)t+=(s.juiceQty||1)*70;
+    }
+  });
+  t+=state.paneerQty*20;
+  return t;
+}
+
+function updateFloat(){
+  var fb=document.getElementById("floatBar");
+  if(currentScreen>=1&&currentScreen<=5){
+    fb.style.display="flex";
+    document.getElementById("floatAmt").textContent="Rs "+calcTotal().toLocaleString("en-IN");
+  } else {
+    fb.style.display="none";
+  }
+}
+
+function showErr(id,v){
+  var el=document.getElementById(id);
+  if(el)el.classList.toggle("show",v);
+}
+
+// ── Validation ──────────────────────────────────────────────────────────────
 function validate(s){
-  if(s===0){if(!state.plan){showErr("err-plan",true);return false;}showErr("err-plan",false);return true;}
-  if(s===1){var has=Object.keys(state.bowlSelections).some(function(k){return state.bowlSelections[k]&&state.bowlSelections[k].qty>0;});if(state.plan==="single"&&!has){showErr("err-menu",true);return false;}showErr("err-menu",false);return true;}
-  if(s===2){if(!state.deliveryTime){showErr("err-time",true);return false;}showErr("err-time",false);if(state.deliveryTime==="lunch"){var d=document.getElementById("lunchDate").value;if(!d){showErr("err-lunch",true);return false;}state.lunchDate=d;showErr("err-lunch",false);}return true;}
+  if(s===0){
+    if(!state.plan){showErr("err-plan",true);return false;}
+    showErr("err-plan",false);return true;
+  }
+  if(s===1){
+    var has=Object.keys(state.bowlSelections).some(function(k){
+      return state.bowlSelections[k]&&state.bowlSelections[k].qty>0;
+    });
+    if(state.plan==="single"&&!has){showErr("err-menu",true);return false;}
+    showErr("err-menu",false);return true;
+  }
+  if(s===2){
+    if(!state.deliveryTime){showErr("err-time",true);return false;}
+    showErr("err-time",false);
+    if(state.deliveryTime==="lunch"){
+      var ld=document.getElementById("lunchDate").value;
+      if(!ld){showErr("err-lunch",true);return false;}
+      state.lunchDate=ld;showErr("err-lunch",false);
+    }
+    return true;
+  }
   if(s===3)return true;
-  if(s===4){var ok=true;state.name=document.getElementById("custName").value.trim();state.phone=document.getElementById("custPhone").value.trim();if(!state.name){showErr("err-name",true);ok=false;}else showErr("err-name",false);if(!/^\d{10}$/.test(state.phone)){showErr("err-phone",true);ok=false;}else showErr("err-phone",false);if(state.deliveryType==="delivery"){state.addr=document.getElementById("custAddr").value.trim();state.area=document.getElementById("custArea").value.trim();state.pin=document.getElementById("custPin").value.trim();state.landmark=document.getElementById("custLandmark").value.trim();if(!state.addr||!state.area||!/^\d{6}$/.test(state.pin)){showErr("err-addr",true);ok=false;}else showErr("err-addr",false);}return ok;}
-  if(s===5){if(!state.payMethod){showErr("err-pay",true);return false;}if(state.payMethod==="upi"){var utr=document.getElementById("utrInput").value.trim();if(!utr){showErr("err-utr",true);return false;}state.utr=utr;showErr("err-utr",false);}if(state.payMethod==="balance"){var cyc=document.getElementById("balanceCycle").value;if(!cyc){showErr("err-balance",true);return false;}state.balanceCycle=cyc;showErr("err-balance",false);}showErr("err-pay",false);return true;}
+  if(s===4){
+    var ok=true;
+    state.name=document.getElementById("custName").value.trim();
+    state.phone=document.getElementById("custPhone").value.trim();
+    if(!state.name){showErr("err-name",true);ok=false;}
+    else showErr("err-name",false);
+    if(!/^[6-9]\d{9}$/.test(state.phone)){showErr("err-phone",true);ok=false;}
+    else showErr("err-phone",false);
+    if(state.deliveryType==="delivery"){
+      state.addr=document.getElementById("custAddr").value.trim();
+      state.area=document.getElementById("custArea").value.trim();
+      state.pin=document.getElementById("custPin").value.trim();
+      state.landmark=document.getElementById("custLandmark")?document.getElementById("custLandmark").value.trim():"";
+      if(!state.addr||!state.area){showErr("err-addr",true);ok=false;}
+      else if(!/^\d{6}$/.test(state.pin)){showErr("err-pin",true);ok=false;}
+      else{showErr("err-addr",false);showErr("err-pin",false);}
+    }
+    return ok;
+  }
+  if(s===5){
+    if(!state.payMethod){showErr("err-pay",true);return false;}
+    if(state.payMethod==="upi"){
+      var utr=document.getElementById("utrInput").value.trim();
+      if(!utr){showErr("err-utr",true);return false;}
+      state.utr=utr;showErr("err-utr",false);
+    }
+    if(state.payMethod==="balance"){
+      var cyc=document.getElementById("balanceCycle").value;
+      if(!cyc){showErr("err-balance",true);return false;}
+      state.balanceCycle=cyc;showErr("err-balance",false);
+    }
+    showErr("err-pay",false);return true;
+  }
   return true;
 }
 
-function goTo(n){if(n>currentScreen&&!validate(currentScreen))return;document.getElementById("screen"+currentScreen).classList.remove("active");currentScreen=n;if(n<7){document.getElementById("screen"+n).classList.add("active");if(n===1)renderMenu();if(n===6)buildSummary();}updateTabs();updateFloat();window.scrollTo({top:0,behavior:"smooth"});}
+// ── Screen navigation ───────────────────────────────────────────────────────
+function goTo(n){
+  if(n>currentScreen&&!validate(currentScreen))return;
+  document.getElementById("screen"+currentScreen).classList.remove("active");
+  currentScreen=n;
+  if(n<7){
+    document.getElementById("screen"+n).classList.add("active");
+    if(n===1)renderMenu();
+    if(n===6)buildSummary();
+  }
+  updateTabs();updateFloat();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
 
+// ── Order summary ───────────────────────────────────────────────────────────
 function buildSummary(){
   var isSub=state.plan!=="single";
-  var timeStr=state.deliveryTime==="lunch"?"Lunch on "+state.lunchDate+" (12 to 2 PM)":"Evening today after 5:30 PM";
+  var sr=document.getElementById("specialReq").value.trim();
+  state.specialReq=sr;
+  var timeStr=state.deliveryTime==="lunch"
+    ?"Lunch on "+state.lunchDate+" (12:00 PM to 2:00 PM)"
+    :"Evening delivery after 5:30 PM today";
+  var payStatus="";
+  if(state.payMethod==="upi")payStatus="PAID — UTR: "+state.utr;
+  else if(state.payMethod==="cod")payStatus="Pay cash on delivery";
+  else if(state.payMethod==="cop")payStatus="Pay cash at pick-up";
+  else if(state.payMethod==="balance")payStatus="Saku Balance ("+({weekly:"Weekly","12days":"Every 12 days",monthly:"Monthly"}[state.balanceCycle])+")";
+
   var html='<div class="sum-title">Your Order Summary</div>';
+
+  // ORDER INFO
   html+='<div class="sum-section"><div class="sum-section-label">Order Info</div>';
-  html+='<div class="sum-row"><span>Week</span><span>Week 58 — 24 to 29 Aug 2026</span></div>';
+  html+='<div class="sum-row"><span>Week</span><span>Week 59 — 31 Aug to 5 Sep 2026</span></div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div>';
   html+='<div class="sum-row"><span>Delivery Slot</span><span>'+timeStr+'</span></div></div>';
-  html+='<div class="sum-section"><div class="sum-section-label">Bowls and Juice</div>';
-  if(isSub)html+='<div class="sum-row"><span>Subscription</span><span>'+PLAN_PRICES[state.plan]+'</span></div>';
-  Object.keys(state.bowlSelections).forEach(function(k){var s=state.bowlSelections[k];if(s&&(s.qty>0||isSub)){var b=BOWLS[k];var sz=s.size||"full";var p=sz==="half"?179:280;if(!isSub)html+='<div class="sum-row"><span>'+b.name+'<br><small style="font-size:9px;opacity:0.7;">'+sz+' bowl x '+s.qty+'</small></span><span>Rs '+(s.qty*p)+'</span></div>';else html+='<div class="sum-row"><span>'+b.name+'</span><span>Included</span></div>';if(s.juice)html+='<div class="sum-row"><span>&nbsp;&nbsp;+ '+b.juice+' x '+(s.juiceQty||1)+'</span><span>Rs '+((s.juiceQty||1)*70)+'</span></div>';}});
-  if(state.paneerQty>0)html+='<div class="sum-row"><span>Extra Paneer x '+state.paneerQty+' ('+(state.paneerQty*50)+'g)</span><span>Rs '+(state.paneerQty*20)+'</span></div>';
-  var sr=document.getElementById("specialReq").value.trim();
-  if(sr)html+='<div class="sum-row"><span>Kitchen Note</span><span style="text-align:right;font-size:10px;max-width:180px;">'+sr+'</span></div>';
+
+  // BOWLS
+  html+='<div class="sum-section"><div class="sum-section-label">Bowls & Juice</div>';
+  if(isSub)html+='<div class="sum-row"><span>Subscription Price</span><span>'+PLAN_PRICES[state.plan]+'</span></div>';
+  var hasItems=false;
+  Object.keys(state.bowlSelections).forEach(function(k){
+    var s=state.bowlSelections[k];
+    if(s&&(s.qty>0||isSub)){
+      hasItems=true;
+      var b=BOWLS[k];var sz=s.size||"full";var p=sz==="half"?179:280;
+      if(!isSub)
+        html+='<div class="sum-row"><span>'+b.name+'<br><small style="font-size:9px;opacity:0.65;">'+sz+' bowl &times; '+s.qty+'</small></span><span>Rs '+(s.qty*p)+'</span></div>';
+      else
+        html+='<div class="sum-row"><span>'+b.name+'<br><small style="font-size:9px;opacity:0.65;">'+b.day+'</small></span><span>Included</span></div>';
+      if(s.juice)
+        html+='<div class="sum-row"><span>&nbsp;&nbsp;&#129381; '+b.juice+' &times;'+(s.juiceQty||1)+'</span><span>Rs '+((s.juiceQty||1)*70)+'</span></div>';
+    }
+  });
+  if(state.paneerQty>0)
+    html+='<div class="sum-row"><span>Extra Paneer &times;'+state.paneerQty+' ('+(state.paneerQty*50)+'g)</span><span>Rs '+(state.paneerQty*20)+'</span></div>';
+  if(sr)
+    html+='<div class="sum-row" style="align-items:flex-start;"><span>&#127807; Kitchen Note</span><span style="text-align:right;font-size:10px;max-width:185px;color:rgba(8,67,199,0.7);">'+sr+'</span></div>';
   html+='</div>';
-  html+='<div class="sum-section"><div class="sum-section-label">Delivery</div>';
-  html+='<div class="sum-row"><span>Type</span><span>'+(state.deliveryType==="delivery"?"Home Delivery":"Self Pick-up")+'</span></div>';
+
+  // DELIVERY
+  html+='<div class="sum-section"><div class="sum-section-label">Delivery Details</div>';
   html+='<div class="sum-row"><span>Name</span><span>'+state.name+'</span></div>';
   html+='<div class="sum-row"><span>WhatsApp</span><span>+91 '+state.phone+'</span></div>';
-  if(state.deliveryType==="delivery"){html+='<div class="sum-row"><span>Address</span><span style="text-align:right;font-size:10px;max-width:195px;">'+state.addr+(state.landmark?', '+state.landmark:'')+', '+state.area+' - '+state.pin+'</span></div>';html+='<div class="sum-row"><span>Delivery</span><span>Free within 3 km</span></div>';}
+  html+='<div class="sum-row"><span>Type</span><span>'+(state.deliveryType==="delivery"?"&#128757; Home Delivery":"&#127968; Self Pick-up")+'</span></div>';
+  if(state.deliveryType==="delivery"){
+    html+='<div class="sum-row" style="align-items:flex-start;"><span>Address</span><span style="text-align:right;font-size:10px;max-width:190px;">'+state.addr+(state.landmark?', '+state.landmark:'')+', '+state.area+' - '+state.pin+'</span></div>';
+    html+='<div class="sum-row"><span>Delivery Charge</span><span>Free within 3 km</span></div>';
+  } else {
+    html+='<div class="sum-row"><span>Pick-up Address</span><span style="text-align:right;font-size:10px;max-width:185px;">Plot 12, Kothrud Industrial Estate, Atenx Studio, Kothrud, Pune 411038</span></div>';
+  }
   html+='</div>';
+
+  // PAYMENT
   html+='<div class="sum-section"><div class="sum-section-label">Payment</div>';
   html+='<div class="sum-row"><span>Method</span><span>'+(PAY_LABELS[state.payMethod]||"")+'</span></div>';
-  if(state.payMethod==="upi")html+='<div class="sum-row"><span>Payment Status</span><span style="color:var(--green-dark);font-weight:800;">PAID</span></div><div class="sum-row"><span>UTR ID</span><span style="font-size:10px;">'+state.utr+'</span></div>';
-  if(state.payMethod==="cod")html+='<div class="sum-row"><span>Status</span><span>Pay cash on delivery</span></div>';
-  if(state.payMethod==="cop")html+='<div class="sum-row"><span>Status</span><span>Pay cash at pick-up</span></div>';
-  if(state.payMethod==="balance"&&state.balanceCycle)html+='<div class="sum-row"><span>Settlement</span><span>'+({weekly:"Weekly","12days":"Every 12 days",monthly:"Monthly"}[state.balanceCycle])+'</span></div>';
+  if(state.payMethod==="upi"){
+    html+='<div class="sum-row"><span>Payment Status</span><span style="color:#2E7D32;font-weight:800;">&#10003; PAID</span></div>';
+    html+='<div class="sum-row"><span>UTR / Txn ID</span><span style="font-size:10px;font-family:monospace;">'+state.utr+'</span></div>';
+  } else {
+    html+='<div class="sum-row"><span>Payment Status</span><span style="color:#E65100;font-weight:700;">Pending — Pay at '+((state.payMethod==="cod")?"delivery":"pick-up")+'</span></div>';
+  }
+  if(state.payMethod==="balance"&&state.balanceCycle)
+    html+='<div class="sum-row"><span>Settlement Cycle</span><span>'+({weekly:"Weekly","12days":"Every 12 days",monthly:"Monthly"}[state.balanceCycle])+'</span></div>';
   html+='</div>';
+
+  // TOTAL
   html+='<div class="sum-total"><span>Total Payable</span><span>Rs '+calcTotal().toLocaleString("en-IN")+'</span></div>';
   document.getElementById("summaryCard").innerHTML=html;
 }
 
+// ── Place order → WhatsApp ──────────────────────────────────────────────────
 function placeOrder(){
   var btn=document.getElementById("placeBtn");
-  btn.textContent="Opening WhatsApp...";btn.disabled=true;
+  btn.textContent="Opening WhatsApp...";
+  btn.disabled=true;
+
   var isSub=state.plan!=="single";
   var bowlLines=[];var juiceLines=[];
+  var bowlTotal=0;var juiceTotal=0;
+
   Object.keys(state.bowlSelections).forEach(function(k){
     var s=state.bowlSelections[k];
     if(s&&(s.qty>0||isSub)){
-      var b=BOWLS[k];var sz=s.size||"full";var p=sz==="half"?179:280;
-      bowlLines.push(b.day+": "+b.name+" ("+sz+" bowl"+(isSub?"":" x"+s.qty+" @ Rs "+p+" = Rs "+(s.qty*p))+")");
-      if(s.juice)juiceLines.push(b.juice+(s.juiceQty>1?" x"+s.juiceQty:"")+" (Rs "+((s.juiceQty||1)*70)+")");
+      var b=BOWLS[k];
+      var sz=s.size||"full";
+      var p=sz==="half"?179:280;
+      var lineTotal=isSub?0:s.qty*p;
+      bowlTotal+=lineTotal;
+      bowlLines.push({
+        day:b.day, name:b.name, size:sz, qty:s.qty,
+        price:p, total:lineTotal, isSub:isSub,
+        juice:s.juice, juiceName:b.juice,
+        juiceQty:s.juiceQty||1, juiceTotal:(s.juice?((s.juiceQty||1)*70):0)
+      });
+      if(s.juice)juiceTotal+=(s.juiceQty||1)*70;
     }
   });
+
   var now=new Date();
-  var orderId="SAKU-"+now.getFullYear().toString()+("0"+(now.getMonth()+1)).slice(-2)+("0"+now.getDate()).slice(-2)+"-"+Math.floor(1000+Math.random()*9000).toString();
+  var orderId="SAKU-"+now.getFullYear().toString()
+    +("0"+(now.getMonth()+1)).slice(-2)
+    +("0"+now.getDate()).slice(-2)+"-"
+    +Math.floor(1000+Math.random()*9000).toString();
+
   var sr=document.getElementById("specialReq").value.trim();
+  var total=calcTotal();
+
   var m="";
-  m+="SAKU HEALTHY BOWLS - NEW ORDER%0A";
-  m+="==========================%0A%0A";
-  m+="Order ID: "+orderId+"%0A";
-  m+="Week 58 - 24 to 29 Aug 2026%0A";
-  m+="Date: "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
-  m+="Time: "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
-  m+="DELIVERY SLOT%0A";
-  m+="---------------------------%0A";
+  m+="*SAKU HEALTHY BOWLS*%0A";
+  m+="*NEW ORDER RECEIVED*%0A";
+  m+="================================%0A%0A";
+
+  m+="*ORDER ID:* "+orderId+"%0A";
+  m+="*Week 59 — 31 Aug to 5 Sep 2026*%0A";
+  m+="*Date:* "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
+  m+="*Time:* "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
+
+  // DELIVERY SLOT
+  m+="--- DELIVERY SLOT ---%0A";
   if(state.deliveryTime==="lunch"){
-    m+="LUNCH ORDER%0A";
-    m+="Lunch Date: "+state.lunchDate+"%0A";
-    m+="Delivery Time: 12:00 PM to 2:00 PM%0A";
-    m+="ACTION: Please confirm lunch bowl with customer on WhatsApp before prepping%0A%0A";
+    m+="*TYPE: LUNCH ORDER*%0A";
+    m+="*Date:* "+state.lunchDate+"%0A";
+    m+="*Time:* 12:00 PM to 2:00 PM%0A";
+    m+="*ACTION:* Confirm lunch bowl with customer on WhatsApp before prepping%0A%0A";
   } else {
-    m+="EVENING ORDER%0A";
-    m+="Delivery: After 5:30 PM today%0A";
-    m+="Status: Ordered before 5:00 PM cutoff%0A%0A";
+    m+="*TYPE: EVENING ORDER*%0A";
+    m+="*Delivery:* After 5:30 PM today%0A";
+    m+="*Status:* Placed before 5:00 PM cutoff%0A%0A";
   }
-  m+="CUSTOMER DETAILS%0A";
-  m+="---------------------------%0A";
-  m+="Name: "+state.name+"%0A";
-  m+="WhatsApp: +91 "+state.phone+"%0A%0A";
-  m+="ORDER DETAILS%0A";
-  m+="---------------------------%0A";
-  m+="Plan: "+PLAN_LABELS[state.plan]+"%0A%0A";
-  for(var i=0;i<bowlLines.length;i++)m+="Bowl "+(i+1)+": "+bowlLines[i]+"%0A";
-  if(juiceLines.length){m+="%0A";for(var j=0;j<juiceLines.length;j++)m+="Juice "+(j+1)+": "+juiceLines[j]+"%0A";}
-  if(state.paneerQty>0)m+="%0APaneer Add-on: "+(state.paneerQty*50)+"g ("+state.paneerQty+" unit"+(state.paneerQty>1?"s":"")+") - Rs "+(state.paneerQty*20)+"%0A";
-  if(sr)m+="%0AKitchen Note: "+sr+"%0A";
-  m+="%0ADELIVERY DETAILS%0A";
-  m+="---------------------------%0A";
+
+  // CUSTOMER
+  m+="--- CUSTOMER DETAILS ---%0A";
+  m+="*Name:* "+state.name+"%0A";
+  m+="*WhatsApp:* +91 "+state.phone+"%0A%0A";
+
+  // ORDER
+  m+="--- ORDER DETAILS ---%0A";
+  m+="*Plan:* "+PLAN_LABELS[state.plan]+"%0A%0A";
+  for(var i=0;i<bowlLines.length;i++){
+    var bl=bowlLines[i];
+    if(bl.isSub){
+      m+="*Bowl:* "+bl.day+" — "+bl.name+" (included in subscription)%0A";
+    } else {
+      m+="*Bowl "+(i+1)+":* "+bl.day+" — "+bl.name+"%0A";
+      m+="  Size: "+bl.size+" bowl | Qty: "+bl.qty+" | @ Rs "+bl.price+" each = *Rs "+bl.total+"*%0A";
+    }
+    if(bl.juice){
+      m+="  *Juice:* "+bl.juiceName+" x"+bl.juiceQty+" = *Rs "+bl.juiceTotal+"*%0A";
+    }
+    m+="%0A";
+  }
+  if(state.paneerQty>0){
+    m+="*Paneer Add-on:* "+(state.paneerQty*50)+"g ("+state.paneerQty+" unit"+(state.paneerQty>1?"s":"")+") = *Rs "+(state.paneerQty*20)+"*%0A%0A";
+  }
+  if(sr){
+    m+="*Kitchen Note:* "+sr+"%0A%0A";
+  }
+
+  // DELIVERY
+  m+="--- DELIVERY DETAILS ---%0A";
   if(state.deliveryType==="delivery"){
-    m+="Type: Home Delivery%0A";
-    m+="Address: "+state.addr+"%0A";
-    if(state.landmark)m+="Landmark: "+state.landmark+"%0A";
-    m+="Area: "+state.area+"%0A";
-    m+="Pincode: "+state.pin+"%0A";
-    m+="Delivery Charge: Free within 3 km - extra charge applies beyond 3 km%0A";
+    m+="*Type:* Home Delivery%0A";
+    m+="*Address:* "+state.addr+"%0A";
+    if(state.landmark)m+="*Landmark:* "+state.landmark+"%0A";
+    m+="*Area:* "+state.area+"%0A";
+    m+="*Pincode:* "+state.pin+"%0A";
+    m+="*Delivery Charge:* Free within 3 km | Extra charge beyond 3 km%0A%0A";
   } else {
-    m+="Type: Self Pick-up%0A";
-    m+="Location: Plot No. 12, Kothrud Industrial Estate, Atenx Studio, Kothrud, Pune 411038%0A";
-    m+="Ready from: 12:00 PM%0A";
+    m+="*Type:* Self Pick-up%0A";
+    m+="*Location:* Plot No. 12, Kothrud Industrial Estate, Atenx Performance Studio, Kothrud, Pune — 411038%0A";
+    m+="*Ready From:* 12:00 PM%0A%0A";
   }
-  m+="%0APAYMENT DETAILS%0A";
-  m+="---------------------------%0A";
-  m+="Method: "+(PAY_LABELS[state.payMethod]||state.payMethod)+"%0A";
-  if(state.payMethod==="upi"){m+="Payment Status: PAID%0A";m+="UTR Transaction ID: "+state.utr+"%0A";}
-  if(state.payMethod==="cod")m+="Action: Collect cash when bowl is delivered%0A";
-  if(state.payMethod==="cop")m+="Action: Collect cash when customer picks up%0A";
-  if(state.payMethod==="balance"){m+="Settlement Cycle: "+state.balanceCycle+"%0A";m+="Action: Add to customer running balance account%0A";}
-  m+="%0A==========================%0A";
-  m+="ORDER TOTAL: Rs "+calcTotal()+"%0A";
-  m+="==========================%0A";
-  m+="Saku Healthy Bowls | Kothrud, Pune";
+
+  // PAYMENT
+  m+="--- PAYMENT DETAILS ---%0A";
+  m+="*Method:* "+(PAY_LABELS[state.payMethod]||state.payMethod)+"%0A";
+  if(state.payMethod==="upi"){
+    m+="*Payment Status:* PAID%0A";
+    m+="*UTR / Transaction ID:* "+state.utr+"%0A";
+  } else if(state.payMethod==="cod"){
+    m+="*Status:* Payment Pending — Collect cash on delivery%0A";
+  } else if(state.payMethod==="cop"){
+    m+="*Status:* Payment Pending — Collect cash at pick-up%0A";
+  } else if(state.payMethod==="balance"){
+    m+="*Status:* Running Balance%0A";
+    m+="*Settlement Cycle:* "+state.balanceCycle+"%0A";
+    m+="*Action:* Add to customer running balance account%0A";
+  }
+  m+="%0A";
+
+  // TOTAL
+  m+="================================%0A";
+  m+="*ORDER TOTAL: Rs "+total+"*%0A";
+  m+="================================%0A";
+  m+="Saku Healthy Bowls | Kothrud, Pune%0A";
+  m+="Contact: +91 9525113636";
+
   var waUrl="https://wa.me/919525113636?text="+m;
   window.open(waUrl,"_blank");
-  setTimeout(function(){document.getElementById("screen6").classList.remove("active");document.getElementById("screenTY").classList.add("active");document.getElementById("floatBar").style.display="none";document.getElementById("stepsNav").style.display="none";},1000);
+
+  setTimeout(function(){
+    document.getElementById("screen6").classList.remove("active");
+    document.getElementById("screenTY").classList.add("active");
+    document.getElementById("floatBar").style.display="none";
+    document.getElementById("stepsNav").style.display="none";
+  },1200);
 }
 
 renderMenu();updateTabs();
