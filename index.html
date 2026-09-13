@@ -247,24 +247,24 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
   <div class="card" id="plan-6days" data-plan="6days" onclick="selectPlan(this)">
     <div class="card-check">&#10003;</div>
     <div class="plan-name">6-Day Subscription</div>
-    <div class="plan-price">Rs 1,550 <span>/ week</span></div>
-    <div class="plan-desc">Get all 6 bowls of the week. Add digestive juice (+Rs 70/day) or extra paneer whenever you want.</div>
-    <div class="plan-savings">Save Rs 130</div>
+    <div class="plan-price">Rs 1,550 <span>/ week</span><br><span style="font-size:13px;font-weight:600;color:var(--green-dark);">Rs 1,800 / week with juice included</span></div>
+    <div class="plan-desc">All 6 bowls of the week. With Juice: Rs 1,800 | Without Juice: Rs 1,550. Add extra paneer any day.</div>
+    <div style="margin-top:6px;font-size:10px;font-weight:600;color:rgba(8,67,199,0.6);background:rgba(8,67,199,0.06);border-radius:8px;padding:4px 9px;display:inline-block;">Without Juice: Rs 1,550 &nbsp;|&nbsp; With Juice: Rs 1,800</div>
   </div>
   <div class="card" id="plan-12days" data-plan="12days" onclick="selectPlan(this)">
     <div class="card-check">&#10003;</div>
     <div class="plan-name">12-Day Subscription</div>
-    <div class="plan-price">Rs 2,850 <span>/ 12 days</span></div>
-    <div class="plan-desc">Two full weeks of nourishing bowls. Build your healthy eating routine with Saku.</div>
-    <div class="plan-savings">Save Rs 510</div>
+    <div class="plan-price">Rs 3,100 <span>/ 12 days</span><br><span style="font-size:13px;font-weight:600;color:var(--green-dark);">Rs 3,750 / 12 days with juice included</span></div>
+    <div class="plan-desc">Two full weeks of nourishing bowls. With Juice: Rs 3,750 | Without Juice: Rs 3,100.</div>
+    <div style="margin-top:6px;font-size:10px;font-weight:600;color:rgba(8,67,199,0.6);background:rgba(8,67,199,0.06);border-radius:8px;padding:4px 9px;display:inline-block;">Without Juice: Rs 3,100 &nbsp;|&nbsp; With Juice: Rs 3,750</div>
   </div>
   <div class="card" id="plan-24days" data-plan="24days" onclick="selectPlan(this)" style="position:relative;">
     <span class="best-value">&#11088; Best Value</span>
     <div class="card-check">&#10003;</div>
     <div class="plan-name">24-Day Subscription</div>
-    <div class="plan-price">Rs 5,850 <span>/ month</span></div>
-    <div class="plan-desc">A complete month of Saku. The most committed way to eat clean and feel great every day.</div>
-    <div class="plan-savings">Save Rs 1,870</div>
+    <div class="plan-price">Rs 5,700 <span>/ month</span><br><span style="font-size:13px;font-weight:600;color:var(--green-dark);">Rs 7,100 / month with juice included</span></div>
+    <div class="plan-desc">A full month of Saku. The most committed way to eat clean. With Juice: Rs 7,100 | Without Juice: Rs 5,700.</div>
+    <div style="margin-top:6px;font-size:10px;font-weight:600;color:rgba(8,67,199,0.6);background:rgba(8,67,199,0.06);border-radius:8px;padding:4px 9px;display:inline-block;">Without Juice: Rs 5,700 &nbsp;|&nbsp; With Juice: Rs 7,100</div>
   </div>
   <div id="err-plan" class="err">Please select a plan to continue.</div>
   <br><button class="btn-primary" onclick="goTo(1)">Continue &rarr;</button>
@@ -572,7 +572,7 @@ var cur=0;
 var PAY_KEYS=["upi","cod","cop","balance"];
 var PAY_LABELS={upi:"UPI Payment (Paid Online)",cod:"Cash on Delivery",cop:"Cash on Pick-up",balance:"Saku Balance Account"};
 var PLAN_LABELS={single:"Single Day Order","6days":"6-Day Subscription","12days":"12-Day Subscription","24days":"24-Day Subscription"};
-var PLAN_PRICES={single:"Per bowl","6days":"Rs 1,550","12days":"Rs 2,850","24days":"Rs 5,850"};
+var PLAN_PRICES={single:"Per bowl","6days":"Rs 1,550 / Rs 1,800 (with juice)","12days":"Rs 3,100 / Rs 3,750 (with juice)","24days":"Rs 5,700 / Rs 7,100 (with juice)"};
 
 function updateTabs(){for(var i=0;i<7;i++){var t=document.getElementById("tab"+i);if(!t)continue;t.className="step-tab";if(i<cur)t.classList.add("done");if(i===cur)t.classList.add("active");}}
 
@@ -646,7 +646,7 @@ function copyUPI(){navigator.clipboard.writeText("hngho95117130@barodampay").the
 
 function calcTotal(){
   var t=0;var isSub=state.plan!=="single";
-  if(isSub){var pp={"6days":1550,"12days":2850,"24days":5850};t+=pp[state.plan]||0;}
+  if(isSub){var pp={"6days":1550,"12days":3100,"24days":5700};t+=pp[state.plan]||0;}
   Object.keys(state.bowlSelections).forEach(function(k){var s=state.bowlSelections[k];if(s&&(s.qty>0||isSub)){if(!isSub){var p=s.size==="half"?179:280;t+=s.qty*p;}if(s.juice)t+=(s.juiceQty||1)*70;}});
   t+=state.paneerQty*20;return t;
 }
