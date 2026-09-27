@@ -280,8 +280,8 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title">This Week's Menu</h2>
-  <p class="section-subtitle">Week 63 &nbsp;&middot;&nbsp; 28 Sep to 3 Oct 2026</p>
-  <div class="week-label">28 Sep to 3 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily Protein Ladoo sweet treat (+Rs 70). Tap a bowl to select.</div>
+  <p class="section-subtitle">Week 64 &nbsp;&middot;&nbsp; 5 to 10 Oct 2026</p>
+  <div class="week-label">5 to 10 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily Protein Ladoo sweet treat (+Rs 70). Tap a bowl to select.</div>
   <div id="bowlsContainer"></div>
   <div id="err-menu" class="err">Please select at least one bowl to continue.</div>
   <br><button class="btn-primary" onclick="goTo(2)">Continue &rarr;</button>
@@ -555,78 +555,66 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Blush Garden Bowl",emoji:"🌸",
-   theme:"BLUSH GARDEN",
-   desc:"Creamy beetroot curd rice layered with lightly seasoned chickpeas, cucumber, carrot, roasted cauliflower and fresh greens. Finished with juicy pomegranate, apple, walnuts, flax and a smooth mint-coriander yogurt dressing.",
-   flavor:"Creamy - Fresh - Tangy - Lightly Sweet",
-   heat:"0/5",
-   contains:"Beetroot Curd Rice, Chickpeas, Cucumber, Carrot, Roasted Cauliflower, Fresh Greens, Pomegranate, Apple, Walnuts, Flaxseed | Dressing: Mint-Coriander Yogurt",
-   macros:["Cal: ~450","P: 23g","Carbs: 52g","Fat: 16g","Fibre: 12g"],
-   ladoo:"Beetroot Coconut Protein Ladoo",
-   ladooEmoji:"🌸",
-   ladooDesc:"Naturally sweet with earthy beetroot, roasted coconut and nutty peanut, finished with flaxseed for extra fiber",
-   ladooIngredients:"Dates, Roasted Oats, Peanut, Beetroot Powder, Desiccated Coconut, Flaxseed",
-   ladooMacros:"Cal: ~90 | Protein: 3g | Carbs: 11g | Fat: 4g | Fibre: 2g"},
-  {day:"Tuesday",name:"Ruby Harvest Bowl",emoji:"❤️",
-   theme:"RUBY HARVEST",
-   desc:"Slow-cooked rajma and red rice meet roasted sweet potato, sweet corn, cucumber, carrot and crisp cabbage. Finished with fresh orange, sunflower-peanut crunch and a creamy orange-mustard yogurt dressing.",
-   flavor:"Creamy - Citrusy - Nutty - Comforting",
-   heat:"0/5",
-   contains:"Rajma, Red Rice, Roasted Sweet Potato, Sweet Corn, Cucumber, Carrot, Crisp Cabbage, Orange, Sunflower-Peanut Crunch | Dressing: Orange-Mustard Yogurt",
-   macros:["Cal: ~460","P: 22g","Carbs: 56g","Fat: 15g","Fibre: 14g"],
-   ladoo:"Peanut Cocoa Protein Ladoo",
-   ladooEmoji:"❤️",
-   ladooDesc:"Rich and chocolatey with roasted peanuts and unsweetened cocoa, naturally sweetened with dates",
-   ladooIngredients:"Roasted Peanuts, Roasted Oats, Unsweetened Cocoa, Dates, Flaxseed, Sesame",
-   ladooMacros:"Cal: ~95 | Protein: 4g | Carbs: 10g | Fat: 5g | Fibre: 2g"},
-  {day:"Wednesday",name:"Green Glow Bowl",emoji:"💚",
-   theme:"GREEN GLOW",
-   desc:"A fresh protein-rich bowl of sprouted moong and field beans with spinach-coriander quinoa, broccoli, baby corn, cucumber and carrot. Finished with green apple, pumpkin-flax crunch and a silky herb yogurt dressing.",
-   flavor:"Fresh - Herby - Creamy - Naturally Sweet",
-   heat:"0/5",
-   contains:"Sprouted Moong, Field Beans, Spinach-Coriander Quinoa, Broccoli, Baby Corn, Cucumber, Carrot, Green Apple, Pumpkin-Flax Crunch | Dressing: Herb Yogurt",
-   macros:["Cal: ~440","P: 25g","Carbs: 48g","Fat: 14g","Fibre: 15g"],
-   ladoo:"Pistachio Cardamom Protein Ladoo",
-   ladooEmoji:"💚",
-   ladooDesc:"Fragrant and nutty with pistachio and cardamom on a naturally sweet date-oat base",
-   ladooIngredients:"Roasted Oats, Peanut Powder, Pistachio, Dates, Cardamom, Flaxseed",
-   ladooMacros:"Cal: ~95 | Protein: 3g | Carbs: 11g | Fat: 5g | Fibre: 2g"},
-  {day:"Thursday",name:"Golden Tropic Bowl",emoji:"🌞",
-   theme:"GOLDEN TROPIC",
-   desc:"Golden chickpeas paired with light lemon-tadka varai, roasted cauliflower, beetroot and sweet potato with crisp red cabbage and greens. Finished with juicy pineapple, ragi crunch and a refreshing pineapple-mint yogurt dressing.",
-   flavor:"Sweet-Tangy - Refreshing - Roasted - Creamy",
-   heat:"0/5",
-   contains:"Chickpeas, Lemon-Tadka Varai, Roasted Cauliflower, Beetroot, Sweet Potato, Red Cabbage, Greens, Pineapple, Ragi Crunch | Dressing: Pineapple-Mint Yogurt",
-   macros:["Cal: ~445","P: 21g","Carbs: 57g","Fat: 13g","Fibre: 13g"],
-   ladoo:"Ragi Peanut Protein Ladoo",
-   ladooEmoji:"🌞",
-   ladooDesc:"Wholesome Indian-style ladoo with roasted ragi, peanut and sesame — nutty with a lightly toasted finish",
-   ladooIngredients:"Roasted Ragi Flour, Peanut Powder, Dates, Sesame, Flaxseed, Cardamom",
-   ladooMacros:"Cal: ~90 | Protein: 3g | Carbs: 11g | Fat: 4g | Fibre: 2g"},
-  {day:"Friday",name:"Harvest Bloom Bowl",emoji:"✨",
-   theme:"HARVEST BLOOM",
-   desc:"Grilled paneer with spinach-herb quinoa, roasted broccoli, bell pepper, carrot and cauliflower, balanced with cucumber and fresh greens. Finished with pomegranate, walnut-flax crunch and a creamy coriander-lime yogurt dressing.",
-   flavor:"Creamy - Roasted - Fresh - Nutty",
-   heat:"0/5",
-   contains:"Paneer (Grilled), Spinach-Herb Quinoa, Roasted Broccoli, Bell Pepper, Carrot, Cauliflower, Cucumber, Pomegranate, Walnut-Flax Crunch | Dressing: Coriander-Lime Yogurt",
-   macros:["Cal: ~470","P: 26g","Carbs: 43g","Fat: 20g","Fibre: 11g"],
-   ladoo:"Almond Sesame Protein Ladoo",
-   ladooEmoji:"✨",
-   ladooDesc:"Crunchy roasted almonds and sesame in a soft date-oat ladoo — naturally nutty and satisfying",
-   ladooIngredients:"Roasted Almonds, Sesame, Roasted Oats, Peanut Powder, Dates, Flaxseed",
-   ladooMacros:"Cal: ~100 | Protein: 4g | Carbs: 10g | Fat: 6g | Fibre: 2g"},
-  {day:"Saturday",name:"Garden Protein Bowl",emoji:"🌿",
-   theme:"GARDEN PROTEIN",
-   desc:"A lighter, grain-free protein bowl built around mixed sprouts and seasoned field beans with broccoli, cabbage, cucumber, tomato, baby corn and carrot. Finished with fresh apple, seed crunch and a creamy green herb yogurt dressing.",
-   flavor:"Fresh - Crunchy - Creamy - Clean",
-   heat:"0/5",
-   contains:"Mixed Sprouts, Field Beans, Broccoli, Cabbage, Cucumber, Tomato, Baby Corn, Carrot, Fresh Apple, Seed Crunch | Dressing: Green Herb Yogurt",
-   macros:["Cal: ~390","P: 25g","Carbs: 35g","Fat: 14g","Fibre: 14g"],
-   ladoo:"Coconut Chia Protein Ladoo",
-   ladooEmoji:"🌿",
-   ladooDesc:"Soft and lightly chewy with coconut and chia — natural sweetness with seeds and healthy fats",
-   ladooIngredients:"Roasted Oats, Peanut Powder, Desiccated Coconut, Chia Seeds, Dates, Flaxseed",
-   ladooMacros:"Cal: ~90 | Protein: 3g | Carbs: 11g | Fat: 4g | Fibre: 3g"},
+  {day:"Monday",name:"Smoky BBQ Crunch",emoji:"🥗",
+   theme:"SMOKY BBQ CRUNCH",
+   desc:"Grilled paneer glazed with light smoky BBQ seasoning, served over crisp lettuce and spinach with warm cumin-seasoned broccoli and sweet corn. Fresh cucumber and juicy apple bring brightness, finished with roasted seed crunch and creamy smoky BBQ yogurt.",
+   flavor:"Smoky - Sweet - Tangy - Creamy",heat:"1/5",
+   contains:"BBQ Paneer, Lettuce, Spinach, Broccoli, Sweet Corn, Cucumber, Apple | Optional: Brown Rice | Crunch: Pumpkin + Sunflower + Flax | Dressing: Smoky BBQ Yogurt",
+   macros:["Cal: ~430","P: ~27g","Carbs: ~34g","Fat: ~18g","Fibre: ~10g"],
+   ladoo:"Coconut Peanut Protein Bite",ladooEmoji:"🥥",
+   ladooDesc:"Soft chewy protein bite with roasted peanut, coconut and dates — naturally sweet with a nutty flax finish",
+   ladooIngredients:"Dates, Roasted Peanut, Coconut, Oats, Plant Protein, Flax | 25-30g | ~85-100 kcal | ~4-5g protein",
+   ladooMacros:"Cal: ~85-100 | Protein: ~4-5g | Portion: 25-30g"},
+  {day:"Tuesday",name:"Tropic Tang",emoji:"🥗",
+   theme:"TROPIC TANG",
+   desc:"Tender rajma with warm cumin-seasoned carrot and cabbage, layered over crisp greens and cucumber. Juicy pineapple adds tropical sweetness, balanced with roasted peanut crunch and a smooth mango-tamarind yogurt dressing.",
+   flavor:"Sweet-Sour - Tangy - Nutty - Fresh",heat:"1/5",
+   contains:"Rajma, Lettuce, Cabbage, Carrot, Cucumber, Pineapple | Optional: Lemon Herb Rice | Crunch: Roasted Peanut | Dressing: Mango Tamarind Yogurt",
+   macros:["Cal: ~410","P: ~23g","Carbs: ~49g","Fat: ~14g","Fibre: ~13g"],
+   ladoo:"Jeera Saunf Digestive Bite",ladooEmoji:"🌿",
+   ladooDesc:"Roasted fennel and cumin with nutty peanut and sesame — a naturally sweet traditional digestive-inspired finish",
+   ladooIngredients:"Dates, Roasted Oats, Peanut, Sesame, Fennel, Roasted Cumin, Plant Protein | 25-30g | ~85-95 kcal | ~4g protein",
+   ladooMacros:"Cal: ~85-95 | Protein: ~4g | Portion: 25-30g"},
+  {day:"Wednesday",name:"Dragon Glow",emoji:"🥗",
+   theme:"DRAGON GLOW",
+   desc:"Protein-rich green moong with fresh spinach and lettuce, warm herb-seasoned broccoli and beetroot, and crisp cucumber. Finished with beautiful dragon fruit, pumpkin-flax crunch and a refreshing green herb yogurt dressing.",
+   flavor:"Fresh - Creamy - Mildly Tangy - Naturally Sweet",heat:"0/5",
+   contains:"Green Moong, Spinach, Lettuce, Broccoli, Beetroot, Cucumber, Dragon Fruit | Optional: Quinoa | Crunch: Pumpkin + Flax | Dressing: Green Silk",
+   macros:["Cal: ~390","P: ~24g","Carbs: ~39g","Fat: ~12g","Fibre: ~13g"],
+   ladoo:"Dragon Berry Chia Mousse",ladooEmoji:"💗",
+   ladooDesc:"Naturally colourful creamy mousse with dragon fruit, coconut and gentle date sweetness — chia gives it a pudding-like texture",
+   ladooIngredients:"Dragon Fruit, Chia, Greek Yogurt / Plant Protein, Dates, Coconut | 50-60g | ~80-100 kcal | ~5-6g protein",
+   ladooMacros:"Cal: ~80-100 | Protein: ~5-6g | Portion: 50-60g"},
+  {day:"Thursday",name:"Golden Mustard",emoji:"🥗",
+   theme:"GOLDEN MUSTARD",
+   desc:"Grilled paneer with warm roasted sweet potato and carrot, crisp cucumber and leafy greens. Fresh orange cuts through the richness, while roasted seeds add texture. Finished with creamy golden mustard yogurt dressing.",
+   flavor:"Sweet - Sour - Mustardy - Creamy",heat:"0/5",
+   contains:"Paneer, Lettuce, Spinach, Sweet Potato, Carrot, Cucumber, Orange | Optional: Quinoa | Crunch: Sunflower + Pumpkin Seeds | Dressing: Golden Honey-Mustard Yogurt",
+   macros:["Cal: ~445","P: ~28g","Carbs: ~40g","Fat: ~19g","Fibre: ~10g"],
+   ladoo:"Cocoa Peanut Protein Fudge",ladooEmoji:"🍫",
+   ladooDesc:"Soft fudgy chocolate bite from dates, roasted peanut and cocoa — rich enough to feel like dessert, made without refined sugar",
+   ladooIngredients:"Dates, Peanut Butter, Cocoa, Oats, Plant Protein, Flax | 25-30g | ~90-105 kcal | ~5g protein",
+   ladooMacros:"Cal: ~90-105 | Protein: ~5g | Portion: 25-30g"},
+  {day:"Friday",name:"Creamy Herb Pasta",emoji:"🥗",
+   theme:"CREAMY HERB PASTA",
+   desc:"A satisfying high-protein pasta salad with grilled paneer, whole-wheat pasta, spinach, warm broccoli, sweet corn and juicy tomato. Tossed in a light creamy herb dressing and finished with roasted seed crunch.",
+   flavor:"Creamy - Herby - Savoury - Comforting",heat:"0/5",
+   contains:"Paneer, Whole-Wheat Pasta, Spinach, Broccoli, Sweet Corn, Tomato | Crunch: Roasted Seed Mix | Dressing: Roasted Tomato and Herb Mayo Yogurt",
+   macros:["Cal: ~470","P: ~29g","Carbs: ~48g","Fat: ~17g","Fibre: ~9g"],
+   ladoo:"Rose Pistachio Protein Mousse",ladooEmoji:"🌹",
+   ladooDesc:"Light creamy mousse with a delicate rose aroma, natural date sweetness and pistachio crunch — premium dessert feel",
+   ladooIngredients:"Greek Yogurt / Plant Protein, Rose, Dates, Pistachio, Chia | 50-60g | ~90-110 kcal | ~6g protein",
+   ladooMacros:"Cal: ~90-110 | Protein: ~6g | Portion: 50-60g"},
+  {day:"Saturday",name:"Chatpata Dragon Crunch",emoji:"🥗",
+   theme:"CHATPATA DRAGON CRUNCH",
+   desc:"A high-protein combination of lightly seasoned chickpeas and grilled paneer with crunchy cabbage, carrot, sweet corn and fresh greens. Juicy dragon fruit adds delicate sweetness, balanced with roasted chana crunch and chatpata yogurt dressing.",
+   flavor:"Chatpata - Tangy - Creamy - Sweet - Crunchy",heat:"1/5",
+   contains:"Chickpeas + Paneer, Lettuce, Cabbage, Carrot, Sweet Corn, Cucumber, Dragon Fruit | Optional: Tadka Varai | Crunch: Roasted Chana + Flax | Dressing: Chatpata Cumin-Lime Yogurt",
+   macros:["Cal: ~450","P: ~29g","Carbs: ~43g","Fat: ~18g","Fibre: ~12g"],
+   ladoo:"Amla Lime Coconut Bite",ladooEmoji:"🍋",
+   ladooDesc:"Soft coconut protein bite with gentle sweet-tangy amla finish and roasted peanut — naturally sweet with a tropical twist",
+   ladooIngredients:"Dates, Coconut, Peanut, Amla, Flax, Plant Protein | 25-30g | ~85-100 kcal | ~4-5g protein",
+   ladooMacros:"Cal: ~85-100 | Protein: ~4-5g | Portion: 25-30g"},
 ];
 var state={plan:null,bowlSelections:{},paneerQty:0,deliveryTime:null,lunchDate:"",deliveryType:"delivery",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
 var cur=0;
@@ -737,7 +725,7 @@ function buildSummary(){
   var isSub=state.plan!=="single";
   var timeStr=state.deliveryTime==="lunch"?"Lunch on "+state.lunchDate+" (12:00 PM to 2:00 PM)":"Evening delivery after 5:30 PM today";
   var html='<div class="sum-title">Your Order Summary</div>';
-  html+='<div class="sum-subtitle">Week 63 - 28 Sep to 3 Oct 2026 - Please review all details before confirming</div>';
+  html+='<div class="sum-subtitle">Week 64 - 5 to 10 Oct 2026 - Please review all details before confirming</div>';
   html+='<div class="sum-section"><div class="sum-section-label">DELIVERY SLOT</div>';
   html+='<div class="sum-row"><span>Time Slot</span><span>'+timeStr+'</span></div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div></div>';
@@ -795,7 +783,7 @@ function placeOrder(){
   m+="NEW ORDER - SAKU HEALTHY BOWLS%0A";
   m+="==================================%0A%0A";
   m+="Order ID: "+orderId+"%0A";
-  m+="Week: 63 (28 Sep to 3 Oct 2026)%0A";
+  m+="Week: 64 (5 to 10 Oct 2026)%0A";
   m+="Date: "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
   m+="Time: "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
   m+="DELIVERY SLOT%0A";
