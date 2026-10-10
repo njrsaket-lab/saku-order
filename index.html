@@ -323,8 +323,8 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title">This Week's Menu</h2>
-  <p class="section-subtitle">Week 65 &nbsp;&middot;&nbsp; 12 to 17 Oct 2026</p>
-  <div class="week-label">12 to 17 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily Protein Ladoo sweet treat (+Rs 70). Tap a bowl to select.</div>
+  <p class="section-subtitle">Week 66 &nbsp;&middot;&nbsp; 19 to 24 Oct 2026</p>
+  <div class="week-label">19 to 24 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily after-bowl treat - protein bites, digestive shots &amp; more (+Rs 70). Tap a bowl to select.</div>
   <div id="bowlsContainer"></div>
   <div id="err-menu" class="err">Please select at least one bowl to continue.</div>
   <br><button class="btn-primary" onclick="goTo(2)">Continue &rarr;</button>
@@ -595,7 +595,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
     <div class="mp-header">
       <div>
         <div class="mp-title">This Week's Menu</div>
-        <div class="mp-week" id="mp-week-label">Week 65 &nbsp;|&nbsp; 12 to 17 Oct 2026</div>
+        <div class="mp-week" id="mp-week-label">Week 66 &nbsp;|&nbsp; 19 to 24 Oct 2026</div>
       </div>
       <button class="mp-close" onclick="closeMenuPreview()">&#10005;</button>
     </div>
@@ -629,66 +629,66 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Kashmiri Apricot Paneer Bowl",emoji:"🌸",
-   theme:"KASHMIRI APRICOT PANEER",
-   desc:"Tandoori kasuri-methi paneer with saffron jeera rice, roasted beetroot, fresh greens, pomegranate and apricot, finished with roasted almonds and a creamy apricot-saffron raita.",
-   flavor:"Aromatic - Creamy - Fruity - Warm",heat:"1/5",
-   contains:"Paneer (Kasuri Methi, Kashmiri Spices), Saffron Jeera Rice, Roasted Beetroot, Fresh Greens, Pomegranate, Apricot, Roasted Almonds | Dressing: Apricot-Saffron Raita",
-   macros:["Cal: ~490","P: 29g","Carbs: 52g","Fat: 19g"],
-   ladoo:"Gulkand Rose Protein Bite",ladooEmoji:"🌸",
-   ladooDesc:"Fragrant rose gulkand with dates, almond and coconut, finished with roasted saunf for a refreshing digestive touch",
-   ladooIngredients:"Dates, Gulkand, Almond, Coconut, Plant Protein, Saunf | ~105 kcal | Protein: 5g | Carbs: 13g | Fat: 4g",
-   ladooMacros:"Cal: ~105 | Protein: 5g | Carbs: 13g | Fat: 4g"},
-  {day:"Tuesday",name:"Green Goddess Chole Bowl",emoji:"🍃",
-   theme:"GREEN GODDESS CHOLE",
-   desc:"Lemon-pepper roasted chickpeas with quinoa, broccoli, cucumber, carrot, greens and green apple, topped with dried kiwi, pumpkin seeds and basil seed crunch.",
-   flavor:"Fresh - Herby - Citrusy - Crunchy",heat:"0/5",
-   contains:"Chickpeas (Lemon Pepper Herb Roasted), Quinoa, Broccoli, Cucumber, Carrot, Greens, Green Apple, Dried Kiwi, Pumpkin Seeds, Basil Seed Crunch | Dressing: Green Apple Basil Goddess",
-   macros:["Cal: ~440","P: 22g","Carbs: 57g","Fat: 15g"],
-   ladoo:"Lemon Ginger Saunf Protein Ladoo",ladooEmoji:"🍋",
-   ladooDesc:"Bright and refreshing with natural date sweetness, fresh lemon zest, warming ginger and aromatic roasted saunf",
-   ladooIngredients:"Dates, Oats, Cashew, Lemon Zest, Ginger, Saunf, Plant Protein | ~100 kcal | Protein: 5g | Carbs: 14g | Fat: 3g",
-   ladooMacros:"Cal: ~100 | Protein: 5g | Carbs: 14g | Fat: 3g"},
-  {day:"Wednesday",name:"Kokum Rajma and Crunch Bowl",emoji:"🔥",
-   theme:"KOKUM RAJMA CRUNCH",
-   desc:"Slow-cooked masala rajma with jeera foxtail millet, roasted pumpkin, corn, cucumber and cabbage, finished with amla, figs, roasted peanuts and kokum berry raita.",
-   flavor:"Tangy - Earthy - Nutty - Comforting",heat:"1/5",
-   contains:"Rajma (Masala, Roasted Cumin Coriander Chilli), Jeera Foxtail Millet, Roasted Pumpkin, Corn, Cucumber, Cabbage, Amla, Figs, Roasted Peanuts | Dressing: Kokum Berry Raita",
-   macros:["Cal: ~460","P: 20g","Carbs: 67g","Fat: 13g"],
-   ladoo:"Bael Jeera Digestive Bite",ladooEmoji:"🧡",
-   ladooDesc:"Naturally sweet earthy protein bite combining bael with roasted cumin and nutty peanut — inspired by traditional Indian digestive flavours",
-   ladooIngredients:"Bael, Dates, Peanut, Oats, Plant Protein, Roasted Jeera, Black Salt | ~105 kcal | Protein: 5g | Carbs: 14g | Fat: 4g",
-   ladooMacros:"Cal: ~105 | Protein: 5g | Carbs: 14g | Fat: 4g"},
-  {day:"Thursday",name:"Malabar Field Bean Harvest",emoji:"🥥",
-   theme:"MALABAR FIELD BEAN HARVEST",
-   desc:"South Indian-inspired field beans with coconut-lime red rice, roasted pumpkin, spinach, cucumber and cabbage, topped with figs, pomegranate, cashews and coconut curry-leaf crunch.",
-   flavor:"Coastal - Creamy - Tropical - Aromatic",heat:"1/5",
-   contains:"Field Beans (Mustard Curry Leaf Tempering), Coconut-Lime Red Rice, Roasted Pumpkin, Spinach, Cucumber, Cabbage, Figs, Pomegranate, Cashews, Coconut Curry-Leaf Crunch | Dressing: Charred Pineapple Coconut",
-   macros:["Cal: ~470","P: 21g","Carbs: 61g","Fat: 17g"],
-   ladoo:"Coconut Ajwain Protein Ladoo",ladooEmoji:"🌿",
-   ladooDesc:"Soft coconut-almond ladoo with gentle cardamom sweetness and subtle ajwain finish for a traditional post-meal digestive touch",
-   ladooIngredients:"Dates, Coconut, Almond, Sesame, Ajwain, Cardamom, Plant Protein | ~110 kcal | Protein: 5g | Carbs: 12g | Fat: 5g",
-   ladooMacros:"Cal: ~110 | Protein: 5g | Carbs: 12g | Fat: 5g"},
-  {day:"Friday",name:"Kulith Fig and Roasted Garlic Bowl",emoji:"🌰",
-   theme:"KULITH FIG ROASTED GARLIC",
-   desc:"Earthy sprouted kulith with jowar, roasted beetroot, zucchini, carrot and spinach, finished with dried figs, roasted almonds and a creamy roasted pear garlic yogurt.",
-   flavor:"Earthy - Nutty - Roasted - Creamy",heat:"0/5",
-   contains:"Kulith (Roasted Garlic Cumin Coriander Black Pepper), Jowar, Roasted Beetroot, Zucchini, Carrot, Spinach, Dried Figs, Roasted Almonds | Dressing: Roasted Pear Garlic Yogurt",
-   macros:["Cal: ~450","P: 21g","Carbs: 59g","Fat: 15g"],
-   ladoo:"Fig Fennel Digestive Bite",ladooEmoji:"💜",
-   ladooDesc:"Chewy fruit-and-nut protein bite with naturally sweet fig and date, balanced with aromatic fennel and warming cinnamon",
-   ladooIngredients:"Dried Fig, Dates, Walnut, Flax, Fennel, Cinnamon, Plant Protein | ~110 kcal | Protein: 5g | Carbs: 14g | Fat: 4g",
-   ladooMacros:"Cal: ~110 | Protein: 5g | Carbs: 14g | Fat: 4g"},
-  {day:"Saturday",name:"Black Bean Chaat Verde",emoji:"🖤",
-   theme:"BLACK BEAN CHAAT VERDE",
-   desc:"Smoky black beans with coriander-lime brown rice, charred vegetables and roasted sweet potato, topped with amla, dried kiwi, peanuts and basil chaat crunch.",
-   flavor:"Smoky - Tangy - Chatpata - Fresh",heat:"1/5",
-   contains:"Black Beans (Cumin Garlic Smoked Spices), Coriander-Lime Brown Rice, Charred Vegetables, Roasted Sweet Potato, Amla, Dried Kiwi, Peanuts, Basil Chaat Crunch | Dressing: Cucumber Basil Chaas",
-   macros:["Cal: ~480","P: 23g","Carbs: 63g","Fat: 16g"],
-   ladoo:"Amla Peanut Chocolate Protein Bite",ladooEmoji:"🌰",
-   ladooDesc:"Naturally sweet chocolate protein bite with subtle amla tang, roasted peanut richness and a refreshing saunf finish",
-   ladooIngredients:"Amla, Dates, Peanut, Cocoa, Sesame, Saunf, Plant Protein | ~105 kcal | Protein: 5g | Carbs: 13g | Fat: 4g",
-   ladooMacros:"Cal: ~105 | Protein: 5g | Carbs: 13g | Fat: 4g"},
+  {day:"Monday",name:"Kokum Rajma Shiso Bowl",emoji:"🫐",
+   theme:"KOKUM RAJMA SHISO",
+   desc:"Masala rajma with shiso-seasoned jeera rice, roasted pumpkin, corn, cucumber and fresh greens, finished with kokum berry, amla, roasted sesame and a tangy kokum wafu onion dressing.",
+   flavor:"Tangy - Earthy - Umami - Comforting",heat:"1/5",
+   contains:"Rajma (Masala Roasted Cumin Coriander), Shiso Jeera Rice, Roasted Pumpkin, Corn, Cucumber, Fresh Greens, Kokum Berry, Amla, Roasted Sesame | Dressing: Kokum Wafu Onion",
+   macros:["Cal: ~440-470","P: ~20-22g","Carbs: ~58g","Fat: ~14g"],
+   ladoo:"Kokum Saunf Digestive Bite",ladooEmoji:"🫐",
+   ladooDesc:"Naturally sweet digestive bite with earthy dates, tangy kokum, roasted sesame, coconut and aromatic saunf - a perfect post-bowl treat",
+   ladooIngredients:"Dates, Kokum, Sesame, Coconut, Plant Protein, Saunf | ~70-80 kcal | Protein: 3-4g",
+   ladooMacros:"Cal: ~70-80 | Protein: 3-4g | Carbs: ~10g | Fat: ~3g"},
+  {day:"Tuesday",name:"Paneer Chaas Ranch Bowl",emoji:"🥛",
+   theme:"PANEER CHAAS RANCH",
+   desc:"Herb-marinated paneer with jeera brown rice, roasted beetroot, cucumber, carrot, fresh greens and mint, finished with roasted peanuts and a creamy masala buttermilk ranch dressing.",
+   flavor:"Creamy - Herby - Tangy - Fresh",heat:"1/5",
+   contains:"Paneer (Herb Marinated), Jeera Brown Rice, Roasted Beetroot, Cucumber, Carrot, Fresh Greens, Mint, Roasted Peanuts | Dressing: Masala Buttermilk Ranch",
+   macros:["Cal: ~470-500","P: ~25-28g","Carbs: ~52g","Fat: ~18g"],
+   ladoo:"Mint Cucumber Chaas Shot",ladooEmoji:"🥒",
+   ladooDesc:"A refreshing digestive drink - cooling cucumber, fresh mint, thick chaas with roasted jeera and black salt. Served chilled as your after-bowl digestive shot",
+   ladooIngredients:"Cucumber, Mint, Chaas (Buttermilk), Roasted Jeera, Black Salt | ~35-45 kcal | Digestive Drink",
+   ladooMacros:"Cal: ~35-45 | Light digestive | No added sugar | Served chilled"},
+  {day:"Wednesday",name:"The Maharashtra Green Bowl",emoji:"🌿",
+   theme:"MAHARASHTRA GREEN",
+   desc:"Green moong and spinach with kairi-sesame foxtail millet, roasted zucchini, broccoli, cucumber and fresh greens, topped with amla, figs, roasted peanuts and a tangy raw mango wafu sesame dressing.",
+   flavor:"Fresh - Tangy - Earthy - Nutty",heat:"1/5",
+   contains:"Green Moong, Spinach, Kairi Sesame Foxtail Millet, Roasted Zucchini, Broccoli, Cucumber, Fresh Greens, Amla, Figs, Roasted Peanuts | Dressing: Kairi Wafu Sesame",
+   macros:["Cal: ~420-450","P: ~19-21g","Carbs: ~55g","Fat: ~13g"],
+   ladoo:"Amla Saunf Protein Bite",ladooEmoji:"🍃",
+   ladooDesc:"Wholesome protein bite with naturally sweet dates, tangy amla, roasted almond, hearty oats and aromatic saunf - earthy, refreshing and satisfying",
+   ladooIngredients:"Dates, Amla, Almond, Oats, Plant Protein, Saunf | ~75-85 kcal | Protein: 3-4g",
+   ladooMacros:"Cal: ~75-85 | Protein: 3-4g | Carbs: ~11g | Fat: ~3g"},
+  {day:"Thursday",name:"Misal Crunch Bowl",emoji:"🔥",
+   theme:"MISAL CRUNCH",
+   desc:"Spiced sprouted matki with jeera rice, roasted beetroot, corn, cucumber and cabbage, finished with crunchy farsan, amla, dried kiwi and a bold carrot chili vinaigrette in SAKU Misal style.",
+   flavor:"Spicy - Tangy - Crunchy - Bold",heat:"2/5",
+   contains:"Sprouted Matki (Misal Masala), Jeera Rice, Roasted Beetroot, Corn, Cucumber, Cabbage, Crunchy Farsan, Amla, Dried Kiwi | Dressing: Carrot Chili Vinaigrette SAKU Misal Style",
+   macros:["Cal: ~450-480","P: ~19-21g","Carbs: ~60g","Fat: ~14g"],
+   ladoo:"Jeera-Ajwain Date Bite",ladooEmoji:"🌾",
+   ladooDesc:"Traditional digestive bite combining earthy roasted chana, sweet dates, toasted sesame, aromatic ajwain and saunf with coconut - inspired by classic Indian digestive flavours",
+   ladooIngredients:"Dates, Roasted Chana, Sesame, Ajwain, Saunf, Coconut | ~70-80 kcal | Protein: 2-3g",
+   ladooMacros:"Cal: ~70-80 | Protein: 2-3g | Carbs: ~12g | Fat: ~3g"},
+  {day:"Friday",name:"Black Bean Kokum Chili Bowl",emoji:"🖤",
+   theme:"BLACK BEAN KOKUM CHILI",
+   desc:"Smoky black beans with coriander-lime brown rice, charred vegetables, roasted sweet potato, topped with amla, dried kiwi, peanuts and a tangy kokum carrot chili dressing.",
+   flavor:"Smoky - Tangy - Chatpata - Bold",heat:"2/5",
+   contains:"Black Beans (Cumin Garlic Smoked Spices), Coriander-Lime Brown Rice, Charred Vegetables, Roasted Sweet Potato, Amla, Dried Kiwi, Peanuts | Dressing: Kokum Carrot Chili",
+   macros:["Cal: ~450-480","P: ~20-22g","Carbs: ~62g","Fat: ~14g"],
+   ladoo:"Amla Mint Cooler",ladooEmoji:"💚",
+   ladooDesc:"A refreshing post-bowl digestive cooler with tangy amla, cooling mint, cucumber, fresh lemon, roasted jeera and black salt. Light, cleansing and energising",
+   ladooIngredients:"Amla, Mint, Cucumber, Lemon, Roasted Jeera, Black Salt | ~25-35 kcal | Digestive Cooler",
+   ladooMacros:"Cal: ~25-35 | Vitamin C rich | No added sugar | Served chilled"},
+  {day:"Saturday",name:"Chana Chaat Caesar Bowl",emoji:"🥗",
+   theme:"CHANA CHAAT CAESAR",
+   desc:"Chaat-spiced chickpeas with coriander-lime quinoa, roasted sweet potato, cucumber, carrot and fresh greens, topped with pomegranate, dried figs, roasted peanuts and an Indian Caesar dressing.",
+   flavor:"Chatpata - Tangy - Creamy - Fresh",heat:"1/5",
+   contains:"Chickpeas (Chaat Masala Spiced), Coriander-Lime Quinoa, Roasted Sweet Potato, Cucumber, Carrot, Fresh Greens, Pomegranate, Dried Figs, Roasted Peanuts | Dressing: Indian Caesar",
+   macros:["Cal: ~440-470","P: ~21-23g","Carbs: ~57g","Fat: ~15g"],
+   ladoo:"Bael Coconut Protein Mousse",ladooEmoji:"🧡",
+   ladooDesc:"A creamy and indulgent protein mousse combining earthy bael pulp, thick hung curd, coconut and cardamom with plant protein - rich, naturally sweet and satisfying",
+   ladooIngredients:"Bael Pulp, Hung Curd, Coconut, Plant Protein, Cardamom | ~80-100 kcal | Protein: 5-7g",
+   ladooMacros:"Cal: ~80-100 | Protein: 5-7g | Carbs: ~12g | Fat: ~4g"},
 ];
 var state={plan:null,bowlSelections:{},paneerQty:0,deliveryTime:null,lunchDate:"",deliveryType:"delivery",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
 var cur=0;
@@ -740,7 +740,7 @@ function renderMenu(){
     html+='<div class="ladoo-toggle'+(sel.ladoo?" active":"")+'" onclick="toggleLadoo('+i+')">';
     html+='<span class="ladoo-icon">'+b.ladooEmoji+'</span><div class="ladoo-info">';
     html+='<div class="ladoo-name">'+b.ladoo+' <span style="background:rgba(232,114,154,0.15);color:#C4567A;font-size:9px;font-weight:800;padding:1px 5px;border-radius:5px;">+Rs 70</span></div>';
-    html+='<div class="ladoo-detail" style="font-style:italic;color:#C4567A;">Daily Sweet Treat - Naturally Made</div>';
+    html+='<div class="ladoo-detail" style="font-style:italic;color:#C4567A;">Daily After-Bowl Treat (+Rs 70)</div>';
     html+='<div class="ladoo-detail">'+b.ladooIngredients+'</div>';
     html+='<div class="ladoo-detail" style="font-weight:600;color:rgba(8,67,199,0.55);">'+b.ladooMacros+'</div>';
     html+='</div><div class="ladoo-check">&#10003;</div></div>';
@@ -779,7 +779,7 @@ function showErr(id,v){var el=document.getElementById(id);if(el)el.classList.tog
 
 function validate(s){
   if(s===0){if(!state.plan){showErr("err-plan",true);return false;}showErr("err-plan",false);return true;}
-  if(s===1){var has=Object.keys(state.bowlSelections).some(function(k){return state.bowlSelections[k]&&state.bowlSelections[k].qty>0;});if(state.plan==="single"&&!has){showErr("err-menu",true);return false;}showErr("err-menu",false);return true;}
+  if(s===1){if(state.plan==="single"){var has=Object.keys(state.bowlSelections).some(function(k){var s=state.bowlSelections[k];return s&&s.qty>0;});if(!has){showErr("err-menu",true);return false;}}showErr("err-menu",false);return true;}
   if(s===2){if(!state.deliveryTime){showErr("err-time",true);return false;}showErr("err-time",false);if(state.deliveryTime==="lunch"){var d=document.getElementById("lunchDate").value;if(!d){showErr("err-lunch",true);return false;}state.lunchDate=d;showErr("err-lunch",false);}return true;}
   if(s===3)return true;
   if(s===4){var ok=true;state.name=document.getElementById("custName").value.trim();state.phone=document.getElementById("custPhone").value.trim();if(!state.name){showErr("err-name",true);ok=false;}else showErr("err-name",false);if(!/^\d{10}$/.test(state.phone)){showErr("err-phone",true);ok=false;}else showErr("err-phone",false);if(state.deliveryType==="delivery"){state.addr=document.getElementById("custAddr").value.trim();state.area=document.getElementById("custArea").value.trim();state.pin=document.getElementById("custPin").value.trim();state.landmark=document.getElementById("custLandmark").value.trim();if(!state.addr||!state.area||!/^\d{6}$/.test(state.pin)){showErr("err-addr",true);ok=false;}else showErr("err-addr",false);}return ok;}
@@ -799,11 +799,11 @@ function buildSummary(){
   var isSub=state.plan!=="single";
   var timeStr=state.deliveryTime==="lunch"?"Lunch on "+state.lunchDate+" (12:00 PM to 2:00 PM)":"Evening delivery after 5:30 PM today";
   var html='<div class="sum-title">Your Order Summary</div>';
-  html+='<div class="sum-subtitle">Week 65 - 12 to 17 Oct 2026 - Please review all details before confirming</div>';
+  html+='<div class="sum-subtitle">Week 66 - 19 to 24 Oct 2026 - Please review all details before confirming</div>';
   html+='<div class="sum-section"><div class="sum-section-label">DELIVERY SLOT</div>';
   html+='<div class="sum-row"><span>Time Slot</span><span>'+timeStr+'</span></div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div></div>';
-  html+='<div class="sum-section"><div class="sum-section-label">BOWLS AND PROTEIN LADOO</div>';
+  html+='<div class="sum-section"><div class="sum-section-label">BOWLS AND AFTER-BOWL TREATS</div>';
   if(isSub){var pp={"6days":"Rs 1,550","12days":"Rs 3,100","24days":"Rs 5,700"};html+='<div class="sum-row"><span>Subscription (without ladoo)</span><span>'+(pp[state.plan]||"")+'</span></div>';}
   Object.keys(state.bowlSelections).forEach(function(k){
     var s=state.bowlSelections[k];
@@ -857,7 +857,7 @@ function placeOrder(){
   m+="NEW ORDER - SAKU HEALTHY BOWLS%0A";
   m+="==================================%0A%0A";
   m+="Order ID: "+orderId+"%0A";
-  m+="Week: 65 (12 to 17 Oct 2026)%0A";
+  m+="Week: 66 (19 to 24 Oct 2026)%0A";
   m+="Date: "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
   m+="Time: "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
   m+="DELIVERY SLOT%0A";
@@ -882,10 +882,10 @@ function placeOrder(){
   m+="BOWLS ORDERED:%0A";
   for(var i=0;i<bowlLines.length;i++)m+=(i+1)+". "+bowlLines[i]+"%0A";
   if(ladooLines.length){
-    m+="%0APROTEIN LADOO SWEET TREAT:%0A";
+    m+="%0AAFTER-BOWL TREATS:%0A";
     for(var j=0;j<ladooLines.length;j++)m+=(j+1)+". "+ladooLines[j]+"%0A";
   } else {
-    m+="%0AProtein Ladoo: Not added%0A";
+    m+="%0AAfter-Bowl Treat: Not added%0A";
   }
   if(state.paneerQty>0)m+="%0AExtra Paneer Add-on: "+(state.paneerQty*50)+"g ("+(state.paneerQty)+" unit"+(state.paneerQty>1?"s":"")+") = Rs "+(state.paneerQty*20)+"%0A";
   if(sr)m+="%0AKitchen Note: "+sr+"%0A";
@@ -947,7 +947,7 @@ function getMenuLink(){
 }
 function shareMenuLink(){
   var url=getMenuLink();
-  var text="Saku Healthy Bowls - Week 65 Menu (12 to 17 Oct 2026)%0A%0AView this week's fresh bowls and protein bites, and place your order directly:%0A"+url+"%0A%0ASaku Healthy Bowls | Kothrud, Pune | +91 9525113636";
+  var text="Saku Healthy Bowls - Week 66 Menu (19 to 24 Oct 2026)%0A%0AView this week's fresh bowls and protein bites, and place your order directly:%0A"+url+"%0A%0ASaku Healthy Bowls | Kothrud, Pune | +91 9525113636";
   if(navigator.share){navigator.share({title:"Saku Healthy Bowls - This Week's Menu",text:"Check out this week's fresh bowls and protein bites!",url:getMenuLink()});}
   else{window.open("https://wa.me/?text="+text,"_blank");}
 }
