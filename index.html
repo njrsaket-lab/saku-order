@@ -255,8 +255,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
   <div class="step-tab" id="tab2"><span class="step-num">3</span>Timing</div>
   <div class="step-tab" id="tab3"><span class="step-num">4</span>Add-ons</div>
   <div class="step-tab" id="tab4"><span class="step-num">5</span>Delivery</div>
-  <div class="step-tab" id="tab5"><span class="step-num">6</span>Payment</div>
-  <div class="step-tab" id="tab6"><span class="step-num">7</span>Review</div>
+  <div class="step-tab" id="tab5"><span class="step-num">6</span>Review</div>
 </div>
 
 <div class="container">
@@ -323,8 +322,8 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <h2 class="section-title">This Week's Menu</h2>
-  <p class="section-subtitle">Week 66 &nbsp;&middot;&nbsp; 19 to 24 Oct 2026</p>
-  <div class="week-label">19 to 24 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily after-bowl treat - protein bites, digestive shots &amp; more (+Rs 70). Tap a bowl to select.</div>
+  <p class="section-subtitle">Week 67 &nbsp;&middot;&nbsp; 26 to 31 Oct 2026</p>
+  <div class="week-label">26 to 31 Oct 2026 &nbsp;&middot;&nbsp; Orders open till 5:00 PM daily &nbsp;&middot;&nbsp; Evening delivery after 5:30 PM<br>Each bowl comes with a unique daily after-bowl treat - protein bites, digestive shots &amp; more (+Rs 70). Tap a bowl to select.</div>
   <div id="bowlsContainer"></div>
   <div id="err-menu" class="err">Please select at least one bowl to continue.</div>
   <br><button class="btn-primary" onclick="goTo(2)">Continue &rarr;</button>
@@ -463,81 +462,12 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
       </div>
     </div>
   </div>
-  <br><button class="btn-primary" onclick="goTo(5)">Continue to Payment &rarr;</button>
+  <br><button class="btn-primary" onclick="goTo(5)">Review My Order &rarr;</button>
   <button class="btn-secondary" onclick="goTo(3)">&larr; Back to Add-Ons</button>
 </div>
 
-<!-- SCREEN 5: PAYMENT -->
+<!-- SCREEN 5: REVIEW -->
 <div class="screen" id="screen5">
-  <h2 class="section-title">Payment</h2>
-  <p class="section-subtitle">Choose how you would like to pay. All methods are accepted.</p>
-  <div class="pay-option" id="pay-upi" onclick="selectPay(0)">
-    <span class="pay-icon">&#128242;</span>
-    <div class="pay-info"><div class="pay-name">UPI Payment - Pay Now</div><div class="pay-desc">Scan QR or pay to UPI ID. Enter your UTR after paying to confirm.</div></div>
-    <div class="pay-radio"></div>
-  </div>
-  <div class="upi-box" id="upiBox">
-    <div class="upi-hint" style="margin-bottom:6px;font-weight:600;color:rgba(255,255,255,0.75);">Step 1 - Scan QR or pay to UPI ID</div>
-    <div class="qr-wrap">
-      <div style="background:white;border-radius:13px;padding:11px;display:inline-block;box-shadow:0 4px 18px rgba(0,0,0,0.2);">
-        <img src="data:image/png;base64,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" style="width:160px;height:160px;display:block;" alt="Saku UPI QR Code"/>
-      </div>
-    </div>
-    <div style="font-size:10px;font-weight:300;color:rgba(255,255,255,0.45);margin-bottom:2px;">HNG HOSPITALITY LLP</div>
-    <div class="upi-id">hngho95117130@barodampay</div>
-    <button onclick="copyUPI()" id="copyBtn" class="copy-btn">Copy UPI ID</button>
-    <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:12px;">
-      <div class="upi-hint" style="margin-bottom:7px;font-weight:600;color:rgba(255,255,255,0.8);">Step 2 - Enter UTR / Transaction ID to confirm</div>
-      <input class="form-input" id="utrInput" type="text" placeholder="Paste UTR or Transaction ID here" style="text-align:center;font-size:13px;color:#fff!important;background:rgba(255,255,255,0.13);border-color:rgba(255,255,255,0.25);-webkit-text-fill-color:#fff;" autocomplete="off">
-      <div class="form-hint" style="text-align:center;margin-top:5px;">Find UTR in your payment app under transaction history.</div>
-      <div id="err-utr" class="err" style="text-align:center;">Please enter your UTR or Transaction ID.</div>
-    </div>
-  </div>
-  <div class="pay-option" id="pay-cod" onclick="selectPay(1)">
-    <span class="pay-icon">&#128181;</span>
-    <div class="pay-info"><div class="pay-name">Cash on Delivery</div><div class="pay-desc">Pay in cash when your bowl and ladoo are delivered. Exact change preferred.</div></div>
-    <div class="pay-radio"></div>
-  </div>
-  <div class="pay-option" id="pay-cop" onclick="selectPay(2)">
-    <span class="pay-icon">&#127968;</span>
-    <div class="pay-info"><div class="pay-name">Cash on Pick-up</div><div class="pay-desc">Pay in cash when you collect from our Kothrud kitchen.</div></div>
-    <div class="pay-radio"></div>
-  </div>
-  <div class="pay-option" id="pay-balance" onclick="selectPay(3)">
-    <span class="pay-icon">&#129689;</span>
-    <div class="pay-info"><div class="pay-name">Saku Balance Account</div><div class="pay-desc">Running tab - settle weekly, 12-day or monthly. Max Rs 2,000 credit.</div></div>
-    <div class="pay-radio"></div>
-  </div>
-  <div class="upi-box" id="balanceBox" style="text-align:left;">
-    <div style="font-size:12px;font-weight:700;color:var(--green);margin-bottom:8px;">Saku Balance - How It Works</div>
-    <div style="font-size:10px;font-weight:300;color:rgba(255,255,255,0.8);line-height:2;">
-      Each order is added to your running balance<br>
-      Settle at your chosen cycle below<br>
-      Weekly WhatsApp balance statement<br>
-      Maximum credit limit: <strong style="color:var(--green);">Rs 2,000</strong>
-    </div>
-    <div style="margin-top:12px;">
-      <label class="form-label">Settlement Cycle <span style="color:var(--red);">*</span></label>
-      <select class="form-input" id="balanceCycle" style="color:#0843C7;background:white;border-color:rgba(8,67,199,0.25);">
-        <option value="">Select your settlement cycle...</option>
-        <option value="weekly">Weekly - every 7 days</option>
-        <option value="12days">Every 12 days</option>
-        <option value="monthly">Monthly - every 30 days</option>
-      </select>
-    </div>
-    <div id="err-balance" class="err">Please select your settlement cycle.</div>
-  </div>
-  <div id="err-pay" class="err" style="margin-bottom:8px;">Please select a payment method.</div>
-  <div class="policy-box" style="margin-top:14px;">
-    <div class="policy-title">Cancellation Policy</div>
-    <div class="policy-text">Cancel before 5:00 PM the day before to avoid charges. COD and Pick-up late cancellations: <strong style="color:#D94F2C;">Rs 200 penalty</strong> on next order.</div>
-  </div>
-  <br><button class="btn-primary" onclick="goTo(6)">Review My Order &rarr;</button>
-  <button class="btn-secondary" onclick="goTo(4)">&larr; Back to Delivery</button>
-</div>
-
-<!-- SCREEN 6: REVIEW -->
-<div class="screen" id="screen6">
   <h2 class="section-title">Review and Confirm</h2>
   <p class="section-subtitle">Please check all your details. Once confirmed your order goes to our kitchen on WhatsApp.</p>
   <div class="summary-card" id="summaryCard"></div>
@@ -556,7 +486,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
     <div class="policy-text" style="color:#0843C7;">Cancel before 5:00 PM the day before to avoid charges. Late COD and Pick-up cancellations: Rs 200 penalty.</div>
   </div>
   <button class="btn-primary" id="placeBtn" onclick="placeOrder()">Confirm and Send Order on WhatsApp</button>
-  <button class="btn-secondary" onclick="goTo(5)">&larr; Back to Payment</button>
+  <button class="btn-secondary" onclick="goTo(4)">&larr; Back to Delivery</button>
 </div>
 
 <!-- THANK YOU -->
@@ -595,7 +525,7 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
     <div class="mp-header">
       <div>
         <div class="mp-title">This Week's Menu</div>
-        <div class="mp-week" id="mp-week-label">Week 66 &nbsp;|&nbsp; 19 to 24 Oct 2026</div>
+        <div class="mp-week" id="mp-week-label">Week 67 &nbsp;|&nbsp; 26 to 31 Oct 2026</div>
       </div>
       <button class="mp-close" onclick="closeMenuPreview()">&#10005;</button>
     </div>
@@ -629,66 +559,66 @@ body{background:var(--blue);font-family:"Montserrat",sans-serif;color:var(--whit
 
 <script>
 const BOWLS = [
-  {day:"Monday",name:"Kokum Rajma Shiso Bowl",emoji:"🫐",
-   theme:"KOKUM RAJMA SHISO",
-   desc:"Masala rajma with shiso-seasoned jeera rice, roasted pumpkin, corn, cucumber and fresh greens, finished with kokum berry, amla, roasted sesame and a tangy kokum wafu onion dressing.",
-   flavor:"Tangy - Earthy - Umami - Comforting",heat:"1/5",
-   contains:"Rajma (Masala Roasted Cumin Coriander), Shiso Jeera Rice, Roasted Pumpkin, Corn, Cucumber, Fresh Greens, Kokum Berry, Amla, Roasted Sesame | Dressing: Kokum Wafu Onion",
-   macros:["Cal: ~440-470","P: ~20-22g","Carbs: ~58g","Fat: ~14g"],
-   ladoo:"Kokum Saunf Digestive Bite",ladooEmoji:"🫐",
-   ladooDesc:"Naturally sweet digestive bite with earthy dates, tangy kokum, roasted sesame, coconut and aromatic saunf - a perfect post-bowl treat",
-   ladooIngredients:"Dates, Kokum, Sesame, Coconut, Plant Protein, Saunf | ~70-80 kcal | Protein: 3-4g",
-   ladooMacros:"Cal: ~70-80 | Protein: 3-4g | Carbs: ~10g | Fat: ~3g"},
-  {day:"Tuesday",name:"Paneer Chaas Ranch Bowl",emoji:"🥛",
-   theme:"PANEER CHAAS RANCH",
-   desc:"Herb-marinated paneer with jeera brown rice, roasted beetroot, cucumber, carrot, fresh greens and mint, finished with roasted peanuts and a creamy masala buttermilk ranch dressing.",
-   flavor:"Creamy - Herby - Tangy - Fresh",heat:"1/5",
-   contains:"Paneer (Herb Marinated), Jeera Brown Rice, Roasted Beetroot, Cucumber, Carrot, Fresh Greens, Mint, Roasted Peanuts | Dressing: Masala Buttermilk Ranch",
-   macros:["Cal: ~470-500","P: ~25-28g","Carbs: ~52g","Fat: ~18g"],
-   ladoo:"Mint Cucumber Chaas Shot",ladooEmoji:"🥒",
-   ladooDesc:"A refreshing digestive drink - cooling cucumber, fresh mint, thick chaas with roasted jeera and black salt. Served chilled as your after-bowl digestive shot",
-   ladooIngredients:"Cucumber, Mint, Chaas (Buttermilk), Roasted Jeera, Black Salt | ~35-45 kcal | Digestive Drink",
-   ladooMacros:"Cal: ~35-45 | Light digestive | No added sugar | Served chilled"},
-  {day:"Wednesday",name:"The Maharashtra Green Bowl",emoji:"🌿",
-   theme:"MAHARASHTRA GREEN",
-   desc:"Green moong and spinach with kairi-sesame foxtail millet, roasted zucchini, broccoli, cucumber and fresh greens, topped with amla, figs, roasted peanuts and a tangy raw mango wafu sesame dressing.",
-   flavor:"Fresh - Tangy - Earthy - Nutty",heat:"1/5",
-   contains:"Green Moong, Spinach, Kairi Sesame Foxtail Millet, Roasted Zucchini, Broccoli, Cucumber, Fresh Greens, Amla, Figs, Roasted Peanuts | Dressing: Kairi Wafu Sesame",
-   macros:["Cal: ~420-450","P: ~19-21g","Carbs: ~55g","Fat: ~13g"],
-   ladoo:"Amla Saunf Protein Bite",ladooEmoji:"🍃",
-   ladooDesc:"Wholesome protein bite with naturally sweet dates, tangy amla, roasted almond, hearty oats and aromatic saunf - earthy, refreshing and satisfying",
-   ladooIngredients:"Dates, Amla, Almond, Oats, Plant Protein, Saunf | ~75-85 kcal | Protein: 3-4g",
-   ladooMacros:"Cal: ~75-85 | Protein: 3-4g | Carbs: ~11g | Fat: ~3g"},
-  {day:"Thursday",name:"Misal Crunch Bowl",emoji:"🔥",
-   theme:"MISAL CRUNCH",
-   desc:"Spiced sprouted matki with jeera rice, roasted beetroot, corn, cucumber and cabbage, finished with crunchy farsan, amla, dried kiwi and a bold carrot chili vinaigrette in SAKU Misal style.",
-   flavor:"Spicy - Tangy - Crunchy - Bold",heat:"2/5",
-   contains:"Sprouted Matki (Misal Masala), Jeera Rice, Roasted Beetroot, Corn, Cucumber, Cabbage, Crunchy Farsan, Amla, Dried Kiwi | Dressing: Carrot Chili Vinaigrette SAKU Misal Style",
-   macros:["Cal: ~450-480","P: ~19-21g","Carbs: ~60g","Fat: ~14g"],
-   ladoo:"Jeera-Ajwain Date Bite",ladooEmoji:"🌾",
-   ladooDesc:"Traditional digestive bite combining earthy roasted chana, sweet dates, toasted sesame, aromatic ajwain and saunf with coconut - inspired by classic Indian digestive flavours",
-   ladooIngredients:"Dates, Roasted Chana, Sesame, Ajwain, Saunf, Coconut | ~70-80 kcal | Protein: 2-3g",
-   ladooMacros:"Cal: ~70-80 | Protein: 2-3g | Carbs: ~12g | Fat: ~3g"},
-  {day:"Friday",name:"Black Bean Kokum Chili Bowl",emoji:"🖤",
-   theme:"BLACK BEAN KOKUM CHILI",
-   desc:"Smoky black beans with coriander-lime brown rice, charred vegetables, roasted sweet potato, topped with amla, dried kiwi, peanuts and a tangy kokum carrot chili dressing.",
-   flavor:"Smoky - Tangy - Chatpata - Bold",heat:"2/5",
-   contains:"Black Beans (Cumin Garlic Smoked Spices), Coriander-Lime Brown Rice, Charred Vegetables, Roasted Sweet Potato, Amla, Dried Kiwi, Peanuts | Dressing: Kokum Carrot Chili",
-   macros:["Cal: ~450-480","P: ~20-22g","Carbs: ~62g","Fat: ~14g"],
-   ladoo:"Amla Mint Cooler",ladooEmoji:"💚",
-   ladooDesc:"A refreshing post-bowl digestive cooler with tangy amla, cooling mint, cucumber, fresh lemon, roasted jeera and black salt. Light, cleansing and energising",
-   ladooIngredients:"Amla, Mint, Cucumber, Lemon, Roasted Jeera, Black Salt | ~25-35 kcal | Digestive Cooler",
-   ladooMacros:"Cal: ~25-35 | Vitamin C rich | No added sugar | Served chilled"},
-  {day:"Saturday",name:"Chana Chaat Caesar Bowl",emoji:"🥗",
-   theme:"CHANA CHAAT CAESAR",
-   desc:"Chaat-spiced chickpeas with coriander-lime quinoa, roasted sweet potato, cucumber, carrot and fresh greens, topped with pomegranate, dried figs, roasted peanuts and an Indian Caesar dressing.",
-   flavor:"Chatpata - Tangy - Creamy - Fresh",heat:"1/5",
-   contains:"Chickpeas (Chaat Masala Spiced), Coriander-Lime Quinoa, Roasted Sweet Potato, Cucumber, Carrot, Fresh Greens, Pomegranate, Dried Figs, Roasted Peanuts | Dressing: Indian Caesar",
-   macros:["Cal: ~440-470","P: ~21-23g","Carbs: ~57g","Fat: ~15g"],
-   ladoo:"Bael Coconut Protein Mousse",ladooEmoji:"🧡",
-   ladooDesc:"A creamy and indulgent protein mousse combining earthy bael pulp, thick hung curd, coconut and cardamom with plant protein - rich, naturally sweet and satisfying",
-   ladooIngredients:"Bael Pulp, Hung Curd, Coconut, Plant Protein, Cardamom | ~80-100 kcal | Protein: 5-7g",
-   ladooMacros:"Cal: ~80-100 | Protein: 5-7g | Carbs: ~12g | Fat: ~4g"},
+  {day:"Monday",name:"Paneer Tikka Guava Bowl",emoji:"🌿",
+   theme:"PANEER TIKKA GUAVA",
+   desc:"Charred tandoori paneer with lemon-cumin little millet, roasted cauliflower and crisp cucumber, finished with fresh guava and pumpkin seeds. Served with a Smoky Guava Chaat Dressing for a sweet, tangy and mildly smoky finish.",
+   flavor:"Smoky - Tangy - Sweet - Nutty",heat:"1/5",
+   contains:"Paneer (Tandoori Charred), Little Millet (Lemon Cumin), Romaine, Roasted Cauliflower, Cucumber, Fresh Guava, Pumpkin Seeds, Roasted Chana | Dressing: Smoky Guava Chaat",
+   macros:["Cal: ~420","P: 30g","Carbs: 38g","Fat: 16g","Fibre: 8g"],
+   ladoo:"Amla Saunf Protein Bite",ladooEmoji:"🌸",
+   ladooDesc:"A soft naturally sweet bite combining the tanginess of amla with the refreshing aroma of roasted fennel. Almond and coconut bring a delicate richness with plant protein for a satisfying finish",
+   ladooIngredients:"Dates, Amla, Roasted Saunf, Almond, Coconut, Plant Protein | ~55-70 kcal | Protein: 3-4g",
+   ladooMacros:"Cal: ~55-70 | Protein: 3-4g | Carbs: ~9g | Fat: ~2g"},
+  {day:"Tuesday",name:"Rajma Chaat Power Bowl",emoji:"🟤",
+   theme:"RAJMA CHAAT POWER",
+   desc:"Crispy-seared rajma tikki layered over lemon-cumin quinoa, tender baby spinach and roasted root vegetables. Juicy pomegranate and a roasted peanut-flax crunch bring texture, finished with a Green Chilli Mint Raita Dressing.",
+   flavor:"Earthy - Fresh - Tangy - Crunchy",heat:"1/5",
+   contains:"Rajma Tikki (Crispy Seared), Quinoa (Lemon Cumin), Baby Spinach, Roasted Carrot, Beetroot, Pomegranate, Peanut-Flax Crunch | Dressing: Green Chilli Mint Raita",
+   macros:["Cal: ~410","P: 26g","Carbs: 43g","Fat: 14g","Fibre: 10g"],
+   ladoo:"Pomegranate Mint Jeera Shot",ladooEmoji:"🟤",
+   ladooDesc:"A refreshing mini digestive shot made with fresh pomegranate, mint and roasted cumin. Bright, lightly tart and gently spiced - a fresh finish to the earthy rajma and quinoa bowl",
+   ladooIngredients:"Pomegranate, Mint, Roasted Cumin, Lemon, Black Salt | ~20-30 kcal | Digestive Shot (50ml)",
+   ladooMacros:"Cal: ~20-30 | Vitamin C rich | No added sugar | Served chilled"},
+  {day:"Wednesday",name:"Chole Pineapple Millet Bowl",emoji:"🟢",
+   theme:"CHOLE PINEAPPLE MILLET",
+   desc:"Smoky roasted chickpeas with turmeric-cumin foxtail millet, charred capsicum and cool cucumber. Sweet-tart pineapple cuts through the spices while crunchy masala makhana adds the perfect finish. Served with a Pineapple Jalapeño Chutney Dressing.",
+   flavor:"Smoky - Sweet-Tart - Spicy - Crunchy",heat:"2/5",
+   contains:"Roasted Chole, Foxtail Millet (Turmeric Cumin), Kale, Charred Capsicum, Cucumber, Fresh Pineapple, Masala Makhana | Dressing: Pineapple Jalapeño Chutney",
+   macros:["Cal: ~400","P: 24g","Carbs: 48g","Fat: 11g","Fibre: 11g"],
+   ladoo:"Pineapple Ajwain Mint Bite",ladooEmoji:"🟢",
+   ladooDesc:"A chewy tropical bite combining the natural sweetness of pineapple and dates with the distinctive warmth of roasted ajwain. A hint of mint keeps the finish fresh and light",
+   ladooIngredients:"Dried Pineapple, Dates, Roasted Ajwain, Mint Powder, Coconut, Plant Protein | ~55-70 kcal | Protein: 3-4g",
+   ladooMacros:"Cal: ~55-70 | Protein: 3-4g | Carbs: ~10g | Fat: ~2g"},
+  {day:"Thursday",name:"Kulith Apple Power Bowl",emoji:"🟣",
+   theme:"KULITH APPLE POWER",
+   desc:"Slow-cooked kulith tossed with roasted garlic, cumin and Indian spices, paired with chewy barley and warm roasted pumpkin. Crisp apple and toasted seeds add freshness and crunch, brought together with an Apple Amla Mustard Dressing.",
+   flavor:"Earthy - Nutty - Fresh - Tangy",heat:"1/5",
+   contains:"Spiced Kulith (Roasted Garlic Cumin), Barley, Lettuce, Baby Spinach, Roasted Pumpkin, Tomato, Fresh Apple, Seed Crunch | Dressing: Apple Amla Mustard",
+   macros:["Cal: ~400","P: 24g","Carbs: 44g","Fat: 12g","Fibre: 11g"],
+   ladoo:"Apple Amla Saunf Mini Bite",ladooEmoji:"🟣",
+   ladooDesc:"A soft apple and almond bite with a gentle tang from amla and a fragrant roasted fennel finish. Inspired by traditional Indian after-meal flavours - fruity sweetness with a clean lightly spiced taste",
+   ladooIngredients:"Apple, Amla, Dates, Roasted Saunf, Almond, Plant Protein | ~55-70 kcal | Protein: 3-4g",
+   ladooMacros:"Cal: ~55-70 | Protein: 3-4g | Carbs: ~9g | Fat: ~2g"},
+  {day:"Friday",name:"Field Bean Kolhapuri Bowl",emoji:"🔥",
+   theme:"FIELD BEAN KOLHAPURI",
+   desc:"A bold Indian bowl built around dry-spiced field beans, fragrant brown rice and smoky charred bhindi. Sweet roasted onion and juicy pomegranate balance the heat, finished with a crisp jowar crunch and a Kolhapuri Peanut-Lime Dressing.",
+   flavor:"Bold - Smoky - Spicy - Tangy",heat:"3/5",
+   contains:"Kolhapuri Field Beans, Brown Rice, Romaine, Charred Bhindi, Roasted Onion, Pomegranate, Jowar Crunch | Dressing: Kolhapuri Peanut-Lime",
+   macros:["Cal: ~430","P: 25g","Carbs: 47g","Fat: 14g","Fibre: 11g"],
+   ladoo:"Kokum Jeera Cooler",ladooEmoji:"🔥",
+   ladooDesc:"A light tangy kokum drink with roasted cumin and fresh mint. Its gentle sourness and savoury notes provide a refreshing contrast to the bold Kolhapuri spices and charred vegetables",
+   ladooIngredients:"Kokum, Roasted Cumin, Mint, Black Salt | ~5-15 kcal | Digestive Cooler (60ml)",
+   ladooMacros:"Cal: ~5-15 | Zero fat | No added sugar | Served chilled"},
+  {day:"Saturday",name:"Black Bean Chaat Verde",emoji:"🖤",
+   theme:"BLACK BEAN CHAAT VERDE",
+   desc:"Smoky Indian-spiced black beans with lime-coriander red rice, crunchy greens and roasted sweet potato. Fresh guava brings a bright sweet-tart note while toasted seeds add crunch. Finished with a creamy Coriander Amla Avocado Dressing.",
+   flavor:"Smoky - Earthy - Tangy - Fresh",heat:"1/5",
+   contains:"Smoky Black Beans, Red Rice (Lime Coriander), Romaine, Cabbage, Roasted Sweet Potato, Cucumber, Guava, Seed Crunch | Dressing: Coriander Amla Avocado",
+   macros:["Cal: ~420","P: 26g","Carbs: 45g","Fat: 13g","Fibre: 12g"],
+   ladoo:"Amla Coriander Lime Shot",ladooEmoji:"🖤",
+   ladooDesc:"A bright green mini digestive shot made with amla, fresh coriander, lime and roasted cumin. Fresh, tangy and lightly herbal - a contrasting finish to the smoky earthy black bean bowl",
+   ladooIngredients:"Amla, Coriander, Lime, Roasted Cumin, Mint | ~10-20 kcal | Digestive Shot (50ml)",
+   ladooMacros:"Cal: ~10-20 | Vitamin C rich | No added sugar | Served chilled"},
 ];
 var state={plan:null,bowlSelections:{},paneerQty:0,deliveryTime:null,lunchDate:"",deliveryType:"delivery",name:"",phone:"",addr:"",landmark:"",area:"",pin:"",payMethod:null,utr:"",balanceCycle:""};
 var cur=0;
@@ -696,7 +626,7 @@ var PAY_KEYS=["upi","cod","cop","balance"];
 var PAY_LABELS={upi:"UPI Payment (Paid Online)",cod:"Cash on Delivery",cop:"Cash on Pick-up",balance:"Saku Balance Account"};
 var PLAN_LABELS={single:"Single Day Order","6days":"6-Day Subscription","12days":"12-Day Subscription","24days":"24-Day Subscription"};
 
-function updateTabs(){for(var i=0;i<7;i++){var t=document.getElementById("tab"+i);if(!t)continue;t.className="step-tab";if(i<cur)t.classList.add("done");if(i===cur)t.classList.add("active");}}
+function updateTabs(){for(var i=0;i<6;i++){var t=document.getElementById("tab"+i);if(!t)continue;t.className="step-tab";if(i<cur)t.classList.add("done");if(i===cur)t.classList.add("active");}}
 
 function selectPlan(el){var p=el.getAttribute("data-plan");state.plan=p;state.bowlSelections={};["single","6days","12days","24days"].forEach(function(id){var c=document.getElementById("plan-"+id);if(c)c.classList.toggle("selected",id===p);});renderMenu();}
 
@@ -774,7 +704,7 @@ function calcTotal(){
   Object.keys(state.bowlSelections).forEach(function(k){var s=state.bowlSelections[k];if(s&&(s.qty>0||isSub)){if(!isSub){var p=s.size==="half"?179:280;t+=s.qty*p;}if(s.ladoo)t+=(s.ladooQty||1)*70;}});
   t+=state.paneerQty*20;return t;
 }
-function updateFloat(){var fb=document.getElementById("floatBar");if(cur>=1&&cur<=5){fb.style.display="flex";document.getElementById("floatAmt").textContent="Rs "+calcTotal().toLocaleString("en-IN");}else fb.style.display="none";}
+function updateFloat(){var fb=document.getElementById("floatBar");if(cur>=1&&cur<=4){fb.style.display="flex";document.getElementById("floatAmt").textContent="Rs "+calcTotal().toLocaleString("en-IN");}else fb.style.display="none";}
 function showErr(id,v){var el=document.getElementById(id);if(el)el.classList.toggle("show",v);}
 
 function validate(s){
@@ -783,7 +713,7 @@ function validate(s){
   if(s===2){if(!state.deliveryTime){showErr("err-time",true);return false;}showErr("err-time",false);if(state.deliveryTime==="lunch"){var d=document.getElementById("lunchDate").value;if(!d){showErr("err-lunch",true);return false;}state.lunchDate=d;showErr("err-lunch",false);}return true;}
   if(s===3)return true;
   if(s===4){var ok=true;state.name=document.getElementById("custName").value.trim();state.phone=document.getElementById("custPhone").value.trim();if(!state.name){showErr("err-name",true);ok=false;}else showErr("err-name",false);if(!/^\d{10}$/.test(state.phone)){showErr("err-phone",true);ok=false;}else showErr("err-phone",false);if(state.deliveryType==="delivery"){state.addr=document.getElementById("custAddr").value.trim();state.area=document.getElementById("custArea").value.trim();state.pin=document.getElementById("custPin").value.trim();state.landmark=document.getElementById("custLandmark").value.trim();if(!state.addr||!state.area||!/^\d{6}$/.test(state.pin)){showErr("err-addr",true);ok=false;}else showErr("err-addr",false);}return ok;}
-  if(s===5){if(!state.payMethod){showErr("err-pay",true);return false;}if(state.payMethod==="upi"){var utr=document.getElementById("utrInput").value.trim();if(!utr){showErr("err-utr",true);return false;}state.utr=utr;showErr("err-utr",false);}if(state.payMethod==="balance"){var cyc=document.getElementById("balanceCycle").value;if(!cyc){showErr("err-balance",true);return false;}state.balanceCycle=cyc;showErr("err-balance",false);}showErr("err-pay",false);return true;}
+  if(s===5){return true;} // review step - no validation needed
   return true;
 }
 
@@ -791,7 +721,7 @@ function goTo(n){
   if(n>cur&&!validate(cur))return;
   document.getElementById("screen"+cur).classList.remove("active");
   cur=n;
-  if(n<7){document.getElementById("screen"+n).classList.add("active");if(n===1)renderMenu();if(n===6)buildSummary();}
+  if(n<7){document.getElementById("screen"+n).classList.add("active");if(n===1)renderMenu();if(n===5)buildSummary();}
   updateTabs();updateFloat();window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -799,7 +729,7 @@ function buildSummary(){
   var isSub=state.plan!=="single";
   var timeStr=state.deliveryTime==="lunch"?"Lunch on "+state.lunchDate+" (12:00 PM to 2:00 PM)":"Evening delivery after 5:30 PM today";
   var html='<div class="sum-title">Your Order Summary</div>';
-  html+='<div class="sum-subtitle">Week 66 - 19 to 24 Oct 2026 - Please review all details before confirming</div>';
+  html+='<div class="sum-subtitle">Week 67 - 26 to 31 Oct 2026 - Please review all details before confirming</div>';
   html+='<div class="sum-section"><div class="sum-section-label">DELIVERY SLOT</div>';
   html+='<div class="sum-row"><span>Time Slot</span><span>'+timeStr+'</span></div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div></div>';
@@ -826,11 +756,8 @@ function buildSummary(){
   else{html+='<div class="sum-row"><span>Pick-up From</span><span style="text-align:right;font-size:10px;">Saku Kitchen, Kothrud</span></div>';html+='<div class="sum-row green"><span>Ready From</span><span>12:00 PM</span></div>';}
   html+='</div>';
   html+='<div class="sum-section"><div class="sum-section-label">PAYMENT</div>';
-  html+='<div class="sum-row"><span>Method</span><span>'+PAY_LABELS[state.payMethod]+'</span></div>';
-  if(state.payMethod==="upi"){html+='<div class="sum-row green"><span>Payment Status</span><span>PAID</span></div>';html+='<div class="sum-row"><span>UTR / Txn ID</span><span style="font-size:10px;word-break:break-all;">'+state.utr+'</span></div>';}
-  if(state.payMethod==="cod")html+='<div class="sum-row"><span>Status</span><span>Pay cash on delivery</span></div>';
-  if(state.payMethod==="cop")html+='<div class="sum-row"><span>Status</span><span>Pay cash at pick-up</span></div>';
-  if(state.payMethod==="balance"&&state.balanceCycle)html+='<div class="sum-row"><span>Settlement</span><span>'+({weekly:"Weekly","12days":"Every 12 days",monthly:"Monthly"}[state.balanceCycle])+'</span></div>';
+  html+='<div class="sum-row"><span>Method</span><span>Pay on delivery / pick-up</span></div>';
+  html+='<div class="sum-row"><span>How to Pay</span><span style="text-align:right;font-size:10px;line-height:1.6;">Cash or UPI when your bowl arrives</span></div>';
   html+='</div>';
   html+='<div class="sum-total"><span>Total Payable</span><span>Rs '+calcTotal().toLocaleString("en-IN")+'</span></div>';
   html+='<div style="font-size:9px;font-weight:300;color:rgba(8,67,199,0.4);margin-top:5px;text-align:right;">excl. delivery charge beyond 3 km</div>';
@@ -857,7 +784,7 @@ function placeOrder(){
   m+="NEW ORDER - SAKU HEALTHY BOWLS%0A";
   m+="==================================%0A%0A";
   m+="Order ID: "+orderId+"%0A";
-  m+="Week: 66 (19 to 24 Oct 2026)%0A";
+  m+="Week: 67 (26 to 31 Oct 2026)%0A";
   m+="Date: "+now.toLocaleDateString("en-IN",{weekday:"long",day:"numeric",month:"long",year:"numeric"})+"%0A";
   m+="Time: "+now.toLocaleTimeString("en-IN",{hour:"2-digit",minute:"2-digit"})+"%0A%0A";
   m+="DELIVERY SLOT%0A";
@@ -903,24 +830,38 @@ function placeOrder(){
     m+="Location: Plot No. 12, Kothrud Industrial Estate, Atenx Studio, Kothrud, Pune 411038%0A";
     m+="Ready from: 12:00 PM%0A";
   }
-  m+="%0APAYMENT DETAILS%0A";
+  m+="%0APAYMENT%0A";
   m+="--------------%0A";
-  m+="Method: "+PAY_LABELS[state.payMethod]+"%0A";
-  if(state.payMethod==="upi"){m+="Payment Status: PAID%0A";m+="UTR Transaction ID: "+state.utr+"%0A";}
-  if(state.payMethod==="cod")m+="Action: Collect cash when bowl is delivered%0A";
-  if(state.payMethod==="cop")m+="Action: Collect cash when customer picks up%0A";
-  if(state.payMethod==="balance"){m+="Settlement Cycle: "+state.balanceCycle+"%0A";m+="Action: Add to customer running balance account%0A";}
+  m+="Payment: Collect on delivery or pick-up (Cash or UPI)%0A";
+  m+="UPI ID: hngho95117130@barodampay (HNG HOSPITALITY LLP)%0A";
   m+="%0A==================================%0A";
   m+="ORDER TOTAL: Rs "+calcTotal()+"%0A";
   m+="(excl. delivery charge beyond 3 km)%0A";
   m+="==================================%0A%0A";
+  m+="KITCHEN PREP GUIDE%0A";
+  m+="--------------%0A";
+  var today=new Date();var dayNames=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];var todayName=dayNames[today.getDay()];var bowlForDay=BOWLS.find(function(b){return b.day===todayName;});
+  if(bowlForDay){
+    m+="Today is: "+todayName+"%0A";
+    m+="Bowl to prep: "+bowlForDay.emoji+" "+bowlForDay.name+"%0A";
+    m+="Theme: "+bowlForDay.theme+"%0A";
+    m+="Dressing: "+bowlForDay.flavor+"%0A";
+    m+="What is inside: "+bowlForDay.contains+"%0A";
+    m+="Macros: "+bowlForDay.macros.join(" | ")+"%0A";
+    m+="After-bowl treat: "+bowlForDay.ladooEmoji+" "+bowlForDay.ladoo+"%0A";
+    m+="Treat ingredients: "+bowlForDay.ladooIngredients+"%0A";
+  }else{
+    m+="Check menu for the day ordered - confirm bowl with customer%0A";
+  }
+  if(state.deliveryTime==="lunch"){m+="%0ALUNCH ORDER - Please confirm exact lunch bowl with customer on WhatsApp before prepping%0A";}
+  m+="%0A==================================%0A";
   m+="Thank you for ordering with Saku Healthy Bowls!%0A";
   m+="We will confirm this order shortly on WhatsApp.%0A";
   m+="Saku Healthy Bowls | Kothrud, Pune | +91 9525113636";
   var waUrl="https://wa.me/919525113636?text="+m;
   window.open(waUrl,"_blank");
   setTimeout(function(){
-    document.getElementById("screen6").classList.remove("active");
+    document.getElementById("screen5").classList.remove("active");
     document.getElementById("screenTY").classList.add("active");
     document.getElementById("floatBar").style.display="none";
     document.getElementById("stepsNav").style.display="none";
@@ -947,7 +888,7 @@ function getMenuLink(){
 }
 function shareMenuLink(){
   var url=getMenuLink();
-  var text="Saku Healthy Bowls - Week 66 Menu (19 to 24 Oct 2026)%0A%0AView this week's fresh bowls and protein bites, and place your order directly:%0A"+url+"%0A%0ASaku Healthy Bowls | Kothrud, Pune | +91 9525113636";
+  var text="Saku Healthy Bowls - Week 67 Menu (26 to 31 Oct 2026)%0A%0AView this week's fresh bowls and protein bites, and place your order directly:%0A"+url+"%0A%0ASaku Healthy Bowls | Kothrud, Pune | +91 9525113636";
   if(navigator.share){navigator.share({title:"Saku Healthy Bowls - This Week's Menu",text:"Check out this week's fresh bowls and protein bites!",url:getMenuLink()});}
   else{window.open("https://wa.me/?text="+text,"_blank");}
 }
