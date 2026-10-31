@@ -184,7 +184,7 @@ h1,h2,h3,.fun-heading{font-family:'Fredoka One',cursive;}
     <div class="header-title">Saku Healthy Bowls</div>
     <div class="header-sub">Kothrud, Pune &middot; Pre-Order</div>
   </div>
-  <div class="week-badge">Wk 68</div>
+  <div class="week-badge">Wk 69</div>
 </div>
 
 <div class="steps-nav" id="stepsNav">
@@ -200,7 +200,7 @@ h1,h2,h3,.fun-heading{font-family:'Fredoka One',cursive;}
 <!-- SCREEN 0: PLAN -->
 <div class="screen active" id="screen0">
   <div class="section-title">&#127881; Pick Your Vibe!</div>
-  <div class="section-sub">Week 68 &nbsp;&middot;&nbsp; 26 to 31 Oct 2026 &nbsp;&middot;&nbsp; Orders by 5 PM daily &nbsp;&middot;&nbsp; Evening delivery 5:30 PM+</div>
+  <div class="section-sub">Week 69 &nbsp;&middot;&nbsp; 2 to 7 Nov 2026 &nbsp;&middot;&nbsp; Orders by 5 PM daily &nbsp;&middot;&nbsp; Evening delivery 5:30 PM+</div>
   <div class="plan-grid">
     <div class="plan-card" id="plan-single" onclick="selectPlan(this)" data-plan="single">
       <span class="plan-emoji">&#x1F963;</span>
@@ -237,7 +237,7 @@ h1,h2,h3,.fun-heading{font-family:'Fredoka One',cursive;}
 <!-- SCREEN 1: MENU -->
 <div class="screen" id="screen1">
   <div class="section-title">&#x1F35C; Build Your Bowl!</div>
-  <div class="section-sub">Week 68 &nbsp;&middot;&nbsp; 26 to 31 Oct 2026 &nbsp;&middot;&nbsp; Rs 179 half / Rs 280 full &nbsp;&middot;&nbsp; +Rs 70 after-bowl treat</div>
+  <div class="section-sub">Week 69 &nbsp;&middot;&nbsp; 2 to 7 Nov 2026 &nbsp;&middot;&nbsp; Rs 179 half / Rs 280 full &nbsp;&middot;&nbsp; +Rs 70 after-bowl treat</div>
   <div class="bowls-container" id="bowlsContainer"></div>
   <div class="err-msg" id="err-menu">You need at least one bowl! &#x1F963;</div>
   <br>
@@ -409,7 +409,7 @@ h1,h2,h3,.fun-heading{font-family:'Fredoka One',cursive;}
 <!-- SCREEN 6: REVIEW -->
 <div class="screen" id="screen6">
   <div class="section-title">&#x1F389; Almost There!</div>
-  <div class="section-sub">Week 68 &nbsp;|&nbsp; 26 to 31 Oct 2026 &nbsp;&middot;&nbsp; Check everything looks right!</div>
+  <div class="section-sub">Week 69 &nbsp;|&nbsp; 2 to 7 Nov 2026 &nbsp;&middot;&nbsp; Check everything looks right!</div>
   <div id="summaryCard"></div>
   <div class="err-msg" id="err-review"></div>
   <button class="btn-whatsapp" onclick="placeOrder()">&#x1F7E2; Send Order on WhatsApp!</button>
@@ -438,66 +438,66 @@ h1,h2,h3,.fun-heading{font-family:'Fredoka One',cursive;}
 <script>
 
 const BOWLS=[
-  {day:"Monday",name:"Dal Baati Power Bowl",emoji:"🔥",
-   theme:"DAL BAATI POWER",
-   desc:"A bold Rajasthani-inspired bowl with slow-cooked panchmel dal, earthy roasted baati crumble, ghee-tempered little millet, crisp cabbage, roasted vegetables and fresh pomegranate. Finished with a smoky cumin-lime dressing.",
-   flavor:"Smoky - Earthy - Tangy - Comforting",heat:"2/5",
-   contains:"Panchmel Dal, Little Millet (Ghee Tempered), Cabbage, Roasted Cauliflower, Carrot, Pomegranate, Baati Crumble | Dressing: Smoky Cumin Lime",
-   macros:["Cal: ~440","P: 22g","Carbs: 52g","Fat: 14g","Fibre: 10g"],
-   ladoo:"Mini Churma Bite",ladooEmoji:"🔥",
-   ladooDesc:"Crumbled baati sweetened with jaggery, ghee and cardamom. Dense, rich and utterly satisfying.",
-   ladooIngredients:"Whole Wheat, Jaggery, Ghee, Cardamom, Almonds | ~70-85 kcal | Protein: 2-3g",
-   ladooMacros:"Cal: ~70-85 | Protein: 2-3g | Carbs: ~12g | Fat: ~3g"},
-  {day:"Tuesday",name:"Hakka Noodle Bowl",emoji:"🍜",
-   theme:"HAKKA NOODLE",
-   desc:"Indo-Chinese meets healthy! Stir-fried tofu with wok-tossed brown rice noodles, crunchy cabbage, carrot, capsicum and spring onion. Soy-sesame-chili dressing with a toasted sesame crunch.",
-   flavor:"Savory - Umami - Spicy - Crunchy",heat:"2/5",
-   contains:"Tofu Stir-fried, Brown Rice Noodles, Cabbage, Carrot, Capsicum, Spring Onion, Sesame | Dressing: Soy Sesame Chili",
-   macros:["Cal: ~420","P: 24g","Carbs: 48g","Fat: 14g","Fibre: 7g"],
-   ladoo:"Sesame Peanut Crunch Bite",ladooEmoji:"🍜",
-   ladooDesc:"Crispy bite with toasted sesame, roasted peanuts and a hint of soy and ginger. Crunchy outside, chewy inside.",
-   ladooIngredients:"Sesame, Peanuts, Jaggery, Ginger, Soy trace | ~65-75 kcal | Protein: 3-4g",
-   ladooMacros:"Cal: ~65-75 | Protein: 3-4g | Carbs: ~8g | Fat: ~4g"},
-  {day:"Wednesday",name:"Rajma Manchurian Bowl",emoji:"🌶️",
-   theme:"RAJMA MANCHURIAN",
-   desc:"Desi-Chinese fusion! Crispy rajma manchurian balls over steamed brown rice, blanched greens, shredded cabbage and roasted sesame. Tangy Indo-Chinese manchurian dressing.",
-   flavor:"Tangy - Savory - Bold - Crunchy",heat:"2/5",
-   contains:"Rajma Manchurian Balls, Brown Rice, Greens, Cabbage, Carrot, Roasted Sesame | Dressing: Indo-Chinese Manchurian",
-   macros:["Cal: ~410","P: 21g","Carbs: 50g","Fat: 12g","Fibre: 9g"],
-   ladoo:"Orange Coconut Bite",ladooEmoji:"🌶️",
-   ladooDesc:"Refreshing tropical bite with bright orange zest, sweet coconut, dates and a hint of cardamom.",
-   ladooIngredients:"Dates, Coconut, Orange Zest, Cardamom, Plant Protein | ~60-70 kcal | Protein: 3g",
-   ladooMacros:"Cal: ~60-70 | Protein: 3g | Carbs: ~10g | Fat: ~2.5g"},
-  {day:"Thursday",name:"Chickpea Arrabbiata Bowl",emoji:"🍅",
-   theme:"CHICKPEA ARRABBIATA",
-   desc:"Bold Italian-Indian mashup! Spicy tomato-chili arrabbiata chickpeas with garlic-herb quinoa, roasted zucchini, cherry tomatoes, baby spinach and a basil-olive drizzle. Topped with toasted pine nuts.",
-   flavor:"Bold - Spicy - Herby - Mediterranean",heat:"3/5",
-   contains:"Arrabbiata Chickpeas, Garlic Herb Quinoa, Baby Spinach, Roasted Zucchini, Cherry Tomatoes, Pine Nuts | Dressing: Basil Olive",
-   macros:["Cal: ~400","P: 20g","Carbs: 46g","Fat: 13g","Fibre: 10g"],
-   ladoo:"Cocoa Almond Fudge Bite",ladooEmoji:"🍅",
-   ladooDesc:"Rich cocoa almond fudge bite sweetened with dates and a hint of vanilla. Dark, dense and deeply satisfying.",
-   ladooIngredients:"Dates, Almonds, Cocoa Powder, Coconut, Vanilla, Plant Protein | ~70-80 kcal | Protein: 3-4g",
-   ladooMacros:"Cal: ~70-80 | Protein: 3-4g | Carbs: ~9g | Fat: ~4g"},
-  {day:"Friday",name:"Field Bean Sizzler Bowl",emoji:"⚡",
-   theme:"FIELD BEAN SIZZLER",
-   desc:"Smoky sizzler-inspired bowl with spicy field beans, brown rice, charred bell peppers, mushrooms and onions. Topped with crispy chickpea crunch and finished with a tangy sizzler pepper sauce dressing.",
-   flavor:"Smoky - Spicy - Bold - Tangy",heat:"3/5",
-   contains:"Spiced Field Beans, Brown Rice, Charred Bell Peppers, Mushrooms, Onions, Chickpea Crunch | Dressing: Sizzler Pepper Sauce",
-   macros:["Cal: ~430","P: 23g","Carbs: 50g","Fat: 13g","Fibre: 11g"],
-   ladoo:"Coconut Cardamom Bite",ladooEmoji:"⚡",
-   ladooDesc:"Traditional South Indian inspired coconut ladoo with gentle warmth of cardamom and natural sweetness of dates and jaggery.",
-   ladooIngredients:"Coconut, Dates, Jaggery, Cardamom, Plant Protein | ~65-75 kcal | Protein: 3g",
-   ladooMacros:"Cal: ~65-75 | Protein: 3g | Carbs: ~10g | Fat: ~3.5g"},
-  {day:"Saturday",name:"Kulith Podi Crunch Bowl",emoji:"🥥",
-   theme:"KULITH PODI CRUNCH",
-   desc:"South Indian power bowl with protein-rich kulith cooked in gunpowder podi spice blend, coconut rice, crispy papad shards, fresh coconut, tomato, cucumber and a coconut podi dressing.",
-   flavor:"Earthy - Coconutty - Spicy - Crunchy",heat:"2/5",
-   contains:"Kulith Horse Gram Gunpowder Podi, Coconut Rice, Fresh Coconut, Tomato, Cucumber, Crispy Papad | Dressing: Coconut Podi",
-   macros:["Cal: ~420","P: 24g","Carbs: 46g","Fat: 15g","Fibre: 12g"],
-   ladoo:"South Indian Coconut Podi Bite",ladooEmoji:"🥥",
-   ladooDesc:"Crispy coconut podi energy bite inspired by South Indian gunpowder. Toasted chana dal, coconut, sesame, curry leaves.",
-   ladooIngredients:"Chana Dal, Coconut, Sesame, Curry Leaves, Dried Chili, Jaggery | ~70-80 kcal | Protein: 4g",
-   ladooMacros:"Cal: ~70-80 | Protein: 4g | Carbs: ~9g | Fat: ~4g"},
+  {day:"Monday",name:"Thai Pink Pesto Paneer Bowl",emoji:"🌸",
+   theme:"THAI PINK PESTO PANEER",
+   desc:"Creamy Thai green curry paneer served over vibrant beetroot herb rice, with roasted broccoli, charred zucchini, baby corn, dried apricot and roasted phutana. Finished with a tangy Thai pink pesto dressing.",
+   flavor:"Creamy - Tangy - Aromatic - Fresh",heat:"2/5",
+   contains:"Thai Green Curry Paneer, Beetroot Brown Rice, Roasted Broccoli, Charred Zucchini, Baby Corn, Dried Apricot, Roasted Phutana | Dressing: Thai Pink Pesto",
+   macros:["Cal: ~450","P: 22g","Carbs: 54g","Fat: 17g"],
+   ladoo:"Amla Saunf Ladoo",ladooEmoji:"🌿",
+   ladooDesc:"A naturally sweet mini ladoo combining dates, tangy amla, coconut, almond and aromatic fennel for a distinctive Indian-inspired finish.",
+   ladooIngredients:"Dates, Amla, Coconut, Almond, Fennel | ~65 kcal | Protein: 1.5g",
+   ladooMacros:"Cal: ~65 | Protein: 1.5g | Carbs: ~11g | Fat: ~2g"},
+  {day:"Tuesday",name:"Thai Arrabbiata Paneer Bowl",emoji:"🍅",
+   theme:"THAI ARRABBIATA PANEER",
+   desc:"A fusion of aromatic green curry paneer and Italian-inspired arrabbiata beetroot rice, paired with charred red capsicum, French beans, roasted carrots and amla candy. Finished with a sweet-chilli tomato rose dressing.",
+   flavor:"Tangy - Spicy - Bold - Fusion",heat:"2/5",
+   contains:"Thai Green Curry Paneer, Spicy Beetroot Rice, Charred Red Capsicum, French Beans, Roasted Carrots, Amla Candy | Dressing: Sweet-Chilli Tomato Rose",
+   macros:["Cal: ~445","P: 22g","Carbs: 55g","Fat: 16g"],
+   ladoo:"Ginger Saunf Infusion",ladooEmoji:"☕",
+   ladooDesc:"A gentle infusion of ginger and fennel, served warm or at room temperature for a refreshing digestive finish after your bowl.",
+   ladooIngredients:"Ginger, Fennel Seeds, Water | ~5 kcal | No added sugar",
+   ladooMacros:"Cal: ~5 per 100ml | Carbs: ~1g | Digestive drink"},
+  {day:"Wednesday",name:"Thai Coconut Alfredo Bowl",emoji:"🥥",
+   theme:"THAI COCONUT ALFREDO",
+   desc:"A comforting bowl of coconut-infused Thai paneer and beetroot herb rice, with roasted cauliflower, tender green beans, zucchini, dried fig and herb-seasoned phutana. Finished with a creamy coconut Alfredo-inspired dressing.",
+   flavor:"Creamy - Comforting - Herby - Rich",heat:"1/5",
+   contains:"Thai Green Curry Paneer, Beetroot Herb Rice, Roasted Cauliflower, Green Beans, Zucchini, Dried Fig, Herb Phutana | Dressing: Creamy Coconut Alfredo",
+   macros:["Cal: ~460","P: 22g","Carbs: 53g","Fat: 19g"],
+   ladoo:"Til Coconut Saunf Ladoo",ladooEmoji:"🥥",
+   ladooDesc:"A nutty little ladoo made with dates, roasted sesame, coconut and fennel, finished with a hint of cardamom.",
+   ladooIngredients:"Dates, Roasted Sesame, Coconut, Fennel, Cardamom | ~80 kcal | Protein: 2g",
+   ladooMacros:"Cal: ~80 | Protein: 2g | Carbs: ~9g | Fat: ~4g"},
+  {day:"Thursday",name:"Thai Arrabbiata Garden Bowl",emoji:"🌱",
+   theme:"THAI ARRABBIATA GARDEN",
+   desc:"A vibrant combination of green curry paneer, tomato-seasoned beetroot rice, roasted broccoli, sweet corn and red capsicum. Topped with tangy bael candy, smoky phutana crunch and a sweet tomato-basil dressing.",
+   flavor:"Vibrant - Tangy - Fresh - Crunchy",heat:"2/5",
+   contains:"Thai Green Curry Paneer, Tomato Beetroot Rice, Roasted Broccoli, Sweet Corn, Red Capsicum, Bael Candy, Phutana Crunch | Dressing: Sweet Tomato-Basil",
+   macros:["Cal: ~455","P: 22g","Carbs: 57g","Fat: 16g"],
+   ladoo:"Cucumber Mint Cooler",ladooEmoji:"🥒",
+   ladooDesc:"A cooling blend of cucumber, fresh mint and lime, lightly blended with water. Refreshing, clean and served without added sugar.",
+   ladooIngredients:"Cucumber, Fresh Mint, Lime, Water | ~10 kcal | No added sugar",
+   ladooMacros:"Cal: ~10 per 120ml | Carbs: ~2g | Cooling digestive"},
+  {day:"Friday",name:"Thai Lemon Herb Paneer Bowl",emoji:"🍋",
+   theme:"THAI LEMON HERB PANEER",
+   desc:"Fresh lime and basil flavours meet beetroot brown rice, roasted broccoli, glazed carrots and green beans. Finished with dried apricot, lemon-pepper phutana and a refreshing lemon-herb rose dressing.",
+   flavor:"Fresh - Citrusy - Herby - Light",heat:"1/5",
+   contains:"Thai Green Curry Paneer, Lemon Herb Rice, Roasted Broccoli, Glazed Carrots, Green Beans, Dried Apricot, Lemon-Pepper Phutana | Dressing: Lemon-Herb Rose",
+   macros:["Cal: ~440","P: 22g","Carbs: 53g","Fat: 16g"],
+   ladoo:"Fennel Coriander Water",ladooEmoji:"🌿",
+   ladooDesc:"A delicate infusion of fennel and coriander seeds with a clean, refreshing flavour. Mild, herbal and naturally calming with no added sugar.",
+   ladooIngredients:"Fennel Seeds, Coriander Seeds, Water | ~3 kcal | No added sugar",
+   ladooMacros:"Cal: ~3 per 100ml | Carbs: ~0.5g | Herbal infusion"},
+  {day:"Saturday",name:"Thai Sweet-Sour Pesto Bowl",emoji:"🍠",
+   theme:"THAI SWEET-SOUR PESTO",
+   desc:"A colourful fusion bowl featuring aromatic Thai paneer, basil-infused beetroot rice, roasted sweet potato, yellow capsicum and fresh cucumber. Finished with tangy amla candy, roasted phutana and a sweet-sour basil dressing.",
+   flavor:"Sweet - Tangy - Aromatic - Colourful",heat:"1/5",
+   contains:"Thai Green Curry Paneer, Beetroot Basil Rice, Roasted Sweet Potato, Yellow Capsicum, Cucumber, Amla Candy, Roasted Phutana | Dressing: Sweet-Sour Basil",
+   macros:["Cal: ~465","P: 22g","Carbs: 60g","Fat: 16g"],
+   ladoo:"Anjeer Elaichi Ladoo",ladooEmoji:"🍠",
+   ladooDesc:"A naturally sweet mini ladoo combining dried figs, dates, roasted almonds, pumpkin seeds and aromatic cardamom.",
+   ladooIngredients:"Dried Figs, Dates, Roasted Almonds, Pumpkin Seeds, Cardamom | ~70 kcal | Protein: 1.5g",
+   ladooMacros:"Cal: ~70 | Protein: 1.5g | Carbs: ~11g | Fat: ~2g"},
 ];
 const COOKIES=[
   {id:"pb",name:"Peanut Butter Choc Chip",emoji:"🥜",price:100,protein:"15g protein",note:"High protein - No refined sugar"},
@@ -827,7 +827,7 @@ function goTo(n){
 function buildSummary(){
   var html="";
   html+='<div class="sum-card">';
-  html+='<div class="sum-header">Your Saku Order - Week 68 (26 to 31 Oct 2026)</div>';
+  html+='<div class="sum-header">Your Saku Order - Week 69 (2 to 7 Nov 2026)</div>';
   html+='<div class="sum-section"><div class="sum-section-label">Your Vibe</div>';
   html+='<div class="sum-row"><span>Plan</span><span>'+PLAN_LABELS[state.plan]+'</span></div>';
   html+='</div>';
@@ -905,7 +905,7 @@ function placeOrder(){
   m+="SAKU HEALTHY BOWLS - NEW ORDER\n";
   m+="================================\n";
   m+="Order ID: "+oid+"\n";
-  m+="Week: 68 (26 to 31 Oct 2026)\n";
+  m+="Week: 69 (2 to 7 Nov 2026)\n";
   m+="Ordered: "+days[d.getDay()]+" "+d.getDate()+" "+months[d.getMonth()]+" "+d.getFullYear()+" at "+(d.getHours()<10?"0"+d.getHours():d.getHours())+":"+(d.getMinutes()<10?"0"+d.getMinutes():d.getMinutes())+"\n";
   m+="\nPLAN\n";
   m+="--------------\n";
